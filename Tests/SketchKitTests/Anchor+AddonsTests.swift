@@ -22,6 +22,8 @@ final class AnchorAddonsTests: XCTestCase {
         super.tearDown()
         self.container = nil
     }
+    
+    //MARK: - Inset equalTo
 
     func testInset() {
 
@@ -39,7 +41,10 @@ final class AnchorAddonsTests: XCTestCase {
         XCTAssertEqual(constraints[1].constant, -20, "Should be 20")
         XCTAssertEqual(constraints[2].constant, 20, "Should be 20")
         XCTAssertEqual(constraints[3].constant, -20, "Should be 20")
+        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
+    
+    //MARK: - AspectRadio equalTo
 
     func testAspectRadio() {
 
@@ -56,6 +61,7 @@ final class AnchorAddonsTests: XCTestCase {
         XCTAssertEqual(constraints[0].multiplier, 125, "Should be 125")
         XCTAssertEqual(constraints[0].firstAttribute, NSLayoutConstraint.Attribute.width, "Should be width")
         XCTAssertEqual(constraints[0].secondAttribute, NSLayoutConstraint.Attribute.height, "Should be height")
+        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
     static var allTests = [

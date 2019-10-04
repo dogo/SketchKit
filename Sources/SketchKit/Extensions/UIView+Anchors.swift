@@ -21,7 +21,7 @@ public extension UIView {
     }
 
     @discardableResult
-    func topAnchor(greaterThan anchor: NSLayoutYAxisAnchor,
+    func topAnchor(greaterThanOrEqualTo anchor: NSLayoutYAxisAnchor,
                    constant: CGFloat = 0,
                    priority: UILayoutPriority = UILayoutPriority.required) -> Self {
         let constraint = topAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
@@ -51,7 +51,7 @@ public extension UIView {
     }
 
     @discardableResult
-    func bottomAnchor(greaterThan anchor: NSLayoutYAxisAnchor,
+    func bottomAnchor(greaterThanOrEqualTo anchor: NSLayoutYAxisAnchor,
                       constant: CGFloat = 0,
                       priority: UILayoutPriority = UILayoutPriority.required) -> Self {
         let constraint = bottomAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
@@ -80,6 +80,7 @@ public extension UIView {
         return self
     }
 
+    @discardableResult
     func leadingAnchor(greaterThanOrEqualTo anchor: NSLayoutXAxisAnchor,
                        constant: CGFloat = 0,
                        priority: UILayoutPriority = UILayoutPriority.required) -> Self {

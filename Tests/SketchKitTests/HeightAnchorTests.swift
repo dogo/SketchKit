@@ -22,6 +22,8 @@ final class HeightAnchorTests: XCTestCase {
         super.tearDown()
         self.container = nil
     }
+    
+    //MARK: - HeightAnchor equalTo
 
     func testHeightAnchor() {
 
@@ -38,7 +40,10 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 20, "Should be 20")
         XCTAssertEqual(view.frame.height, 20, "Should be 20")
+        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
+    
+    //MARK: - HeightAnchor safeArea
 
     func testSafeHeightAnchor() {
 
@@ -56,9 +61,32 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 0, "Should be 0")
         XCTAssertEqual(viewOne.frame.height, 0, "Should be 0")
+        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
+    }
+    
+    //MARK: - HeightAnchor greaterThanOrEqualTo
+
+    func testHeightAnchorGreaterThanOrEqualTo() {
+
+        let view = UIView()
+        self.container.addSubview(view)
+
+        view.layout.applyConstraint { view in
+            view.heightAnchor(greaterThanOrEqualToConstant: 20)
+        }
+        view.layoutIfNeeded()
+
+        let constraints = view.constraints
+
+        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
+        XCTAssertEqual(constraints[0].constant, 20, "Should be 20")
+        XCTAssertEqual(view.frame.height, 20, "Should be 20")
+        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
 
     static var allTests = [
-        ("testHeightAnchor", testHeightAnchor), ("testSafeHeightAnchor", testSafeHeightAnchor)
+        ("testHeightAnchor", testHeightAnchor),
+        ("testSafeHeightAnchor", testSafeHeightAnchor),
+        ("testHeightAnchorGreaterThanOrEqualTo", testHeightAnchorGreaterThanOrEqualTo)
     ]
 }
