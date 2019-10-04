@@ -83,10 +83,31 @@ final class WidthAnchorTests: XCTestCase {
         XCTAssertEqual(view.frame.width, 20, "Should be 20")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
+    
+    //MARK: - WidthAnchor greaterThanOrEqual
+    
+    func testWidthAnchorLessThanOrEqualTo() {
+
+        let view = UIView()
+        self.container.addSubview(view)
+
+        view.layout.applyConstraint { view in
+            view.widthAnchor(lessThanOrEqualToConstant: 20)
+        }
+        view.layoutIfNeeded()
+
+        let constraints = view.constraints
+
+        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
+        XCTAssertEqual(constraints[0].constant, 20, "Should be 20")
+        XCTAssertEqual(view.frame.width, 20, "Should be 20")
+        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.lessThanOrEqual, "Should be lessThanOrEqual")
+    }
 
     static var allTests = [
         ("testWidthAnchor", testWidthAnchor),
         ("testSafeWidthAnchor", testSafeWidthAnchor),
-        ("testWidthAnchorGreaterThanOrEqual", testWidthAnchorGreaterThanOrEqual)
+        ("testWidthAnchorGreaterThanOrEqual", testWidthAnchorGreaterThanOrEqual),
+        ("testWidthAnchorLessThanOrEqualTo", testWidthAnchorLessThanOrEqualTo)
     ]
 }

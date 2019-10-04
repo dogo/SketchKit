@@ -83,10 +83,31 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(view.frame.height, 20, "Should be 20")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
+    
+    //MARK: - HeightAnchor lessThanOrEqualTo
+
+    func testHeightAnchorLessThanOrEqual() {
+
+        let view = UIView()
+        self.container.addSubview(view)
+
+        view.layout.applyConstraint { view in
+            view.heightAnchor(lessThanOrEqualToConstant: 20)
+        }
+        view.layoutIfNeeded()
+
+        let constraints = view.constraints
+
+        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
+        XCTAssertEqual(constraints[0].constant, 20, "Should be 20")
+        XCTAssertEqual(view.frame.height, 20, "Should be 20")
+        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.lessThanOrEqual, "Should be lessThanOrEqual")
+    }
 
     static var allTests = [
         ("testHeightAnchor", testHeightAnchor),
         ("testSafeHeightAnchor", testSafeHeightAnchor),
-        ("testHeightAnchorGreaterThanOrEqualTo", testHeightAnchorGreaterThanOrEqualTo)
+        ("testHeightAnchorGreaterThanOrEqualTo", testHeightAnchorGreaterThanOrEqualTo),
+        ("testHeightAnchorLessThanOrEqual", testHeightAnchorLessThanOrEqual)
     ]
 }

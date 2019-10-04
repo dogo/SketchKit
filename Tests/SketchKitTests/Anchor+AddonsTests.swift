@@ -24,6 +24,25 @@ final class AnchorAddonsTests: XCTestCase {
     }
     
     //MARK: - Inset equalTo
+    
+    func testInsetWithDefaultParams() {
+
+        let view = UIView()
+        self.container.addSubview(view)
+
+        view.layout.applyConstraint { view in
+            view.inset(to: self.container)
+        }
+
+        let constraints = self.container.constraints
+
+        XCTAssertEqual(constraints.count, 4, "Should have 4 constraints installed")
+        XCTAssertEqual(constraints[0].constant, 0, "Should be 0")
+        XCTAssertEqual(constraints[1].constant, 0, "Should be 0")
+        XCTAssertEqual(constraints[2].constant, 0, "Should be 0")
+        XCTAssertEqual(constraints[3].constant, 0, "Should be 0")
+        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
+    }
 
     func testInset() {
 
@@ -65,6 +84,8 @@ final class AnchorAddonsTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testInset", testInset), ("testAspectRadio", testAspectRadio)
+        ("testInsetWithDefaultParams", testInsetWithDefaultParams),
+        ("testInset", testInset),
+        ("testAspectRadio", testAspectRadio)
     ]
 }
