@@ -1,6 +1,9 @@
 # Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+xcuserdata
+*.xcuserstate
+*.xcbkptlist
+*.xcworkspace
+*.bak
 
 ## Build generated
 build/
@@ -16,6 +19,12 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+
+## Mac OSX
+.DS_Store
+
+## Git
+*.orig
 
 ## Other
 *.moved-aside
