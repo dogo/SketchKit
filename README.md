@@ -3,6 +3,7 @@
 [![codecov](https://codecov.io/gh/dogo/SketchKit/branch/develop/graph/badge.svg)](https://codecov.io/gh/dogo/SketchKit)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/SketchKit.svg)](https://cocoapods.org/?q=SketchKit)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen)](https://swift.org/package-manager)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/github/license/dogo/SketchKit.svg)](https://github.com/dogo/SketchKit/blob/develop/LICENSE)
 
 SketchKit is a lightweight, powerful and pure-Swift auto layout library, you can set up your constraints with a simple and intuitive code without any stringly typing.
@@ -39,7 +40,7 @@ newView.layout.applyConstraint { view in
 
 ## Installation
 
-### CocoaPods
+### [CocoaPods](https://cocoapods.org)
 
 To integrate SketchKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -55,9 +56,15 @@ Then, run the following command:
 $ pod install
 ```
 
-### Swift Package Manager (SPM)
+### [Swift Package Manager (SPM)](https://swift.org/package-manager)
 
 TODO: Add images
+
+### [Carthage](https://github.com/Carthage/Carthage)
+
+```
+github "dogo/SCLAlertView"
+```  
 
 ## Usage
 
