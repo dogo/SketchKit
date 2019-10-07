@@ -2,7 +2,7 @@
 [![Build Status](https://app.bitrise.io/app/9a6a28a9adbe78f8/status.svg?token=2bn-vbmKSW3ZbCE9xQnVWg&branch=develop)](https://app.bitrise.io/app/9a6a28a9adbe78f8)
 [![codecov](https://codecov.io/gh/dogo/SketchKit/branch/develop/graph/badge.svg)](https://codecov.io/gh/dogo/SketchKit)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/SketchKit.svg)](https://cocoapods.org/?q=SketchKit)
-[![SPM compatible](https://img.shields.io/badge/SketchKit.svg?style=flat)](https://swift.org/package-manager)
+[![SPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen)](https://swift.org/package-manager)
 [![License](https://img.shields.io/github/license/dogo/SketchKit.svg)](https://github.com/dogo/SketchKit/blob/develop/LICENSE)
 
 SketchKit is a lightweight, powerful and pure-Swift auto layout library, you can set up your constraints with a simple and intuitive code without any stringly typing.
