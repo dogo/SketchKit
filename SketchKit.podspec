@@ -19,6 +19,8 @@ Pod::Spec.new do |s|
 
   s.swift_versions   = ['3.2', '4.0', '4.2', '5.0', '5.1']
   s.ios.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
+  s.tvos.deployment_target = '9.0'
 
   s.source           = { :git => 'https://github.com/dogo/SketchKit.git', :tag => s.version.to_s }
   s.source_files     = 'Sources/SketchKit/**/*'
