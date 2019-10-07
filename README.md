@@ -3,7 +3,7 @@
 [![codecov](https://codecov.io/gh/dogo/SketchKit/branch/develop/graph/badge.svg)](https://codecov.io/gh/dogo/SketchKit)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/SketchKit.svg)](https://cocoapods.org/?q=SketchKit)
 [![SPM compatible](https://img.shields.io/badge/SketchKit.svg?style=flat)](https://swift.org/package-manager)
-[![License](https://img.shields.io/cocoapods/l/SketchKit.svg)](https://github.com/dogo/SketchKit/blob/develop/LICENSE)
+[![License](https://img.shields.io/github/license/dogo/SketchKit.svg)](https://github.com/dogo/SketchKit/blob/develop/LICENSE)
 
 SketchKit is a lightweight, powerful and pure-Swift auto layout library, you can set up your constraints with a simple and intuitive code without any stringly typing.
 
@@ -45,7 +45,7 @@ To integrate SketchKit into your Xcode project using CocoaPods, specify it in yo
 
 ```ruby
 target '<Your Target Name>' do
-  pod 'SketchKit', '~> 1.0,0'
+  pod 'SketchKit', '~> 1.0.0'
 end
 ```
 
