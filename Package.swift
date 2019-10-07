@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "SketchKit",
-    platforms: [.iOS(.v9), .tvOS(.v9), .watchOS(.v2)],
+    platforms: [.iOS(.v9), .tvOS(.v9)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
