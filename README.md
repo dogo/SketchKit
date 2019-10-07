@@ -39,6 +39,11 @@ newView.layout.applyConstraint { view in
 }
 ```
 
+## Requirements
+
+- iOS 10.0+ / tvOS 10.0+
+- Swift 3.2+
+
 ## Installation
 
 ### [CocoaPods](https://cocoapods.org)
