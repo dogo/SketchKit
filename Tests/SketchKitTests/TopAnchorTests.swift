@@ -22,8 +22,8 @@ final class TopAnchorTests: XCTestCase {
         super.tearDown()
         self.container = nil
     }
-    
-    //MARK: - TopAnchor equalTo
+
+    // MARK: - TopAnchor equalTo
 
     func testTopAnchor() {
 
@@ -42,8 +42,8 @@ final class TopAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    //MARK: - TopAnchor equalTo
+
+    // MARK: - TopAnchor equalTo
 
     func testSafeTopAnchor() {
 
@@ -62,9 +62,9 @@ final class TopAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    //MARK: - TopAnchor greaterThanOrEqual
-    
+
+    // MARK: - TopAnchor greaterThanOrEqual
+
     func testTopAnchorGreaterThanOrEqualTo() {
 
         let viewOne = UIView()
@@ -82,9 +82,9 @@ final class TopAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
-    
-    //MARK: - TopAnchor lessThanOrEqualTo
-    
+
+    // MARK: - TopAnchor lessThanOrEqualTo
+
     func testTopAnchorLessThanOrEqualTo() {
 
         let viewOne = UIView()

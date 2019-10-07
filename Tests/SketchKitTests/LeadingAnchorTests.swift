@@ -22,8 +22,8 @@ final class LeadingAnchorTests: XCTestCase {
         super.tearDown()
         self.container = nil
     }
-    
-    //MARK: - LeadingAnchor equalTo
+
+    // MARK: - LeadingAnchor equalTo
 
     func testLeadingAnchor() {
 
@@ -42,8 +42,8 @@ final class LeadingAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    //MARK: - LeadingAnchor safeArea
+
+    // MARK: - LeadingAnchor safeArea
 
     func testSafeLeadingAnchor() {
 
@@ -62,9 +62,9 @@ final class LeadingAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    //MARK: - LeadingAnchor greaterThanOrEqualTo
-    
+
+    // MARK: - LeadingAnchor greaterThanOrEqualTo
+
     func testLeadingAnchorGreaterThanOrEqualTo() {
 
         let viewOne = UIView()
@@ -82,9 +82,9 @@ final class LeadingAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
-    
-    //MARK: - LeadingAnchor lessThanOrEqualTo
-    
+
+    // MARK: - LeadingAnchor lessThanOrEqualTo
+
     func testLeadingAnchorLessThanOrEqualTo() {
 
         let viewOne = UIView()
@@ -102,7 +102,7 @@ final class LeadingAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.lessThanOrEqual, "Should be lessThanOrEqual")
     }
-    
+
     static var allTests = [
         ("testLeadingAnchor", testLeadingAnchor),
         ("testSafeLeadingAnchor", testSafeLeadingAnchor),

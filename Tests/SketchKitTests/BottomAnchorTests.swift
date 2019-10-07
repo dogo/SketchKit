@@ -22,8 +22,8 @@ final class BottomAnchorTests: XCTestCase {
         super.tearDown()
         self.container = nil
     }
-    
-    //MARK: - BottomAnchor equalTo
+
+    // MARK: - BottomAnchor equalTo
 
     func testBottomAnchor() {
 
@@ -42,8 +42,8 @@ final class BottomAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    //MARK: - BottomAnchor safeArea
+
+    // MARK: - BottomAnchor safeArea
 
     func testSafeBottomAnchor() {
 
@@ -62,9 +62,8 @@ final class BottomAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    
-    //MARK: - BottomAnchor greaterThanOrEqualTo
+
+    // MARK: - BottomAnchor greaterThanOrEqualTo
 
     func testBottomAnchorGreaterThanOrEqualTo() {
 
@@ -83,8 +82,8 @@ final class BottomAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
-    
-    //MARK: - BottomAnchor lessThanOrEqualTo
+
+    // MARK: - BottomAnchor lessThanOrEqualTo
 
     func testBottomAnchorLessThanOrEqualTo() {
 

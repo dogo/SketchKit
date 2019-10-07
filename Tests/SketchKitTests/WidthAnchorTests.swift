@@ -22,8 +22,8 @@ final class WidthAnchorTests: XCTestCase {
         super.tearDown()
         self.container = nil
     }
-    
-    //MARK: - WidthAnchor equalTo
+
+    // MARK: - WidthAnchor equalTo
 
     func testWidthAnchor() {
 
@@ -42,8 +42,8 @@ final class WidthAnchorTests: XCTestCase {
         XCTAssertEqual(view.frame.width, 20, "Should be 20")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    //MARK: - WidthAnchor equalTo
+
+    // MARK: - WidthAnchor equalTo
 
     func testSafeWidthAnchor() {
 
@@ -63,9 +63,9 @@ final class WidthAnchorTests: XCTestCase {
         XCTAssertEqual(viewOne.frame.height, 0, "Should be 0")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    //MARK: - WidthAnchor greaterThanOrEqual
-    
+
+    // MARK: - WidthAnchor greaterThanOrEqual
+
     func testWidthAnchorGreaterThanOrEqual() {
 
         let view = UIView()
@@ -83,9 +83,9 @@ final class WidthAnchorTests: XCTestCase {
         XCTAssertEqual(view.frame.width, 20, "Should be 20")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
-    
-    //MARK: - WidthAnchor greaterThanOrEqual
-    
+
+    // MARK: - WidthAnchor greaterThanOrEqual
+
     func testWidthAnchorLessThanOrEqualTo() {
 
         let view = UIView()

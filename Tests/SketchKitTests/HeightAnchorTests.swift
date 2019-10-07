@@ -22,8 +22,8 @@ final class HeightAnchorTests: XCTestCase {
         super.tearDown()
         self.container = nil
     }
-    
-    //MARK: - HeightAnchor equalTo
+
+    // MARK: - HeightAnchor equalTo
 
     func testHeightAnchor() {
 
@@ -42,8 +42,8 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(view.frame.height, 20, "Should be 20")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    //MARK: - HeightAnchor safeArea
+
+    // MARK: - HeightAnchor safeArea
 
     func testSafeHeightAnchor() {
 
@@ -63,8 +63,8 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(viewOne.frame.height, 0, "Should be 0")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
-    
-    //MARK: - HeightAnchor greaterThanOrEqualTo
+
+    // MARK: - HeightAnchor greaterThanOrEqualTo
 
     func testHeightAnchorGreaterThanOrEqualTo() {
 
@@ -83,8 +83,8 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(view.frame.height, 20, "Should be 20")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
-    
-    //MARK: - HeightAnchor lessThanOrEqualTo
+
+    // MARK: - HeightAnchor lessThanOrEqualTo
 
     func testHeightAnchorLessThanOrEqual() {
 
