@@ -59,7 +59,28 @@ $ pod install
 
 ### [Swift Package Manager (SPM)](https://swift.org/package-manager)
 
-TODO: Add images
+To add `SketchKit` as a dependency, you have to add it to the `dependencies` of your `Package.swift` file and refer to that dependency in your `target`.
+
+```swift
+import PackageDescription
+let package = Package(
+    name: "<Your Product Name>", 
+    dependencies: [
+       .package(url: "https://github.com/dogo/SketchKit", .upToNextMajor(from: "1.0.0"))
+    ],
+    targets: [
+        .target(
+            name: "<Your Target Name>",
+            dependencies: ["SketchKit"]),
+    ]
+)
+```
+
+After adding the dependency, you can fetch the library with:
+
+```bash
+$ swift package resolve
+```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
