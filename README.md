@@ -63,7 +63,7 @@ TODO: Add images
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```
-github "dogo/SCLAlertView"
+github "dogo/SketchKit"
 ```  
 
 ## Usage
