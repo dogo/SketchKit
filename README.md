@@ -32,9 +32,10 @@ newView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 with this
 
 ```Swift
+// It's NOT necessary: newView.translatesAutoresizingMaskIntoConstraints = false
 newView.layout.applyConstraint { view in
-    view.centerXAnchor(equalTo: self.centerXAnchor)
-    view.centerYAnchor(equalTo: self.centerYAnchor)
+    view.centerXAnchor(equalTo: self.view.centerXAnchor)
+    view.centerYAnchor(equalTo: self.view.centerYAnchor)
 }
 ```
 
@@ -46,7 +47,7 @@ To integrate SketchKit into your Xcode project using CocoaPods, specify it in yo
 
 ```ruby
 target '<Your Target Name>' do
-  pod 'SketchKit', '~> 1.0.0'
+  pod 'SketchKit'
 end
 ```
 
