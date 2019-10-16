@@ -41,7 +41,7 @@ newView.layout.applyConstraint { view in
 
 ## Requirements
 
-- iOS 10.0+ / tvOS 10.0+
+- iOS 9.0+ / tvOS 9.0+
 - Swift 3.2+
 
 ## Installation
