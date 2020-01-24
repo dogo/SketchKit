@@ -101,6 +101,36 @@ public extension UIView {
     }
 
     @discardableResult
+    func leftAnchor(equalTo anchor: NSLayoutXAxisAnchor,
+                    constant: CGFloat = 0,
+                    priority: UILayoutPriority = UILayoutPriority.required) -> Self {
+        let constraint = leftAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.priority = priority
+        constraint.isActive = true
+        return self
+    }
+
+    @discardableResult
+    func leftAnchor(greaterThanOrEqualTo anchor: NSLayoutXAxisAnchor,
+                    constant: CGFloat = 0,
+                    priority: UILayoutPriority = UILayoutPriority.required) -> Self {
+        let constraint = leftAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
+        constraint.priority = priority
+        constraint.isActive = true
+        return self
+    }
+
+    @discardableResult
+    func leftAnchor(lessThanOrEqualTo anchor: NSLayoutXAxisAnchor,
+                       constant: CGFloat = 0,
+                       priority: UILayoutPriority = UILayoutPriority.required) -> Self {
+        let constraint = leftAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
+        constraint.priority = priority
+        constraint.isActive = true
+        return self
+    }
+
+    @discardableResult
     func trailingAnchor(equalTo anchor: NSLayoutXAxisAnchor,
                         constant: CGFloat = 0,
                         priority: UILayoutPriority = UILayoutPriority.required) -> Self {
@@ -125,6 +155,36 @@ public extension UIView {
                         constant: CGFloat = 0,
                         priority: UILayoutPriority = UILayoutPriority.required) -> Self {
         let constraint = trailingAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
+        constraint.priority = priority
+        constraint.isActive = true
+        return self
+    }
+
+    @discardableResult
+    func rightAnchor(equalTo anchor: NSLayoutXAxisAnchor,
+                     constant: CGFloat = 0,
+                     priority: UILayoutPriority = UILayoutPriority.required) -> Self {
+        let constraint = rightAnchor.constraint(equalTo: anchor, constant: constant)
+        constraint.priority = priority
+        constraint.isActive = true
+        return self
+    }
+
+    @discardableResult
+    func rightAnchor(greaterThanOrEqualTo anchor: NSLayoutXAxisAnchor,
+                     constant: CGFloat = 0,
+                     priority: UILayoutPriority = UILayoutPriority.required) -> Self {
+        let constraint = rightAnchor.constraint(greaterThanOrEqualTo: anchor, constant: constant)
+        constraint.priority = priority
+        constraint.isActive = true
+        return self
+    }
+
+    @discardableResult
+    func rightAnchor(lessThanOrEqualTo anchor: NSLayoutXAxisAnchor,
+                     constant: CGFloat = 0,
+                     priority: UILayoutPriority = UILayoutPriority.required) -> Self {
+        let constraint = rightAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         constraint.priority = priority
         constraint.isActive = true
         return self
