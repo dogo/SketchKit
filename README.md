@@ -1,4 +1,4 @@
-# SketchKit
+<img src="/images/SketchKit-Full.png" alt="" />
 
 [![Build Status](https://app.bitrise.io/app/9a6a28a9adbe78f8/status.svg?token=2bn-vbmKSW3ZbCE9xQnVWg&branch=develop)](https://app.bitrise.io/app/9a6a28a9adbe78f8)
 [![codecov](https://codecov.io/gh/dogo/SketchKit/branch/develop/graph/badge.svg)](https://codecov.io/gh/dogo/SketchKit)
@@ -123,6 +123,10 @@ final class MyViewController: UIViewController {
     }
 }
 ```
+
+## Credits
+
+- Nicholas Babo ([@NickBabo](https://github.com/NickBabo)) thank you for the SketchKit logo,
 
 ## License
 
