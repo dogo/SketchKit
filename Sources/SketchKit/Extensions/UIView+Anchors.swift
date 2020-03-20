@@ -122,8 +122,8 @@ public extension UIView {
 
     @discardableResult
     func leftAnchor(lessThanOrEqualTo anchor: NSLayoutXAxisAnchor,
-                       constant: CGFloat = 0,
-                       priority: UILayoutPriority = UILayoutPriority.required) -> Self {
+                    constant: CGFloat = 0,
+                    priority: UILayoutPriority = UILayoutPriority.required) -> Self {
         let constraint = leftAnchor.constraint(lessThanOrEqualTo: anchor, constant: constant)
         constraint.priority = priority
         constraint.isActive = true
