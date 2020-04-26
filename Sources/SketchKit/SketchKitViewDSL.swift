@@ -1,5 +1,5 @@
 //
-//  SketchKitDSL.swift
+//  SketchKitViewDSL.swift
 //  SketchKit
 //
 //  Created by Diogo Autilio on 04/10/19.
@@ -10,12 +10,12 @@ import UIKit
 
 public extension UIView {
 
-    var layout: SketchKitDSL {
-        return SketchKitDSL(view: self)
+    var layout: SketchKitViewDSL {
+        return SketchKitViewDSL(view: self)
     }
 }
 
-public class SketchKitDSL {
+public class SketchKitViewDSL {
 
     let view: UIView
 
