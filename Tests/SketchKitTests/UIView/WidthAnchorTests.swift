@@ -66,7 +66,7 @@ final class WidthAnchorTests: XCTestCase {
 
     // MARK: - WidthAnchor greaterThanOrEqual
 
-    func testWidthAnchorGreaterThanOrEqual() {
+    func testWidthAnchorGreaterThanOrEqualToConstant() {
 
         let view = UIView()
         self.container.addSubview(view)
@@ -84,9 +84,9 @@ final class WidthAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
 
-    // MARK: - WidthAnchor greaterThanOrEqual
+    // MARK: - WidthAnchor lessThanOrEqualToConstant
 
-    func testWidthAnchorLessThanOrEqualTo() {
+    func testWidthAnchorLessThanOrEqualToConstant() {
 
         let view = UIView()
         self.container.addSubview(view)
@@ -104,10 +104,62 @@ final class WidthAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.lessThanOrEqual, "Should be lessThanOrEqual")
     }
 
+    // MARK: - WidthAnchor greaterThanOrEqualTo
+
+    func testWidthAnchorGreaterThanOrEqualTo() {
+
+        let viewOne = UIView()
+        let viewTwo = UIView()
+        self.container.addSubview(viewOne)
+        self.container.addSubview(viewTwo)
+
+        viewTwo.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+
+        viewOne.layout.applyConstraint { view in
+            view.widthAnchor(greaterThanOrEqual: viewTwo.widthAnchor)
+            view.widthAnchor(equalTo: 10)
+        }
+
+        viewOne.layoutIfNeeded()
+
+        let constraints = viewOne.constraints
+
+        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
+        XCTAssertEqual(constraints[0].constant, 10, "Constant should be 10")
+        XCTAssertEqual(viewOne.frame.width, 20, "Should be 20")
+    }
+
+    // MARK: - WidthAnchor lessThanOrEqualTo
+
+    func testWidthAnchorLessThanOrEqualTo() {
+
+        let viewOne = UIView()
+        let viewTwo = UIView()
+        self.container.addSubview(viewOne)
+        self.container.addSubview(viewTwo)
+
+        viewTwo.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+
+        viewOne.layout.applyConstraint { view in
+            view.widthAnchor(lessThanOrEqualTo: viewTwo.widthAnchor)
+            view.widthAnchor(equalTo: 30)
+        }
+
+        viewOne.layoutIfNeeded()
+
+        let constraints = viewOne.constraints
+
+        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
+        XCTAssertEqual(constraints[0].constant, 30, "Constant should be 30")
+        XCTAssertEqual(viewOne.frame.width, 20, "Should be 20")
+    }
+
     static var allTests = [
         ("testWidthAnchor", testWidthAnchor),
         ("testSafeWidthAnchor", testSafeWidthAnchor),
-        ("testWidthAnchorGreaterThanOrEqual", testWidthAnchorGreaterThanOrEqual),
+        ("testWidthAnchorGreaterThanOrEqual", testWidthAnchorGreaterThanOrEqualToConstant),
+        ("testWidthAnchorLessThanOrEqualTo", testWidthAnchorLessThanOrEqualToConstant),
+        ("testWidthAnchorGreaterThanOrEqualTo", testWidthAnchorGreaterThanOrEqualTo),
         ("testWidthAnchorLessThanOrEqualTo", testWidthAnchorLessThanOrEqualTo)
     ]
 }

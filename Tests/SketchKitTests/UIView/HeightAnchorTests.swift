@@ -64,9 +64,9 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
-    // MARK: - HeightAnchor greaterThanOrEqualTo
+    // MARK: - HeightAnchor greaterThanOrEqualToConstant
 
-    func testHeightAnchorGreaterThanOrEqualTo() {
+    func testHeightAnchorGreaterThanOrEqualToConstant() {
 
         let view = UIView()
         self.container.addSubview(view)
@@ -84,9 +84,9 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
 
-    // MARK: - HeightAnchor lessThanOrEqualTo
+    // MARK: - HeightAnchor lessThanOrEqualToConstant
 
-    func testHeightAnchorLessThanOrEqual() {
+    func testHeightAnchorLessThanOrEqualToConstant() {
 
         let view = UIView()
         self.container.addSubview(view)
@@ -104,10 +104,62 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.lessThanOrEqual, "Should be lessThanOrEqual")
     }
 
+    // MARK: - HeightAnchor greaterThanOrEqualTo
+
+    func testHeightAnchorGreaterThanOrEqualTo() {
+
+        let viewOne = UIView()
+        let viewTwo = UIView()
+        self.container.addSubview(viewOne)
+        self.container.addSubview(viewTwo)
+
+        viewTwo.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+
+        viewOne.layout.applyConstraint { view in
+            view.heightAnchor(greaterThanOrEqual: viewTwo.heightAnchor)
+            view.heightAnchor(equalTo: 10)
+        }
+
+        viewOne.layoutIfNeeded()
+
+        let constraints = viewOne.constraints
+
+        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
+        XCTAssertEqual(constraints[0].constant, 10, "Constant should be 10")
+        XCTAssertEqual(viewOne.frame.height, 20, "Should be 20")
+    }
+
+    // MARK: - HeightAnchor lessThanOrEqualTo
+
+    func testHeightAnchorLessThanOrEqualTo() {
+
+        let viewOne = UIView()
+        let viewTwo = UIView()
+        self.container.addSubview(viewOne)
+        self.container.addSubview(viewTwo)
+
+        viewTwo.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+
+        viewOne.layout.applyConstraint { view in
+            view.heightAnchor(lessThanOrEqualTo: viewTwo.heightAnchor)
+            view.heightAnchor(equalTo: 30)
+        }
+
+        viewOne.layoutIfNeeded()
+
+        let constraints = viewOne.constraints
+
+        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
+        XCTAssertEqual(constraints[0].constant, 30, "Constant should be 30")
+        XCTAssertEqual(viewOne.frame.height, 20, "Should be 20")
+    }
+
     static var allTests = [
         ("testHeightAnchor", testHeightAnchor),
         ("testSafeHeightAnchor", testSafeHeightAnchor),
+        ("testHeightAnchorGreaterThanOrEqualToConstant", testHeightAnchorGreaterThanOrEqualToConstant),
+        ("testHeightAnchorLessThanOrEqualToConstant", testHeightAnchorLessThanOrEqualToConstant),
         ("testHeightAnchorGreaterThanOrEqualTo", testHeightAnchorGreaterThanOrEqualTo),
-        ("testHeightAnchorLessThanOrEqual", testHeightAnchorLessThanOrEqual)
+        ("testHeightAnchorLessThanOrEqualTo", testHeightAnchorLessThanOrEqualTo)
     ]
 }
