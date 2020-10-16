@@ -14,8 +14,11 @@ jobs:
         with:
           xcode-version: 12.0.0
       
-      - name: Running SketchKit Unit Tests
-        run: exec ./.github/scripts/test_app.sh
+      - name: Running SketchKit Unit Tests with the latest iOS version
+        run: exec ./.github/scripts/test_app.sh latest
+
+      - name: Running SketchKit Unit Tests with iOS 9
+        run: exec ./.github/scripts/test_app.sh ios9
       
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1  
