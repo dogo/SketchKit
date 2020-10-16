@@ -190,7 +190,7 @@ public extension UILayoutGuide {
     }
 
     @discardableResult
-    func heightAnchor(equalTo height: CGFloat,
+    func heightAnchor(equalToConstant height: CGFloat,
                       priority: UILayoutPriority = UILayoutPriority.required) -> Self {
         let constraint = heightAnchor.constraint(equalToConstant: height)
         constraint.priority = priority
@@ -224,7 +224,7 @@ public extension UILayoutGuide {
     }
 
     @discardableResult
-    func widthAnchor(equalTo width: CGFloat,
+    func widthAnchor(equalToConstant width: CGFloat,
                      priority: UILayoutPriority = UILayoutPriority.required) -> Self {
         let constraint = widthAnchor.constraint(equalToConstant: width)
         constraint.priority = priority

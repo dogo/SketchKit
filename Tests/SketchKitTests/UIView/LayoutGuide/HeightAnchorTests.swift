@@ -31,7 +31,7 @@ final class HeightAnchorTests: XCTestCase {
         self.container.addSubview(view)
 
         view.layout.applyConstraint { view in
-            view.heightAnchor(equalTo: 20)
+            view.heightAnchor(equalToConstant: 20)
         }
         view.layoutIfNeeded()
 
@@ -40,27 +40,6 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 20, "Should be 20")
         XCTAssertEqual(view.frame.height, 20, "Should be 20")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
-    }
-
-    // MARK: - HeightAnchor safeArea
-
-    func testSafeHeightAnchor() {
-
-        let viewOne = UIView()
-        let viewTwo = UIView()
-        self.container.addSubview(viewOne)
-        self.container.addSubview(viewTwo)
-
-        viewOne.layout.applyConstraint { view in
-            view.heightAnchor(equalTo: viewTwo.safeHeightAnchor)
-        }
-
-        let constraints = self.container.constraints
-
-        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
-        XCTAssertEqual(constraints[0].constant, 0, "Should be 0")
-        XCTAssertEqual(viewOne.frame.height, 0, "Should be 0")
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
@@ -116,8 +95,8 @@ final class HeightAnchorTests: XCTestCase {
         viewTwo.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
 
         viewOne.layout.applyConstraint { view in
-            view.heightAnchor(greaterThanOrEqual: viewTwo.heightAnchor)
-            view.heightAnchor(equalTo: 10)
+            view.heightAnchor(greaterThanOrEqualTo: viewTwo.heightAnchor)
+            view.heightAnchor(equalToConstant: 10)
         }
 
         viewOne.layoutIfNeeded()
@@ -142,7 +121,7 @@ final class HeightAnchorTests: XCTestCase {
 
         viewOne.layout.applyConstraint { view in
             view.heightAnchor(lessThanOrEqualTo: viewTwo.heightAnchor)
-            view.heightAnchor(equalTo: 30)
+            view.heightAnchor(equalToConstant: 30)
         }
 
         viewOne.layoutIfNeeded()
@@ -156,7 +135,6 @@ final class HeightAnchorTests: XCTestCase {
 
     static var allTests = [
         ("testHeightAnchor", testHeightAnchor),
-        ("testSafeHeightAnchor", testSafeHeightAnchor),
         ("testHeightAnchorGreaterThanOrEqualToConstant", testHeightAnchorGreaterThanOrEqualToConstant),
         ("testHeightAnchorLessThanOrEqualToConstant", testHeightAnchorLessThanOrEqualToConstant),
         ("testHeightAnchorGreaterThanOrEqualTo", testHeightAnchorGreaterThanOrEqualTo),

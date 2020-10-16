@@ -1,15 +1,15 @@
 //
-//  BottomAnchorTests.swift
+//  SafeLeadingAnchorTests.swift
 //  SketchKitTests
 //
-//  Created by Diogo Autilio on 04/10/19.
-//  Copyright (c) 2019 Anykey Entertrainment. All rights reserved.
+//  Created by Diogo Autilio on 17/10/20.
 //
 
 import XCTest
 @testable import SketchKit
 
-final class BottomAnchorTests: XCTestCase {
+@available(iOS 11.0, tvOS 11.0, *)
+final class SafeLeadingAnchorTests: XCTestCase {
 
     var container: UIView!
 
@@ -23,9 +23,9 @@ final class BottomAnchorTests: XCTestCase {
         self.container = nil
     }
 
-    // MARK: - BottomAnchor equalTo
+    // MARK: - LeadingAnchor safeArea equalTo
 
-    func testBottomAnchor() {
+    func testSafeLeadingAnchor() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -33,7 +33,7 @@ final class BottomAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.bottomAnchor(equalTo: viewTwo.bottomAnchor, constant: 10)
+            view.leadingAnchor(equalTo: viewTwo.safeLeadingAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -43,29 +43,9 @@ final class BottomAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
-    // MARK: - BottomAnchor safeArea
+    // MARK: - LeadingAnchor safeArea greaterThanOrEqualTo
 
-    func testSafeBottomAnchor() {
-
-        let viewOne = UIView()
-        let viewTwo = UIView()
-        self.container.addSubview(viewOne)
-        self.container.addSubview(viewTwo)
-
-        viewOne.layout.applyConstraint { view in
-            view.bottomAnchor(equalTo: viewTwo.safeBottomAnchor, constant: 10)
-        }
-
-        let constraints = self.container.constraints
-
-        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
-        XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
-    }
-
-    // MARK: - BottomAnchor greaterThanOrEqualTo
-
-    func testBottomAnchorGreaterThanOrEqualTo() {
+    func testSafeLeadingAnchorGreaterThanOrEqualTo() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -73,7 +53,7 @@ final class BottomAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.bottomAnchor(greaterThanOrEqualTo: viewTwo.bottomAnchor, constant: 10)
+            view.leadingAnchor(greaterThanOrEqualTo: viewTwo.safeLeadingAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -83,9 +63,9 @@ final class BottomAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
 
-    // MARK: - BottomAnchor lessThanOrEqualTo
+    // MARK: - LeadingAnchor safeArea lessThanOrEqualTo
 
-    func testBottomAnchorLessThanOrEqualTo() {
+    func testSafeLeadingAnchorLessThanOrEqualTo() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -93,7 +73,7 @@ final class BottomAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.bottomAnchor(lessThanOrEqualTo: viewTwo.bottomAnchor, constant: 10)
+            view.leadingAnchor(lessThanOrEqualTo: viewTwo.safeLeadingAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -104,9 +84,9 @@ final class BottomAnchorTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testBottomAnchor", testBottomAnchor),
-        ("testSafeBottomAnchor", testSafeBottomAnchor),
-        ("testBottomAnchorGreaterThanOrEqualTo", testBottomAnchorGreaterThanOrEqualTo),
-        ("testBottomAnchorLessThanOrEqualTo", testBottomAnchorLessThanOrEqualTo)
+        ("testSafeLeadingAnchor", testSafeLeadingAnchor),
+        ("testSafeLeadingAnchorGreaterThanOrEqualTo", testSafeLeadingAnchorGreaterThanOrEqualTo),
+        ("testSafeLeadingAnchorLessThanOrEqualTo", testSafeLeadingAnchorLessThanOrEqualTo)
     ]
 }
+

@@ -42,24 +42,6 @@ final class CenterAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
-    // MARK: - CenterXAnchor safeArea
-
-    func testSafeCenterXAnchor() {
-
-        let view = UIView()
-        self.container.addSubview(view)
-
-        view.layout.applyConstraint { view in
-            view.centerXAnchor(equalTo: self.container.safeCenterXAnchor, constant: 10)
-        }
-
-        let constraints = self.container.constraints
-
-        XCTAssertEqual(constraints.count, 5, "Should have 5 constraints installed")
-        XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
-    }
-
     // MARK: - CenterYAnchor equalTo
 
     func testCenterYAnchorTests() {
@@ -78,26 +60,8 @@ final class CenterAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
-    // MARK: - CenterYAnchor safeArea
-
-    func testSafeCenterYAnchorTests() {
-
-        let view = UIView()
-        self.container.addSubview(view)
-
-        view.layout.applyConstraint { view in
-            view.centerYAnchor(equalTo: self.container.safeCenterYAnchor, constant: 10)
-        }
-
-        let constraints = self.container.constraints
-
-        XCTAssertEqual(constraints.count, 5, "Should have 5 constraints installed")
-        XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
-    }
-
     static var allTests = [
-        ("testCenterXAnchor", testCenterXAnchor), ("testSafeCenterXAnchor", testSafeCenterXAnchor),
-        ("testCenterXAnchor", testCenterXAnchor), ("testSafeCenterYAnchorTests", testSafeCenterYAnchorTests)
+        ("testCenterXAnchor", testCenterXAnchor),
+        ("testCenterXAnchor", testCenterXAnchor),
     ]
 }

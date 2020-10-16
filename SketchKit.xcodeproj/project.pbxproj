@@ -21,6 +21,15 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		DDEF42E825394392000DCC3B /* SafeCenterAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF42E725394392000DCC3B /* SafeCenterAnchorTests.swift */; };
+		DDEF42F425394488000DCC3B /* SafeBottomAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF42F325394488000DCC3B /* SafeBottomAnchorTests.swift */; };
+		DDEF4307253A9AF5000DCC3B /* SafeHeightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4306253A9AF5000DCC3B /* SafeHeightAnchorTests.swift */; };
+		DDEF4315253A9E67000DCC3B /* SafeLeadingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4314253A9E67000DCC3B /* SafeLeadingAnchorTests.swift */; };
+		DDEF431F253AA05E000DCC3B /* SafeLeftAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF431E253AA05E000DCC3B /* SafeLeftAnchorTests.swift */; };
+		DDEF4329253AA203000DCC3B /* SafeRightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4328253AA203000DCC3B /* SafeRightAnchorTests.swift */; };
+		DDEF4333253AA28C000DCC3B /* SafeTopAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4332253AA28C000DCC3B /* SafeTopAnchorTests.swift */; };
+		DDEF4339253AA320000DCC3B /* SafeTrailingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4338253AA320000DCC3B /* SafeTrailingAnchorTests.swift */; };
+		DDEF433F253AA3BB000DCC3B /* SafeWidthAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF433E253AA3BB000DCC3B /* SafeWidthAnchorTests.swift */; };
 		OBJ_55 /* Anchors+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Anchors+SafeArea.swift */; };
 		OBJ_56 /* UILayoutGuide+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* UILayoutGuide+Anchors.swift */; };
 		OBJ_57 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* UIView+Anchors.swift */; };
@@ -49,9 +58,25 @@
 			remoteGlobalIDString = "SketchKit::SketchKit";
 			remoteInfo = SketchKit;
 		};
+		DDEF42EB25394393000DCC3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SketchKit::SketchKitTests";
+			remoteInfo = SketchKitTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DDEF42E725394392000DCC3B /* SafeCenterAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeCenterAnchorTests.swift; sourceTree = "<group>"; };
+		DDEF42F325394488000DCC3B /* SafeBottomAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeBottomAnchorTests.swift; sourceTree = "<group>"; };
+		DDEF4306253A9AF5000DCC3B /* SafeHeightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeHeightAnchorTests.swift; sourceTree = "<group>"; };
+		DDEF4314253A9E67000DCC3B /* SafeLeadingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeLeadingAnchorTests.swift; sourceTree = "<group>"; };
+		DDEF431E253AA05E000DCC3B /* SafeLeftAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeLeftAnchorTests.swift; sourceTree = "<group>"; };
+		DDEF4328253AA203000DCC3B /* SafeRightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeRightAnchorTests.swift; sourceTree = "<group>"; };
+		DDEF4332253AA28C000DCC3B /* SafeTopAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTopAnchorTests.swift; sourceTree = "<group>"; };
+		DDEF4338253AA320000DCC3B /* SafeTrailingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTrailingAnchorTests.swift; sourceTree = "<group>"; };
+		DDEF433E253AA3BB000DCC3B /* SafeWidthAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeWidthAnchorTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* Anchors+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchors+SafeArea.swift"; sourceTree = "<group>"; };
 		OBJ_11 /* UILayoutGuide+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+Anchors.swift"; sourceTree = "<group>"; };
 		OBJ_12 /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
@@ -99,6 +124,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DDEF42EE25394420000DCC3B /* SafeArea */ = {
+			isa = PBXGroup;
+			children = (
+				DDEF42F325394488000DCC3B /* SafeBottomAnchorTests.swift */,
+				DDEF42E725394392000DCC3B /* SafeCenterAnchorTests.swift */,
+				DDEF4306253A9AF5000DCC3B /* SafeHeightAnchorTests.swift */,
+				DDEF4314253A9E67000DCC3B /* SafeLeadingAnchorTests.swift */,
+				DDEF431E253AA05E000DCC3B /* SafeLeftAnchorTests.swift */,
+				DDEF4328253AA203000DCC3B /* SafeRightAnchorTests.swift */,
+				DDEF4332253AA28C000DCC3B /* SafeTopAnchorTests.swift */,
+				DDEF4338253AA320000DCC3B /* SafeTrailingAnchorTests.swift */,
+				DDEF433E253AA3BB000DCC3B /* SafeWidthAnchorTests.swift */,
+			);
+			path = SafeArea;
+			sourceTree = "<group>";
+		};
+		DDEF4305253A9AAA000DCC3B /* LayoutGuide */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_30 /* BottomAnchorTests.swift */,
+				OBJ_31 /* CenterAnchorTests.swift */,
+				OBJ_32 /* HeightAnchorTests.swift */,
+				OBJ_33 /* LeadingAnchorTests.swift */,
+				OBJ_34 /* LeftAnchorTests.swift */,
+				OBJ_35 /* RightAnchorTests.swift */,
+				OBJ_36 /* TopAnchorTests.swift */,
+				OBJ_37 /* TrailingAnchorTests.swift */,
+				OBJ_38 /* WidthAnchorTests.swift */,
+			);
+			path = LayoutGuide;
+			sourceTree = "<group>";
+		};
 		OBJ_15 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,15 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_29 /* Anchor+AddonsTests.swift */,
-				OBJ_30 /* BottomAnchorTests.swift */,
-				OBJ_31 /* CenterAnchorTests.swift */,
-				OBJ_32 /* HeightAnchorTests.swift */,
-				OBJ_33 /* LeadingAnchorTests.swift */,
-				OBJ_34 /* LeftAnchorTests.swift */,
-				OBJ_35 /* RightAnchorTests.swift */,
-				OBJ_36 /* TopAnchorTests.swift */,
-				OBJ_37 /* TrailingAnchorTests.swift */,
-				OBJ_38 /* WidthAnchorTests.swift */,
+				DDEF4305253A9AAA000DCC3B /* LayoutGuide */,
+				DDEF42EE25394420000DCC3B /* SafeArea */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -143,7 +193,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -158,7 +208,6 @@
 				OBJ_48 /* CONTRIBUTING.md */,
 				OBJ_49 /* _config.yml */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -255,7 +304,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_40 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -294,15 +343,24 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_87 /* Anchor+AddonsTests.swift in Sources */,
+				DDEF4315253A9E67000DCC3B /* SafeLeadingAnchorTests.swift in Sources */,
 				OBJ_88 /* BottomAnchorTests.swift in Sources */,
+				DDEF42F425394488000DCC3B /* SafeBottomAnchorTests.swift in Sources */,
 				OBJ_89 /* CenterAnchorTests.swift in Sources */,
+				DDEF4333253AA28C000DCC3B /* SafeTopAnchorTests.swift in Sources */,
 				OBJ_90 /* HeightAnchorTests.swift in Sources */,
+				DDEF42E825394392000DCC3B /* SafeCenterAnchorTests.swift in Sources */,
+				DDEF4307253A9AF5000DCC3B /* SafeHeightAnchorTests.swift in Sources */,
 				OBJ_91 /* LeadingAnchorTests.swift in Sources */,
 				OBJ_92 /* LeftAnchorTests.swift in Sources */,
+				DDEF4339253AA320000DCC3B /* SafeTrailingAnchorTests.swift in Sources */,
 				OBJ_93 /* RightAnchorTests.swift in Sources */,
 				OBJ_94 /* TopAnchorTests.swift in Sources */,
+				DDEF431F253AA05E000DCC3B /* SafeLeftAnchorTests.swift in Sources */,
+				DDEF4329253AA203000DCC3B /* SafeRightAnchorTests.swift in Sources */,
 				OBJ_95 /* TrailingAnchorTests.swift in Sources */,
 				OBJ_96 /* WidthAnchorTests.swift in Sources */,
+				DDEF433F253AA3BB000DCC3B /* SafeWidthAnchorTests.swift in Sources */,
 				OBJ_97 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +376,7 @@
 		OBJ_71 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SketchKit::SketchKitTests" /* SketchKitTests */;
-			targetProxy = "SketchKit::SketchKitTests" /* SketchKitTests */;
+			targetProxy = DDEF42EB25394393000DCC3B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

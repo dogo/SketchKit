@@ -1,15 +1,14 @@
 //
-//  LeftAnchorTests.swift
+//  SafeRightAnchorTests.swift
 //  SketchKitTests
 //
-//  Created by Diogo Autilio on 24/01/20.
-//  Copyright (c) 2019 Anykey Entertrainment. All rights reserved.
+//  Created by Diogo Autilio on 17/10/20.
 //
 
 import XCTest
 @testable import SketchKit
 
-final class LeftAnchorTests: XCTestCase {
+final class SafeRightAnchorTests: XCTestCase {
 
     var container: UIView!
 
@@ -23,9 +22,9 @@ final class LeftAnchorTests: XCTestCase {
         self.container = nil
     }
 
-    // MARK: - LeadingAnchor equalTo
+    // MARK: - RightAnchor safeArea equalTo
 
-    func testLeftAnchor() {
+    func testSafeRightAnchor() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -33,7 +32,7 @@ final class LeftAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.leftAnchor(equalTo: viewTwo.leftAnchor, constant: 10)
+            view.rightAnchor(equalTo: viewTwo.safeRightAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -43,29 +42,9 @@ final class LeftAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
-    // MARK: - LeftAnchor safeArea
+    // MARK: - RightAnchor safeArea greaterThanOrEqual
 
-    func testSafeLeftAnchor() {
-
-        let viewOne = UIView()
-        let viewTwo = UIView()
-        self.container.addSubview(viewOne)
-        self.container.addSubview(viewTwo)
-
-        viewOne.layout.applyConstraint { view in
-            view.leftAnchor(equalTo: viewTwo.safeLeftAnchor, constant: 10)
-        }
-
-        let constraints = self.container.constraints
-
-        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
-        XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
-    }
-
-    // MARK: - LeftAnchor greaterThanOrEqualTo
-
-    func testLeftAnchorGreaterThanOrEqualTo() {
+    func testSafeRightAnchorGreaterThanOrEqualTo() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -73,7 +52,7 @@ final class LeftAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.leftAnchor(greaterThanOrEqualTo: viewTwo.leftAnchor, constant: 10)
+            view.rightAnchor(greaterThanOrEqualTo: viewTwo.safeRightAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -83,9 +62,9 @@ final class LeftAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
 
-    // MARK: - LeftAnchor lessThanOrEqualTo
+    // MARK: - RightAnchor safeArea lessThanOrEqualTo
 
-    func testLeftAnchorLessThanOrEqualTo() {
+    func testSafeRightAnchorLessThanOrEqualTo() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -93,7 +72,7 @@ final class LeftAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.leftAnchor(lessThanOrEqualTo: viewTwo.leftAnchor, constant: 10)
+            view.rightAnchor(lessThanOrEqualTo: viewTwo.safeRightAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -104,9 +83,9 @@ final class LeftAnchorTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testLeftAnchor", testLeftAnchor),
-        ("testSafeLeftAnchor", testSafeLeftAnchor),
-        ("testLeftAnchorGreaterThanOrEqualTo", testLeftAnchorGreaterThanOrEqualTo),
-        ("testLeftAnchorLessThanOrEqualTo", testLeftAnchorLessThanOrEqualTo)
+        ("testSafeRightAnchor", testSafeRightAnchor),
+        ("testSafeRightAnchorGreaterThanOrEqualTo", testSafeRightAnchorGreaterThanOrEqualTo),
+        ("testSafeRightAnchorLessThanOrEqualTo", testSafeRightAnchorLessThanOrEqualTo)
     ]
 }
+

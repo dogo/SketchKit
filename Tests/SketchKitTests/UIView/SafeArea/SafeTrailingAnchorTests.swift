@@ -1,15 +1,14 @@
 //
-//  TopAnchorTests.swift
+//  SafeTrailingAnchorTests.swift
 //  SketchKitTests
 //
-//  Created by Diogo Autilio on 04/10/19.
-//  Copyright (c) 2019 Anykey Entertrainment. All rights reserved.
+//  Created by Diogo Autilio on 17/10/20.
 //
 
 import XCTest
 @testable import SketchKit
 
-final class TopAnchorTests: XCTestCase {
+final class SafeTrailingAnchorTests: XCTestCase {
 
     var container: UIView!
 
@@ -23,9 +22,9 @@ final class TopAnchorTests: XCTestCase {
         self.container = nil
     }
 
-    // MARK: - TopAnchor equalTo
+    // MARK: - TrailingAnchor safeArea equalTo
 
-    func testTopAnchor() {
+    func testSafeTrailingAnchor() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -33,7 +32,7 @@ final class TopAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.topAnchor(equalTo: viewTwo.topAnchor, constant: 10)
+            view.trailingAnchor(equalTo: viewTwo.safeTrailingAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -43,29 +42,9 @@ final class TopAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
-    // MARK: - TopAnchor equalTo
+    // MARK: - TrailingAnchor safeArea greaterThanOrEqual
 
-    func testSafeTopAnchor() {
-
-        let viewOne = UIView()
-        let viewTwo = UIView()
-        self.container.addSubview(viewOne)
-        self.container.addSubview(viewTwo)
-
-        viewOne.layout.applyConstraint { view in
-            view.topAnchor(equalTo: viewTwo.safeTopAnchor, constant: 10)
-        }
-
-        let constraints = self.container.constraints
-
-        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
-        XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
-    }
-
-    // MARK: - TopAnchor greaterThanOrEqual
-
-    func testTopAnchorGreaterThanOrEqualTo() {
+    func testSafeTrailingAnchorGreaterThanOrEqualTo() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -73,7 +52,7 @@ final class TopAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.topAnchor(greaterThanOrEqualTo: viewTwo.topAnchor, constant: 10)
+            view.trailingAnchor(greaterThanOrEqualTo: viewTwo.safeTrailingAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -83,9 +62,9 @@ final class TopAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
 
-    // MARK: - TopAnchor lessThanOrEqualTo
+    // MARK: - TrailingAnchor safeArea lessThanOrEqualTo
 
-    func testTopAnchorLessThanOrEqualTo() {
+    func testSafeTrailingAnchorLessThanOrEqualTo() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -93,7 +72,7 @@ final class TopAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.topAnchor(lessThanOrEqualTo: viewTwo.topAnchor, constant: 10)
+            view.trailingAnchor(lessThanOrEqualTo: viewTwo.safeTrailingAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -104,9 +83,9 @@ final class TopAnchorTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testTopAnchor", testTopAnchor),
-        ("testSafeTopAnchor", testSafeTopAnchor),
-        ("testTopAnchorGreaterThanOrEqualTo", testTopAnchorGreaterThanOrEqualTo),
-        ("testTopAnchorLessThanOrEqualTo", testTopAnchorLessThanOrEqualTo)
+        ("testSafeTrailingAnchor", testSafeTrailingAnchor),
+        ("testSafeTrailingAnchorGreaterThanOrEqualTo", testSafeTrailingAnchorGreaterThanOrEqualTo),
+        ("testSafeTrailingAnchorLessThanOrEqualTo", testSafeTrailingAnchorLessThanOrEqualTo)
     ]
 }
+

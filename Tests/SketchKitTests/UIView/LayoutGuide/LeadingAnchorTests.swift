@@ -1,15 +1,15 @@
 //
-//  RightAnchorTests.swift
+//  LeadingAnchorTests.swift
 //  SketchKitTests
 //
-//  Created by Diogo Autilio on 24/01/20.
+//  Created by Diogo Autilio on 04/10/19.
 //  Copyright (c) 2019 Anykey Entertrainment. All rights reserved.
 //
 
 import XCTest
 @testable import SketchKit
 
-final class RightAnchorTests: XCTestCase {
+final class LeadingAnchorTests: XCTestCase {
 
     var container: UIView!
 
@@ -23,9 +23,9 @@ final class RightAnchorTests: XCTestCase {
         self.container = nil
     }
 
-    // MARK: - RightAnchor equalTo
+    // MARK: - LeadingAnchor equalTo
 
-    func testRightAnchor() {
+    func testLeadingAnchor() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -33,7 +33,7 @@ final class RightAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.rightAnchor(equalTo: viewTwo.rightAnchor, constant: 10)
+            view.leadingAnchor(equalTo: viewTwo.leadingAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -43,29 +43,9 @@ final class RightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
-    // MARK: - RightAnchor safeArea
+    // MARK: - LeadingAnchor greaterThanOrEqualTo
 
-    func testSafeRightAnchor() {
-
-        let viewOne = UIView()
-        let viewTwo = UIView()
-        self.container.addSubview(viewOne)
-        self.container.addSubview(viewTwo)
-
-        viewOne.layout.applyConstraint { view in
-            view.rightAnchor(equalTo: viewTwo.safeRightAnchor, constant: 10)
-        }
-
-        let constraints = self.container.constraints
-
-        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
-        XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
-    }
-
-    // MARK: - RightAnchor greaterThanOrEqual
-
-    func testRightAnchorGreaterThanOrEqualTo() {
+    func testLeadingAnchorGreaterThanOrEqualTo() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -73,7 +53,7 @@ final class RightAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.rightAnchor(greaterThanOrEqualTo: viewTwo.rightAnchor, constant: 10)
+            view.leadingAnchor(greaterThanOrEqualTo: viewTwo.leadingAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -83,9 +63,9 @@ final class RightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
 
-    // MARK: - RightAnchor lessThanOrEqualTo
+    // MARK: - LeadingAnchor lessThanOrEqualTo
 
-    func testRightAnchorLessThanOrEqualTo() {
+    func testLeadingAnchorLessThanOrEqualTo() {
 
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -93,7 +73,7 @@ final class RightAnchorTests: XCTestCase {
         self.container.addSubview(viewTwo)
 
         viewOne.layout.applyConstraint { view in
-            view.rightAnchor(lessThanOrEqualTo: viewTwo.rightAnchor, constant: 10)
+            view.leadingAnchor(lessThanOrEqualTo: viewTwo.leadingAnchor, constant: 10)
         }
 
         let constraints = self.container.constraints
@@ -104,9 +84,8 @@ final class RightAnchorTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testRightAnchor", testRightAnchor),
-        ("testSafeRightAnchor", testSafeRightAnchor),
-        ("testRightAnchorGreaterThanOrEqualTo", testRightAnchorGreaterThanOrEqualTo),
-        ("testRightAnchorLessThanOrEqualTo", testRightAnchorLessThanOrEqualTo)
+        ("testLeadingAnchor", testLeadingAnchor),
+        ("testLeadingAnchorGreaterThanOrEqualTo", testLeadingAnchorGreaterThanOrEqualTo),
+        ("testLeadingAnchorLessThanOrEqualTo", testLeadingAnchorLessThanOrEqualTo)
     ]
 }

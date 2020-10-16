@@ -191,7 +191,7 @@ public extension UIView {
     }
 
     @discardableResult
-    func heightAnchor(equalTo height: CGFloat,
+    func heightAnchor(equalToConstant height: CGFloat,
                       priority: UILayoutPriority = UILayoutPriority.required) -> Self {
         let constraint = heightAnchor.constraint(equalToConstant: height)
         constraint.priority = priority
@@ -232,14 +232,14 @@ public extension UIView {
     }
 
     @discardableResult
-    func heightAnchor(greaterThanOrEqual layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
+    func heightAnchor(greaterThanOrEqualTo layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
         let constraint = heightAnchor.constraint(greaterThanOrEqualTo: layoutDimension, multiplier: multiplier)
         constraint.isActive = true
         return self
     }
 
     @discardableResult
-    func widthAnchor(equalTo width: CGFloat,
+    func widthAnchor(equalToConstant width: CGFloat,
                      priority: UILayoutPriority = UILayoutPriority.required) -> Self {
         let constraint = widthAnchor.constraint(equalToConstant: width)
         constraint.priority = priority
@@ -280,7 +280,7 @@ public extension UIView {
     }
 
     @discardableResult
-    func widthAnchor(greaterThanOrEqual layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
+    func widthAnchor(greaterThanOrEqualTo layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
         let constraint = widthAnchor.constraint(greaterThanOrEqualTo: layoutDimension, multiplier: multiplier)
         constraint.isActive = true
         return self

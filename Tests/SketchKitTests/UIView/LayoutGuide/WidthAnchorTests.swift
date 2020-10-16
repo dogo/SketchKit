@@ -31,7 +31,7 @@ final class WidthAnchorTests: XCTestCase {
         self.container.addSubview(view)
 
         view.layout.applyConstraint { view in
-            view.widthAnchor(equalTo: 20)
+            view.widthAnchor(equalToConstant: 20)
         }
         view.layoutIfNeeded()
 
@@ -43,28 +43,7 @@ final class WidthAnchorTests: XCTestCase {
         XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
     }
 
-    // MARK: - WidthAnchor equalTo
-
-    func testSafeWidthAnchor() {
-
-        let viewOne = UIView()
-        let viewTwo = UIView()
-        self.container.addSubview(viewOne)
-        self.container.addSubview(viewTwo)
-
-        viewOne.layout.applyConstraint { view in
-            view.widthAnchor(equalTo: viewTwo.safeWidthAnchor)
-        }
-
-        let constraints = self.container.constraints
-
-        XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
-        XCTAssertEqual(constraints[0].constant, 0, "Should be 0")
-        XCTAssertEqual(viewOne.frame.height, 0, "Should be 0")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
-    }
-
-    // MARK: - WidthAnchor greaterThanOrEqual
+    // MARK: - WidthAnchor greaterThanOrEqualToConstant
 
     func testWidthAnchorGreaterThanOrEqualToConstant() {
 
@@ -116,8 +95,8 @@ final class WidthAnchorTests: XCTestCase {
         viewTwo.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
 
         viewOne.layout.applyConstraint { view in
-            view.widthAnchor(greaterThanOrEqual: viewTwo.widthAnchor)
-            view.widthAnchor(equalTo: 10)
+            view.widthAnchor(greaterThanOrEqualTo: viewTwo.widthAnchor)
+            view.widthAnchor(equalToConstant: 10)
         }
 
         viewOne.layoutIfNeeded()
@@ -142,7 +121,7 @@ final class WidthAnchorTests: XCTestCase {
 
         viewOne.layout.applyConstraint { view in
             view.widthAnchor(lessThanOrEqualTo: viewTwo.widthAnchor)
-            view.widthAnchor(equalTo: 30)
+            view.widthAnchor(equalToConstant: 30)
         }
 
         viewOne.layoutIfNeeded()
@@ -156,9 +135,8 @@ final class WidthAnchorTests: XCTestCase {
 
     static var allTests = [
         ("testWidthAnchor", testWidthAnchor),
-        ("testSafeWidthAnchor", testSafeWidthAnchor),
-        ("testWidthAnchorGreaterThanOrEqual", testWidthAnchorGreaterThanOrEqualToConstant),
-        ("testWidthAnchorLessThanOrEqualTo", testWidthAnchorLessThanOrEqualToConstant),
+        ("testWidthAnchorGreaterThanOrEqualToConstant", testWidthAnchorGreaterThanOrEqualToConstant),
+        ("testWidthAnchorLessThanOrEqualToConstant", testWidthAnchorLessThanOrEqualToConstant),
         ("testWidthAnchorGreaterThanOrEqualTo", testWidthAnchorGreaterThanOrEqualTo),
         ("testWidthAnchorLessThanOrEqualTo", testWidthAnchorLessThanOrEqualTo)
     ]
