@@ -9,7 +9,7 @@
 import XCTest
 @testable import SketchKit
 
-final class AnchorAddonsTests: XCTestCase {
+final class Anchor_AddonsTests: XCTestCase {
 
     var container: UIView!
 
@@ -41,7 +41,7 @@ final class AnchorAddonsTests: XCTestCase {
         XCTAssertEqual(constraints[1].constant, 0, "Should be 0")
         XCTAssertEqual(constraints[2].constant, 0, "Should be 0")
         XCTAssertEqual(constraints[3].constant, 0, "Should be 0")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
+        XCTAssertEqual(constraints[0].relation, .equal, "Should be equal")
     }
 
     func testInset() {
@@ -60,7 +60,7 @@ final class AnchorAddonsTests: XCTestCase {
         XCTAssertEqual(constraints[1].constant, -20, "Should be 20")
         XCTAssertEqual(constraints[2].constant, 20, "Should be 20")
         XCTAssertEqual(constraints[3].constant, -20, "Should be 20")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
+        XCTAssertEqual(constraints[0].relation, .equal, "Should be equal")
     }
 
     // MARK: - AspectRadio equalTo
@@ -80,7 +80,7 @@ final class AnchorAddonsTests: XCTestCase {
         XCTAssertEqual(constraints[0].multiplier, 125, "Should be 125")
         XCTAssertEqual(constraints[0].firstAttribute, NSLayoutConstraint.Attribute.width, "Should be width")
         XCTAssertEqual(constraints[0].secondAttribute, NSLayoutConstraint.Attribute.height, "Should be height")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
+        XCTAssertEqual(constraints[0].relation, .equal, "Should be equal")
     }
 
     static var allTests = [

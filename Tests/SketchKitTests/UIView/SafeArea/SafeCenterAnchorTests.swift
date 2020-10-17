@@ -39,7 +39,7 @@ final class SafeCenterAnchorTests: XCTestCase {
 
         XCTAssertEqual(constraints.count, 5, "Should have 5 constraints installed")
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
+        XCTAssertEqual(constraints[0].relation, .equal, "Should be equal")
     }
 
     // MARK: - CenterYAnchor safeArea
@@ -57,7 +57,7 @@ final class SafeCenterAnchorTests: XCTestCase {
 
         XCTAssertEqual(constraints.count, 5, "Should have 5 constraints installed")
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
+        XCTAssertEqual(constraints[0].relation, .equal, "Should be equal")
     }
 
     static var allTests = [

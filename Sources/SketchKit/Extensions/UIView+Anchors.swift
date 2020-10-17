@@ -266,22 +266,31 @@ public extension UIView {
     }
 
     @discardableResult
-    func widthAnchor(equalTo layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
+    func widthAnchor(equalTo layoutDimension: NSLayoutDimension,
+                     priority: UILayoutPriority = UILayoutPriority.required,
+                     multiplier: CGFloat = 1.0) -> Self {
         let constraint = widthAnchor.constraint(equalTo: layoutDimension, multiplier: multiplier)
+        constraint.priority = priority
         constraint.isActive = true
         return self
     }
 
     @discardableResult
-    func widthAnchor(lessThanOrEqualTo layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
+    func widthAnchor(lessThanOrEqualTo layoutDimension: NSLayoutDimension,
+                     priority: UILayoutPriority = UILayoutPriority.required,
+                     multiplier: CGFloat = 1.0) -> Self {
         let constraint = widthAnchor.constraint(lessThanOrEqualTo: layoutDimension, multiplier: multiplier)
+        constraint.priority = priority
         constraint.isActive = true
         return self
     }
 
     @discardableResult
-    func widthAnchor(greaterThanOrEqualTo layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
+    func widthAnchor(greaterThanOrEqualTo layoutDimension: NSLayoutDimension,
+                     priority: UILayoutPriority = UILayoutPriority.required,
+                     multiplier: CGFloat = 1.0) -> Self {
         let constraint = widthAnchor.constraint(greaterThanOrEqualTo: layoutDimension, multiplier: multiplier)
+        constraint.priority = priority
         constraint.isActive = true
         return self
     }

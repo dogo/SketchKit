@@ -23,7 +23,7 @@ final class HeightAnchorTests: XCTestCase {
         self.container = nil
     }
 
-    // MARK: - HeightAnchor equalTo
+    // MARK: - HeightAnchor equalToConstant
 
     func testHeightAnchor() {
 
@@ -40,7 +40,7 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 20, "Should be 20")
         XCTAssertEqual(view.frame.height, 20, "Should be 20")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.equal, "Should be equal")
+        XCTAssertEqual(constraints[0].relation, .equal, "Should be equal")
     }
 
     // MARK: - HeightAnchor greaterThanOrEqualToConstant
@@ -60,7 +60,7 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 20, "Should be 20")
         XCTAssertEqual(view.frame.height, 20, "Should be 20")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.greaterThanOrEqual, "Should be greaterThanOrEqual")
+        XCTAssertEqual(constraints[0].relation, .greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
 
     // MARK: - HeightAnchor lessThanOrEqualToConstant
@@ -80,7 +80,7 @@ final class HeightAnchorTests: XCTestCase {
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 20, "Should be 20")
         XCTAssertEqual(view.frame.height, 20, "Should be 20")
-        XCTAssertEqual(constraints[0].relation, NSLayoutConstraint.Relation.lessThanOrEqual, "Should be lessThanOrEqual")
+        XCTAssertEqual(constraints[0].relation, .lessThanOrEqual, "Should be lessThanOrEqual")
     }
 
     // MARK: - HeightAnchor greaterThanOrEqualTo

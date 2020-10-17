@@ -1,45 +1,43 @@
 //
-//  LeadingAnchorTests.swift
+//  UILayoutGuide+LeadingAnchorTests.swift
 //  SketchKitTests
 //
-//  Created by Diogo Autilio on 04/10/19.
-//  Copyright (c) 2019 Anykey Entertrainment. All rights reserved.
+//  Created by Diogo Autilio on 17/10/20.
 //
 
 import XCTest
 @testable import SketchKit
 
-final class LeadingAnchorTests: XCTestCase {
+final class UILayoutGuide_LeadingAnchorTests: XCTestCase {
 
-    var container: UIView!
+    var scrollView: UIScrollView!
 
     override func setUp() {
         super.setUp()
-        self.container = UIView()
+        self.scrollView = UIScrollView()
     }
 
     override func tearDown() {
         super.tearDown()
-        self.container = nil
+        self.scrollView = nil
     }
 
     // MARK: - LeadingAnchor equalTo
 
     func testLeadingAnchor() {
 
-        let viewOne = UIView()
-        let viewTwo = UIView()
-        self.container.addSubview(viewOne)
-        self.container.addSubview(viewTwo)
+        let containerLayoutGuide = UILayoutGuide()
+        scrollView.addLayoutGuide(containerLayoutGuide)
 
-        viewOne.layout.applyConstraint { view in
-            view.leadingAnchor(equalTo: viewTwo.leadingAnchor, constant: 10)
+        containerLayoutGuide.layout.applyConstraint { guide in
+            guide.leadingAnchor(equalTo: scrollView.leadingAnchor, constant: 10)
         }
 
-        let constraints = self.container.constraints
+        let constraints = self.scrollView.constraints
 
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
+        XCTAssertEqual(constraints[0].firstAttribute, .leading, "Should be leading")
         XCTAssertEqual(constraints[0].relation, .equal, "Should be equal")
     }
 
@@ -47,19 +45,18 @@ final class LeadingAnchorTests: XCTestCase {
 
     func testLeadingAnchorGreaterThanOrEqualTo() {
 
-        let viewOne = UIView()
-        let viewTwo = UIView()
-        self.container.addSubview(viewOne)
-        self.container.addSubview(viewTwo)
+        let containerLayoutGuide = UILayoutGuide()
+        scrollView.addLayoutGuide(containerLayoutGuide)
 
-        viewOne.layout.applyConstraint { view in
-            view.leadingAnchor(greaterThanOrEqualTo: viewTwo.leadingAnchor, constant: 10)
+        containerLayoutGuide.layout.applyConstraint { guide in
+            guide.leadingAnchor(greaterThanOrEqualTo: scrollView.leadingAnchor, constant: 10)
         }
 
-        let constraints = self.container.constraints
+        let constraints = self.scrollView.constraints
 
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
+        XCTAssertEqual(constraints[0].firstAttribute, .leading, "Should be leading")
         XCTAssertEqual(constraints[0].relation, .greaterThanOrEqual, "Should be greaterThanOrEqual")
     }
 
@@ -67,19 +64,18 @@ final class LeadingAnchorTests: XCTestCase {
 
     func testLeadingAnchorLessThanOrEqualTo() {
 
-        let viewOne = UIView()
-        let viewTwo = UIView()
-        self.container.addSubview(viewOne)
-        self.container.addSubview(viewTwo)
+        let containerLayoutGuide = UILayoutGuide()
+        scrollView.addLayoutGuide(containerLayoutGuide)
 
-        viewOne.layout.applyConstraint { view in
-            view.leadingAnchor(lessThanOrEqualTo: viewTwo.leadingAnchor, constant: 10)
+        containerLayoutGuide.layout.applyConstraint { guide in
+            guide.leadingAnchor(lessThanOrEqualTo: scrollView.leadingAnchor, constant: 10)
         }
 
-        let constraints = self.container.constraints
+        let constraints = self.scrollView.constraints
 
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 10, "Should be 10")
+        XCTAssertEqual(constraints[0].firstAttribute, .leading, "Should be leading")
         XCTAssertEqual(constraints[0].relation, .lessThanOrEqual, "Should be lessThanOrEqual")
     }
 
@@ -89,3 +85,4 @@ final class LeadingAnchorTests: XCTestCase {
         ("testLeadingAnchorLessThanOrEqualTo", testLeadingAnchorLessThanOrEqualTo)
     ]
 }
+

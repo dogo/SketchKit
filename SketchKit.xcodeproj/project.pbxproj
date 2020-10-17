@@ -21,6 +21,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		DD0E3D2E253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E3D2D253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift */; };
+		DD1BED17253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED16253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift */; };
+		DD1BED21253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED20253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift */; };
+		DD1BED2B253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED2A253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift */; };
+		DD1BED35253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED34253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift */; };
+		DD1BED43253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED42253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift */; };
+		DD1BED4D253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED4C253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift */; };
+		DD1BED57253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED56253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift */; };
+		DD1BED69253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED68253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift */; };
+		DD1BED74253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED73253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift */; };
 		DDEF42E825394392000DCC3B /* SafeCenterAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF42E725394392000DCC3B /* SafeCenterAnchorTests.swift */; };
 		DDEF42F425394488000DCC3B /* SafeBottomAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF42F325394488000DCC3B /* SafeBottomAnchorTests.swift */; };
 		DDEF4307253A9AF5000DCC3B /* SafeHeightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4306253A9AF5000DCC3B /* SafeHeightAnchorTests.swift */; };
@@ -68,6 +78,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD0E3D2D253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+TopAnchorTests.swift"; sourceTree = "<group>"; };
+		DD1BED16253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+BottomAnchorTests.swift"; sourceTree = "<group>"; };
+		DD1BED20253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+LeadingAnchorTests.swift"; sourceTree = "<group>"; };
+		DD1BED2A253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+LeftAnchorTests.swift"; sourceTree = "<group>"; };
+		DD1BED34253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+CenterAnchorTests.swift"; sourceTree = "<group>"; };
+		DD1BED42253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+HeightAnchorTests.swift"; sourceTree = "<group>"; };
+		DD1BED4C253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+WidthAnchorTests.swift"; sourceTree = "<group>"; };
+		DD1BED56253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+RightAnchorTests.swift"; sourceTree = "<group>"; };
+		DD1BED68253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+TrailingAnchorTests.swift"; sourceTree = "<group>"; };
+		DD1BED73253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+AddonsTests.swift"; sourceTree = "<group>"; };
 		DDEF42E725394392000DCC3B /* SafeCenterAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeCenterAnchorTests.swift; sourceTree = "<group>"; };
 		DDEF42F325394488000DCC3B /* SafeBottomAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeBottomAnchorTests.swift; sourceTree = "<group>"; };
 		DDEF4306253A9AF5000DCC3B /* SafeHeightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeHeightAnchorTests.swift; sourceTree = "<group>"; };
@@ -124,6 +144,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD0E3D2C253AB76E00EC142E /* UILayoutGuide */ = {
+			isa = PBXGroup;
+			children = (
+				DD1BED16253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift */,
+				DD1BED34253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift */,
+				DD1BED42253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift */,
+				DD1BED20253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift */,
+				DD1BED2A253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift */,
+				DD1BED56253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift */,
+				DD0E3D2D253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift */,
+				DD1BED68253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift */,
+				DD1BED4C253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift */,
+			);
+			path = UILayoutGuide;
+			sourceTree = "<group>";
+		};
+		DD1BED6E253B3DDE0020B997 /* Addons */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_29 /* Anchor+AddonsTests.swift */,
+				DD1BED73253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift */,
+			);
+			path = Addons;
+			sourceTree = "<group>";
+		};
 		DDEF42EE25394420000DCC3B /* SafeArea */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,8 +212,10 @@
 		OBJ_16 /* SketchKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_28 /* UIView */,
 				OBJ_39 /* XCTestManifests.swift */,
+				DD1BED6E253B3DDE0020B997 /* Addons */,
+				DD0E3D2C253AB76E00EC142E /* UILayoutGuide */,
+				OBJ_28 /* UIView */,
 			);
 			name = SketchKitTests;
 			path = Tests/SketchKitTests;
@@ -177,7 +224,6 @@
 		OBJ_28 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_29 /* Anchor+AddonsTests.swift */,
 				DDEF4305253A9AAA000DCC3B /* LayoutGuide */,
 				DDEF42EE25394420000DCC3B /* SafeArea */,
 			);
@@ -342,25 +388,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				DD1BED69253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift in Sources */,
+				DD1BED57253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift in Sources */,
 				OBJ_87 /* Anchor+AddonsTests.swift in Sources */,
 				DDEF4315253A9E67000DCC3B /* SafeLeadingAnchorTests.swift in Sources */,
 				OBJ_88 /* BottomAnchorTests.swift in Sources */,
+				DD1BED21253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift in Sources */,
+				DD1BED43253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift in Sources */,
+				DD0E3D2E253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift in Sources */,
 				DDEF42F425394488000DCC3B /* SafeBottomAnchorTests.swift in Sources */,
+				DD1BED35253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift in Sources */,
 				OBJ_89 /* CenterAnchorTests.swift in Sources */,
 				DDEF4333253AA28C000DCC3B /* SafeTopAnchorTests.swift in Sources */,
 				OBJ_90 /* HeightAnchorTests.swift in Sources */,
+				DD1BED74253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift in Sources */,
 				DDEF42E825394392000DCC3B /* SafeCenterAnchorTests.swift in Sources */,
 				DDEF4307253A9AF5000DCC3B /* SafeHeightAnchorTests.swift in Sources */,
 				OBJ_91 /* LeadingAnchorTests.swift in Sources */,
+				DD1BED2B253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift in Sources */,
 				OBJ_92 /* LeftAnchorTests.swift in Sources */,
 				DDEF4339253AA320000DCC3B /* SafeTrailingAnchorTests.swift in Sources */,
 				OBJ_93 /* RightAnchorTests.swift in Sources */,
+				DD1BED4D253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift in Sources */,
 				OBJ_94 /* TopAnchorTests.swift in Sources */,
 				DDEF431F253AA05E000DCC3B /* SafeLeftAnchorTests.swift in Sources */,
 				DDEF4329253AA203000DCC3B /* SafeRightAnchorTests.swift in Sources */,
 				OBJ_95 /* TrailingAnchorTests.swift in Sources */,
 				OBJ_96 /* WidthAnchorTests.swift in Sources */,
 				DDEF433F253AA3BB000DCC3B /* SafeWidthAnchorTests.swift in Sources */,
+				DD1BED17253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift in Sources */,
 				OBJ_97 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
