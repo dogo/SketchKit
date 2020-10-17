@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.5
+      
+      - name: Run bundle install
         run: |
           gem install bundler
           bundle install
