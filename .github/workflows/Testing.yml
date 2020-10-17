@@ -14,10 +14,17 @@ jobs:
         with:
           xcode-version: 12.0.0
 
+      - name: Set up Ruby 2.6.5
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.5
+        run: |
+          gem install bundler
+          bundle install
+
       - name: Prepare iOS 10.3 simulator
         run: |
-          xcrun simctl list runtimes
-          xcrun simctl create "iPhone 6s" com.apple.CoreSimulator.SimDeviceType.iPhone-6s com.apple.CoreSimulator.SimRuntime.iOS-10-3
+          bundle exec xcversion simulators --install='iOS 10.3'
       
       - name: Running SketchKit Unit Tests
         run: exec ./.github/scripts/test_app.sh
