@@ -13,6 +13,11 @@ jobs:
         uses: maxim-lobanov/setup-xcode@v1.1
         with:
           xcode-version: 12.0.0
+
+      - name: Prepare iOS 10.3 simulator
+        run: |
+          xcrun simctl list runtimes
+          xcrun simctl create "iPhone 6s" com.apple.CoreSimulator.SimDeviceType.iPhone-6s com.apple.CoreSimulator.SimRuntime.iOS-10-3
       
       - name: Running SketchKit Unit Tests
         run: exec ./.github/scripts/test_app.sh
