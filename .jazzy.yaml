@@ -1,0 +1,15 @@
+clean: true
+author: Diogo Autilio
+author_url: https://github.com/dogo
+github_url: https://github.com/dogo/SketchKit
+copyright: Copyright (c) 2020 Anykey Entertrainment. All rights reserved.
+xcodebuild_arguments:
+   - clean
+   - build
+   - -project
+   - SketchKit.xcodeproj
+   - -scheme
+   - SketchKit-Package
+   - -sdk
+   - iphonesimulator
+output: docs
