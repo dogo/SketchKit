@@ -1,678 +1,1017 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXAggregateTarget section */
-		"SketchKit::SketchKitPackageTests::ProductTarget" /* SketchKitPackageTests */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_68 /* Build configuration list for PBXAggregateTarget "SketchKitPackageTests" */;
-			buildPhases = (
-			);
-			dependencies = (
-				OBJ_71 /* PBXTargetDependency */,
-			);
-			name = SketchKitPackageTests;
-			productName = SketchKitPackageTests;
-		};
-/* End PBXAggregateTarget section */
-
-/* Begin PBXBuildFile section */
-		DD0E3D2E253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0E3D2D253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift */; };
-		DD1BED17253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED16253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift */; };
-		DD1BED21253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED20253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift */; };
-		DD1BED2B253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED2A253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift */; };
-		DD1BED35253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED34253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift */; };
-		DD1BED43253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED42253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift */; };
-		DD1BED4D253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED4C253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift */; };
-		DD1BED57253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED56253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift */; };
-		DD1BED69253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED68253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift */; };
-		DD1BED74253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1BED73253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift */; };
-		DDEF42E825394392000DCC3B /* SafeCenterAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF42E725394392000DCC3B /* SafeCenterAnchorTests.swift */; };
-		DDEF42F425394488000DCC3B /* SafeBottomAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF42F325394488000DCC3B /* SafeBottomAnchorTests.swift */; };
-		DDEF4307253A9AF5000DCC3B /* SafeHeightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4306253A9AF5000DCC3B /* SafeHeightAnchorTests.swift */; };
-		DDEF4315253A9E67000DCC3B /* SafeLeadingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4314253A9E67000DCC3B /* SafeLeadingAnchorTests.swift */; };
-		DDEF431F253AA05E000DCC3B /* SafeLeftAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF431E253AA05E000DCC3B /* SafeLeftAnchorTests.swift */; };
-		DDEF4329253AA203000DCC3B /* SafeRightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4328253AA203000DCC3B /* SafeRightAnchorTests.swift */; };
-		DDEF4333253AA28C000DCC3B /* SafeTopAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4332253AA28C000DCC3B /* SafeTopAnchorTests.swift */; };
-		DDEF4339253AA320000DCC3B /* SafeTrailingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF4338253AA320000DCC3B /* SafeTrailingAnchorTests.swift */; };
-		DDEF433F253AA3BB000DCC3B /* SafeWidthAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF433E253AA3BB000DCC3B /* SafeWidthAnchorTests.swift */; };
-		OBJ_55 /* Anchors+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Anchors+SafeArea.swift */; };
-		OBJ_56 /* UILayoutGuide+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* UILayoutGuide+Anchors.swift */; };
-		OBJ_57 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* UIView+Anchors.swift */; };
-		OBJ_58 /* SketchKitLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* SketchKitLayoutGuideDSL.swift */; };
-		OBJ_59 /* SketchKitViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* SketchKitViewDSL.swift */; };
-		OBJ_66 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_87 /* Anchor+AddonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Anchor+AddonsTests.swift */; };
-		OBJ_88 /* BottomAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* BottomAnchorTests.swift */; };
-		OBJ_89 /* CenterAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* CenterAnchorTests.swift */; };
-		OBJ_90 /* HeightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* HeightAnchorTests.swift */; };
-		OBJ_91 /* LeadingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* LeadingAnchorTests.swift */; };
-		OBJ_92 /* LeftAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* LeftAnchorTests.swift */; };
-		OBJ_93 /* RightAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* RightAnchorTests.swift */; };
-		OBJ_94 /* TopAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* TopAnchorTests.swift */; };
-		OBJ_95 /* TrailingAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* TrailingAnchorTests.swift */; };
-		OBJ_96 /* WidthAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* WidthAnchorTests.swift */; };
-		OBJ_97 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* XCTestManifests.swift */; };
-		OBJ_99 /* SketchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SketchKit::SketchKit::Product" /* SketchKit.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DDBD10562455D5D600D4727B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SketchKit::SketchKit";
-			remoteInfo = SketchKit;
-		};
-		DDEF42EB25394393000DCC3B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SketchKit::SketchKitTests";
-			remoteInfo = SketchKitTests;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		DD0E3D2D253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+TopAnchorTests.swift"; sourceTree = "<group>"; };
-		DD1BED16253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+BottomAnchorTests.swift"; sourceTree = "<group>"; };
-		DD1BED20253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+LeadingAnchorTests.swift"; sourceTree = "<group>"; };
-		DD1BED2A253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+LeftAnchorTests.swift"; sourceTree = "<group>"; };
-		DD1BED34253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+CenterAnchorTests.swift"; sourceTree = "<group>"; };
-		DD1BED42253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+HeightAnchorTests.swift"; sourceTree = "<group>"; };
-		DD1BED4C253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+WidthAnchorTests.swift"; sourceTree = "<group>"; };
-		DD1BED56253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+RightAnchorTests.swift"; sourceTree = "<group>"; };
-		DD1BED68253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+TrailingAnchorTests.swift"; sourceTree = "<group>"; };
-		DD1BED73253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+AddonsTests.swift"; sourceTree = "<group>"; };
-		DDEF42E725394392000DCC3B /* SafeCenterAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeCenterAnchorTests.swift; sourceTree = "<group>"; };
-		DDEF42F325394488000DCC3B /* SafeBottomAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeBottomAnchorTests.swift; sourceTree = "<group>"; };
-		DDEF4306253A9AF5000DCC3B /* SafeHeightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeHeightAnchorTests.swift; sourceTree = "<group>"; };
-		DDEF4314253A9E67000DCC3B /* SafeLeadingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeLeadingAnchorTests.swift; sourceTree = "<group>"; };
-		DDEF431E253AA05E000DCC3B /* SafeLeftAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeLeftAnchorTests.swift; sourceTree = "<group>"; };
-		DDEF4328253AA203000DCC3B /* SafeRightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeRightAnchorTests.swift; sourceTree = "<group>"; };
-		DDEF4332253AA28C000DCC3B /* SafeTopAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTopAnchorTests.swift; sourceTree = "<group>"; };
-		DDEF4338253AA320000DCC3B /* SafeTrailingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeTrailingAnchorTests.swift; sourceTree = "<group>"; };
-		DDEF433E253AA3BB000DCC3B /* SafeWidthAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeWidthAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_10 /* Anchors+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchors+SafeArea.swift"; sourceTree = "<group>"; };
-		OBJ_11 /* UILayoutGuide+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+Anchors.swift"; sourceTree = "<group>"; };
-		OBJ_12 /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
-		OBJ_13 /* SketchKitLayoutGuideDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchKitLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		OBJ_14 /* SketchKitViewDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchKitViewDSL.swift; sourceTree = "<group>"; };
-		OBJ_29 /* Anchor+AddonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchor+AddonsTests.swift"; sourceTree = "<group>"; };
-		OBJ_30 /* BottomAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_31 /* CenterAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_32 /* HeightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_33 /* LeadingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_34 /* LeftAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_35 /* RightAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_36 /* TopAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_37 /* TrailingAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_38 /* WidthAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthAnchorTests.swift; sourceTree = "<group>"; };
-		OBJ_39 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_43 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = SOURCE_ROOT; };
-		OBJ_44 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
-		OBJ_45 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		OBJ_46 /* SketchKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SketchKit.podspec; sourceTree = "<group>"; };
-		OBJ_47 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_48 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
-		OBJ_49 /* _config.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = _config.yml; sourceTree = "<group>"; };
-		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		"SketchKit::SketchKit::Product" /* SketchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SketchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"SketchKit::SketchKitTests::Product" /* SketchKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SketchKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		OBJ_60 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_98 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_99 /* SketchKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		DD0E3D2C253AB76E00EC142E /* UILayoutGuide */ = {
-			isa = PBXGroup;
-			children = (
-				DD1BED16253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift */,
-				DD1BED34253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift */,
-				DD1BED42253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift */,
-				DD1BED20253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift */,
-				DD1BED2A253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift */,
-				DD1BED56253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift */,
-				DD0E3D2D253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift */,
-				DD1BED68253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift */,
-				DD1BED4C253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift */,
-			);
-			path = UILayoutGuide;
-			sourceTree = "<group>";
-		};
-		DD1BED6E253B3DDE0020B997 /* Addons */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_29 /* Anchor+AddonsTests.swift */,
-				DD1BED73253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift */,
-			);
-			path = Addons;
-			sourceTree = "<group>";
-		};
-		DDEF42EE25394420000DCC3B /* SafeArea */ = {
-			isa = PBXGroup;
-			children = (
-				DDEF42F325394488000DCC3B /* SafeBottomAnchorTests.swift */,
-				DDEF42E725394392000DCC3B /* SafeCenterAnchorTests.swift */,
-				DDEF4306253A9AF5000DCC3B /* SafeHeightAnchorTests.swift */,
-				DDEF4314253A9E67000DCC3B /* SafeLeadingAnchorTests.swift */,
-				DDEF431E253AA05E000DCC3B /* SafeLeftAnchorTests.swift */,
-				DDEF4328253AA203000DCC3B /* SafeRightAnchorTests.swift */,
-				DDEF4332253AA28C000DCC3B /* SafeTopAnchorTests.swift */,
-				DDEF4338253AA320000DCC3B /* SafeTrailingAnchorTests.swift */,
-				DDEF433E253AA3BB000DCC3B /* SafeWidthAnchorTests.swift */,
-			);
-			path = SafeArea;
-			sourceTree = "<group>";
-		};
-		DDEF4305253A9AAA000DCC3B /* LayoutGuide */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_30 /* BottomAnchorTests.swift */,
-				OBJ_31 /* CenterAnchorTests.swift */,
-				OBJ_32 /* HeightAnchorTests.swift */,
-				OBJ_33 /* LeadingAnchorTests.swift */,
-				OBJ_34 /* LeftAnchorTests.swift */,
-				OBJ_35 /* RightAnchorTests.swift */,
-				OBJ_36 /* TopAnchorTests.swift */,
-				OBJ_37 /* TrailingAnchorTests.swift */,
-				OBJ_38 /* WidthAnchorTests.swift */,
-			);
-			path = LayoutGuide;
-			sourceTree = "<group>";
-		};
-		OBJ_15 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_16 /* SketchKitTests */,
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_16 /* SketchKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_39 /* XCTestManifests.swift */,
-				DD1BED6E253B3DDE0020B997 /* Addons */,
-				DD0E3D2C253AB76E00EC142E /* UILayoutGuide */,
-				OBJ_28 /* UIView */,
-			);
-			name = SketchKitTests;
-			path = Tests/SketchKitTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_28 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				DDEF4305253A9AAA000DCC3B /* LayoutGuide */,
-				DDEF42EE25394420000DCC3B /* SafeArea */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		OBJ_40 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"SketchKit::SketchKit::Product" /* SketchKit.framework */,
-				"SketchKit::SketchKitTests::Product" /* SketchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_5 = {
-			isa = PBXGroup;
-			children = (
-				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Sources */,
-				OBJ_15 /* Tests */,
-				OBJ_40 /* Products */,
-				OBJ_43 /* images */,
-				OBJ_44 /* CODE_OF_CONDUCT.md */,
-				OBJ_45 /* LICENSE */,
-				OBJ_46 /* SketchKit.podspec */,
-				OBJ_47 /* README.md */,
-				OBJ_48 /* CONTRIBUTING.md */,
-				OBJ_49 /* _config.yml */,
-			);
-			sourceTree = "<group>";
-		};
-		OBJ_7 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_8 /* SketchKit */,
-			);
-			path = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_8 /* SketchKit */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* Extensions */,
-				OBJ_13 /* SketchKitLayoutGuideDSL.swift */,
-				OBJ_14 /* SketchKitViewDSL.swift */,
-			);
-			path = SketchKit;
-			sourceTree = "<group>";
-		};
-		OBJ_9 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_10 /* Anchors+SafeArea.swift */,
-				OBJ_11 /* UILayoutGuide+Anchors.swift */,
-				OBJ_12 /* UIView+Anchors.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		"SketchKit::SketchKit" /* SketchKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_51 /* Build configuration list for PBXNativeTarget "SketchKit" */;
-			buildPhases = (
-				OBJ_54 /* Sources */,
-				OBJ_60 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SketchKit;
-			productName = SketchKit;
-			productReference = "SketchKit::SketchKit::Product" /* SketchKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"SketchKit::SketchKitTests" /* SketchKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_73 /* Build configuration list for PBXNativeTarget "SketchKitTests" */;
-			buildPhases = (
-				OBJ_76 /* Sources */,
-				OBJ_98 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_100 /* PBXTargetDependency */,
-			);
-			name = SketchKitTests;
-			productName = SketchKitTests;
-			productReference = "SketchKit::SketchKitTests::Product" /* SketchKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"SketchKit::SwiftPMPackageDescription" /* SketchKitPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_62 /* Build configuration list for PBXNativeTarget "SketchKitPackageDescription" */;
-			buildPhases = (
-				OBJ_65 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SketchKitPackageDescription;
-			productName = SketchKitPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		OBJ_1 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftMigration = 9999;
-				LastUpgradeCheck = 9999;
-			};
-			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SketchKit" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_40 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				"SketchKit::SketchKit" /* SketchKit */,
-				"SketchKit::SwiftPMPackageDescription" /* SketchKitPackageDescription */,
-				"SketchKit::SketchKitPackageTests::ProductTarget" /* SketchKitPackageTests */,
-				"SketchKit::SketchKitTests" /* SketchKitTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		OBJ_54 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_55 /* Anchors+SafeArea.swift in Sources */,
-				OBJ_56 /* UILayoutGuide+Anchors.swift in Sources */,
-				OBJ_57 /* UIView+Anchors.swift in Sources */,
-				OBJ_58 /* SketchKitLayoutGuideDSL.swift in Sources */,
-				OBJ_59 /* SketchKitViewDSL.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_65 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_66 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_76 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				DD1BED69253B3D990020B997 /* UILayoutGuide+TrailingAnchorTests.swift in Sources */,
-				DD1BED57253B3BD10020B997 /* UILayoutGuide+RightAnchorTests.swift in Sources */,
-				OBJ_87 /* Anchor+AddonsTests.swift in Sources */,
-				DDEF4315253A9E67000DCC3B /* SafeLeadingAnchorTests.swift in Sources */,
-				OBJ_88 /* BottomAnchorTests.swift in Sources */,
-				DD1BED21253B2FE40020B997 /* UILayoutGuide+LeadingAnchorTests.swift in Sources */,
-				DD1BED43253B32E20020B997 /* UILayoutGuide+HeightAnchorTests.swift in Sources */,
-				DD0E3D2E253AB7F000EC142E /* UILayoutGuide+TopAnchorTests.swift in Sources */,
-				DDEF42F425394488000DCC3B /* SafeBottomAnchorTests.swift in Sources */,
-				DD1BED35253B32140020B997 /* UILayoutGuide+CenterAnchorTests.swift in Sources */,
-				OBJ_89 /* CenterAnchorTests.swift in Sources */,
-				DDEF4333253AA28C000DCC3B /* SafeTopAnchorTests.swift in Sources */,
-				OBJ_90 /* HeightAnchorTests.swift in Sources */,
-				DD1BED74253B3EF50020B997 /* UILayoutGuide+AddonsTests.swift in Sources */,
-				DDEF42E825394392000DCC3B /* SafeCenterAnchorTests.swift in Sources */,
-				DDEF4307253A9AF5000DCC3B /* SafeHeightAnchorTests.swift in Sources */,
-				OBJ_91 /* LeadingAnchorTests.swift in Sources */,
-				DD1BED2B253B30BC0020B997 /* UILayoutGuide+LeftAnchorTests.swift in Sources */,
-				OBJ_92 /* LeftAnchorTests.swift in Sources */,
-				DDEF4339253AA320000DCC3B /* SafeTrailingAnchorTests.swift in Sources */,
-				OBJ_93 /* RightAnchorTests.swift in Sources */,
-				DD1BED4D253B3A220020B997 /* UILayoutGuide+WidthAnchorTests.swift in Sources */,
-				OBJ_94 /* TopAnchorTests.swift in Sources */,
-				DDEF431F253AA05E000DCC3B /* SafeLeftAnchorTests.swift in Sources */,
-				DDEF4329253AA203000DCC3B /* SafeRightAnchorTests.swift in Sources */,
-				OBJ_95 /* TrailingAnchorTests.swift in Sources */,
-				OBJ_96 /* WidthAnchorTests.swift in Sources */,
-				DDEF433F253AA3BB000DCC3B /* SafeWidthAnchorTests.swift in Sources */,
-				DD1BED17253B2D9A0020B997 /* UILayoutGuide+BottomAnchorTests.swift in Sources */,
-				OBJ_97 /* XCTestManifests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		OBJ_100 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SketchKit::SketchKit" /* SketchKit */;
-			targetProxy = DDBD10562455D5D600D4727B /* PBXContainerItemProxy */;
-		};
-		OBJ_71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SketchKit::SketchKitTests" /* SketchKitTests */;
-			targetProxy = DDEF42EB25394393000DCC3B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		OBJ_3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"SWIFT_PACKAGE=1",
-					"DEBUG=1",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				USE_HEADERMAP = NO;
-			};
-			name = Debug;
-		};
-		OBJ_4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"SWIFT_PACKAGE=1",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				USE_HEADERMAP = NO;
-			};
-			name = Release;
-		};
-		OBJ_52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SketchKit.xcodeproj/SketchKit_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SketchKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SketchKit;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SketchKit.xcodeproj/SketchKit_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SketchKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SketchKit;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_63 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.0.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.0.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_69 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_70 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_74 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SketchKit.xcodeproj/SketchKitTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SketchKitTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_75 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SketchKit.xcodeproj/SketchKitTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SketchKitTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		OBJ_2 /* Build configuration list for PBXProject "SketchKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_3 /* Debug */,
-				OBJ_4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_51 /* Build configuration list for PBXNativeTarget "SketchKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_52 /* Debug */,
-				OBJ_53 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_62 /* Build configuration list for PBXNativeTarget "SketchKitPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_63 /* Debug */,
-				OBJ_64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_68 /* Build configuration list for PBXAggregateTarget "SketchKitPackageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_69 /* Debug */,
-				OBJ_70 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_73 /* Build configuration list for PBXNativeTarget "SketchKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_74 /* Debug */,
-				OBJ_75 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = OBJ_1 /* Project object */;
+   archiveVersion = "1";
+   objectVersion = "46";
+   objects = {
+      "OBJ_1" = {
+         isa = "PBXProject";
+         attributes = {
+            LastSwiftMigration = "9999";
+            LastUpgradeCheck = "9999";
+         };
+         buildConfigurationList = "OBJ_2";
+         compatibilityVersion = "Xcode 3.2";
+         developmentRegion = "en";
+         hasScannedForEncodings = "0";
+         knownRegions = (
+            "en"
+         );
+         mainGroup = "OBJ_5";
+         productRefGroup = "OBJ_52";
+         projectDirPath = ".";
+         targets = (
+            "SketchKit::SketchKit",
+            "SketchKit::SwiftPMPackageDescription",
+            "SketchKit::SketchKitPackageTests::ProductTarget",
+            "SketchKit::SketchKitTests"
+         );
+      };
+      "OBJ_10" = {
+         isa = "PBXFileReference";
+         path = "Anchors+SafeArea.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_100" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_29";
+      };
+      "OBJ_101" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_32";
+      };
+      "OBJ_102" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_33";
+      };
+      "OBJ_103" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_34";
+      };
+      "OBJ_104" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_35";
+      };
+      "OBJ_105" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_36";
+      };
+      "OBJ_106" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_37";
+      };
+      "OBJ_107" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_38";
+      };
+      "OBJ_108" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_39";
+      };
+      "OBJ_109" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_40";
+      };
+      "OBJ_11" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+Anchors.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_110" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_42";
+      };
+      "OBJ_111" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_43";
+      };
+      "OBJ_112" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_44";
+      };
+      "OBJ_113" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_45";
+      };
+      "OBJ_114" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_46";
+      };
+      "OBJ_115" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_47";
+      };
+      "OBJ_116" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_48";
+      };
+      "OBJ_117" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_49";
+      };
+      "OBJ_118" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_50";
+      };
+      "OBJ_119" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_51";
+      };
+      "OBJ_12" = {
+         isa = "PBXFileReference";
+         path = "UIView+Anchors.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_120" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_121"
+         );
+      };
+      "OBJ_121" = {
+         isa = "PBXBuildFile";
+         fileRef = "SketchKit::SketchKit::Product";
+      };
+      "OBJ_122" = {
+         isa = "PBXTargetDependency";
+         target = "SketchKit::SketchKit";
+      };
+      "OBJ_13" = {
+         isa = "PBXFileReference";
+         path = "SketchKitLayoutGuideDSL.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_14" = {
+         isa = "PBXFileReference";
+         path = "SketchKitViewDSL.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_15" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_16"
+         );
+         name = "Tests";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_16" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_17",
+            "OBJ_20",
+            "OBJ_30",
+            "OBJ_51"
+         );
+         name = "SketchKitTests";
+         path = "Tests/SketchKitTests";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_17" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_18",
+            "OBJ_19"
+         );
+         name = "Addons";
+         path = "Addons";
+         sourceTree = "<group>";
+      };
+      "OBJ_18" = {
+         isa = "PBXFileReference";
+         path = "Anchor+AddonsTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_19" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+AddonsTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_2" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_3",
+            "OBJ_4"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_20" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_21",
+            "OBJ_22",
+            "OBJ_23",
+            "OBJ_24",
+            "OBJ_25",
+            "OBJ_26",
+            "OBJ_27",
+            "OBJ_28",
+            "OBJ_29"
+         );
+         name = "UILayoutGuide";
+         path = "UILayoutGuide";
+         sourceTree = "<group>";
+      };
+      "OBJ_21" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+BottomAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_22" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+CenterAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_23" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+HeightAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_24" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+LeadingAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_25" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+LeftAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_26" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+RightAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_27" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+TopAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_28" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+TrailingAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_29" = {
+         isa = "PBXFileReference";
+         path = "UILayoutGuide+WidthAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_3" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "NO";
+            DEBUG_INFORMATION_FORMAT = "dwarf";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            ENABLE_NS_ASSERTIONS = "YES";
+            GCC_OPTIMIZATION_LEVEL = "0";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1",
+               "DEBUG=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            ONLY_ACTIVE_ARCH = "YES";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE",
+               "DEBUG"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Debug";
+      };
+      "OBJ_30" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_31",
+            "OBJ_41"
+         );
+         name = "UIView";
+         path = "UIView";
+         sourceTree = "<group>";
+      };
+      "OBJ_31" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_32",
+            "OBJ_33",
+            "OBJ_34",
+            "OBJ_35",
+            "OBJ_36",
+            "OBJ_37",
+            "OBJ_38",
+            "OBJ_39",
+            "OBJ_40"
+         );
+         name = "LayoutGuide";
+         path = "LayoutGuide";
+         sourceTree = "<group>";
+      };
+      "OBJ_32" = {
+         isa = "PBXFileReference";
+         path = "BottomAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_33" = {
+         isa = "PBXFileReference";
+         path = "CenterAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_34" = {
+         isa = "PBXFileReference";
+         path = "HeightAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_35" = {
+         isa = "PBXFileReference";
+         path = "LeadingAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_36" = {
+         isa = "PBXFileReference";
+         path = "LeftAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_37" = {
+         isa = "PBXFileReference";
+         path = "RightAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_38" = {
+         isa = "PBXFileReference";
+         path = "TopAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_39" = {
+         isa = "PBXFileReference";
+         path = "TrailingAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_4" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "YES";
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            GCC_OPTIMIZATION_LEVEL = "s";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Release";
+      };
+      "OBJ_40" = {
+         isa = "PBXFileReference";
+         path = "WidthAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_41" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_42",
+            "OBJ_43",
+            "OBJ_44",
+            "OBJ_45",
+            "OBJ_46",
+            "OBJ_47",
+            "OBJ_48",
+            "OBJ_49",
+            "OBJ_50"
+         );
+         name = "SafeArea";
+         path = "SafeArea";
+         sourceTree = "<group>";
+      };
+      "OBJ_42" = {
+         isa = "PBXFileReference";
+         path = "SafeBottomAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_43" = {
+         isa = "PBXFileReference";
+         path = "SafeCenterAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_44" = {
+         isa = "PBXFileReference";
+         path = "SafeHeightAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_45" = {
+         isa = "PBXFileReference";
+         path = "SafeLeadingAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_46" = {
+         isa = "PBXFileReference";
+         path = "SafeLeftAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_47" = {
+         isa = "PBXFileReference";
+         path = "SafeRightAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_48" = {
+         isa = "PBXFileReference";
+         path = "SafeTopAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_49" = {
+         isa = "PBXFileReference";
+         path = "SafeTrailingAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_5" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_6",
+            "OBJ_7",
+            "OBJ_15",
+            "OBJ_52",
+            "OBJ_55",
+            "OBJ_56",
+            "OBJ_57",
+            "OBJ_58",
+            "OBJ_59",
+            "OBJ_60",
+            "OBJ_61",
+            "OBJ_62"
+         );
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_50" = {
+         isa = "PBXFileReference";
+         path = "SafeWidthAnchorTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_51" = {
+         isa = "PBXFileReference";
+         path = "XCTestManifests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_52" = {
+         isa = "PBXGroup";
+         children = (
+            "SketchKit::SketchKit::Product",
+            "SketchKit::SketchKitTests::Product"
+         );
+         name = "Products";
+         path = "";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "OBJ_55" = {
+         isa = "PBXFileReference";
+         path = "images";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_56" = {
+         isa = "PBXFileReference";
+         path = "CODE_OF_CONDUCT.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_57" = {
+         isa = "PBXFileReference";
+         path = "LICENSE";
+         sourceTree = "<group>";
+      };
+      "OBJ_58" = {
+         isa = "PBXFileReference";
+         path = "SketchKit.podspec";
+         sourceTree = "<group>";
+      };
+      "OBJ_59" = {
+         isa = "PBXFileReference";
+         path = "README.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_6" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         path = "Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_60" = {
+         isa = "PBXFileReference";
+         path = "CONTRIBUTING.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_61" = {
+         isa = "PBXFileReference";
+         path = "_config.yml";
+         sourceTree = "<group>";
+      };
+      "OBJ_62" = {
+         isa = "PBXFileReference";
+         path = "Gemfile";
+         sourceTree = "<group>";
+      };
+      "OBJ_64" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_65",
+            "OBJ_66"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_65" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "SketchKit.xcodeproj/SketchKit_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "9.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "SketchKit";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SketchKit";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_66" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "SketchKit.xcodeproj/SketchKit_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "9.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "SketchKit";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SketchKit";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_67" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_68",
+            "OBJ_69",
+            "OBJ_70",
+            "OBJ_71",
+            "OBJ_72"
+         );
+      };
+      "OBJ_68" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_10";
+      };
+      "OBJ_69" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_11";
+      };
+      "OBJ_7" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_8"
+         );
+         name = "Sources";
+         path = "Sources";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_70" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_12";
+      };
+      "OBJ_71" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_13";
+      };
+      "OBJ_72" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_14";
+      };
+      "OBJ_73" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_75" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_76",
+            "OBJ_77"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_76" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.0.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_77" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.0.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_78" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_79"
+         );
+      };
+      "OBJ_79" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_6";
+      };
+      "OBJ_8" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_9",
+            "OBJ_13",
+            "OBJ_14"
+         );
+         name = "SketchKit";
+         path = "SketchKit";
+         sourceTree = "<group>";
+      };
+      "OBJ_81" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_82",
+            "OBJ_83"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_82" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_83" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_84" = {
+         isa = "PBXTargetDependency";
+         target = "SketchKit::SketchKitTests";
+      };
+      "OBJ_86" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_87",
+            "OBJ_88"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_87" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "SketchKit.xcodeproj/SketchKitTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SketchKitTests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_88" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "SketchKit.xcodeproj/SketchKitTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SketchKitTests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_89" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_90",
+            "OBJ_91",
+            "OBJ_92",
+            "OBJ_93",
+            "OBJ_94",
+            "OBJ_95",
+            "OBJ_96",
+            "OBJ_97",
+            "OBJ_98",
+            "OBJ_99",
+            "OBJ_100",
+            "OBJ_101",
+            "OBJ_102",
+            "OBJ_103",
+            "OBJ_104",
+            "OBJ_105",
+            "OBJ_106",
+            "OBJ_107",
+            "OBJ_108",
+            "OBJ_109",
+            "OBJ_110",
+            "OBJ_111",
+            "OBJ_112",
+            "OBJ_113",
+            "OBJ_114",
+            "OBJ_115",
+            "OBJ_116",
+            "OBJ_117",
+            "OBJ_118",
+            "OBJ_119"
+         );
+      };
+      "OBJ_9" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_10",
+            "OBJ_11",
+            "OBJ_12"
+         );
+         name = "Extensions";
+         path = "Extensions";
+         sourceTree = "<group>";
+      };
+      "OBJ_90" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_18";
+      };
+      "OBJ_91" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_19";
+      };
+      "OBJ_92" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_21";
+      };
+      "OBJ_93" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_22";
+      };
+      "OBJ_94" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_23";
+      };
+      "OBJ_95" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_24";
+      };
+      "OBJ_96" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_25";
+      };
+      "OBJ_97" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_26";
+      };
+      "OBJ_98" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_27";
+      };
+      "OBJ_99" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_28";
+      };
+      "SketchKit::SketchKit" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_64";
+         buildPhases = (
+            "OBJ_67",
+            "OBJ_73"
+         );
+         dependencies = (
+         );
+         name = "SketchKit";
+         productName = "SketchKit";
+         productReference = "SketchKit::SketchKit::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "SketchKit::SketchKit::Product" = {
+         isa = "PBXFileReference";
+         path = "SketchKit.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "SketchKit::SketchKitPackageTests::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_81";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_84"
+         );
+         name = "SketchKitPackageTests";
+         productName = "SketchKitPackageTests";
+      };
+      "SketchKit::SketchKitTests" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_86";
+         buildPhases = (
+            "OBJ_89",
+            "OBJ_120"
+         );
+         dependencies = (
+            "OBJ_122"
+         );
+         name = "SketchKitTests";
+         productName = "SketchKitTests";
+         productReference = "SketchKit::SketchKitTests::Product";
+         productType = "com.apple.product-type.bundle.unit-test";
+      };
+      "SketchKit::SketchKitTests::Product" = {
+         isa = "PBXFileReference";
+         path = "SketchKitTests.xctest";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "SketchKit::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_75";
+         buildPhases = (
+            "OBJ_78"
+         );
+         dependencies = (
+         );
+         name = "SketchKitPackageDescription";
+         productName = "SketchKitPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+   };
+   rootObject = "OBJ_1";
 }
