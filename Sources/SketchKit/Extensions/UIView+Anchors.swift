@@ -10,6 +10,12 @@ import UIKit
 
 public extension UIView {
 
+    /// A layout anchor representing the top edge of the view’s frame.
+    ///
+    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func topAnchor(equalTo anchor: NSLayoutYAxisAnchor,
                    constant: CGFloat = 0,
@@ -20,6 +26,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the top edge of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func topAnchor(greaterThanOrEqualTo anchor: NSLayoutYAxisAnchor,
                    constant: CGFloat = 0,
@@ -30,6 +42,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the top edge of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func topAnchor(lessThanOrEqualTo anchor: NSLayoutYAxisAnchor,
                    constant: CGFloat = 0,
@@ -40,6 +58,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the bottom edge of the view’s frame.
+    ///
+    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func bottomAnchor(equalTo anchor: NSLayoutYAxisAnchor,
                       constant: CGFloat = 0,
@@ -50,6 +74,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the bottom edge of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func bottomAnchor(greaterThanOrEqualTo anchor: NSLayoutYAxisAnchor,
                       constant: CGFloat = 0,
@@ -60,6 +90,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the bottom edge of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func bottomAnchor(lessThanOrEqualTo anchor: NSLayoutYAxisAnchor,
                       constant: CGFloat = 0,
@@ -70,6 +106,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the leading edge of the view’s frame.
+    ///
+    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func leadingAnchor(equalTo anchor: NSLayoutXAxisAnchor,
                        constant: CGFloat = 0,
@@ -80,6 +122,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the leading edge of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func leadingAnchor(greaterThanOrEqualTo anchor: NSLayoutXAxisAnchor,
                        constant: CGFloat = 0,
@@ -90,6 +138,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the leading edge of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func leadingAnchor(lessThanOrEqualTo anchor: NSLayoutXAxisAnchor,
                        constant: CGFloat = 0,
@@ -100,6 +154,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the left edge of the view’s frame.
+    ///
+    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func leftAnchor(equalTo anchor: NSLayoutXAxisAnchor,
                     constant: CGFloat = 0,
@@ -110,6 +170,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the left edge of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func leftAnchor(greaterThanOrEqualTo anchor: NSLayoutXAxisAnchor,
                     constant: CGFloat = 0,
@@ -120,6 +186,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the left edge of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func leftAnchor(lessThanOrEqualTo anchor: NSLayoutXAxisAnchor,
                     constant: CGFloat = 0,
@@ -130,6 +202,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the trailing edge of the view’s frame.
+    ///
+    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func trailingAnchor(equalTo anchor: NSLayoutXAxisAnchor,
                         constant: CGFloat = 0,
@@ -140,6 +218,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the trailing edge of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func trailingAnchor(greaterThanOrEqualTo anchor: NSLayoutXAxisAnchor,
                         constant: CGFloat = 0,
@@ -150,6 +234,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the trailing edge of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func trailingAnchor(lessThanOrEqualTo anchor: NSLayoutXAxisAnchor,
                         constant: CGFloat = 0,
@@ -160,6 +250,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the right edge of the view’s frame.
+    ///
+    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func rightAnchor(equalTo anchor: NSLayoutXAxisAnchor,
                      constant: CGFloat = 0,
@@ -170,6 +266,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the right edge of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func rightAnchor(greaterThanOrEqualTo anchor: NSLayoutXAxisAnchor,
                      constant: CGFloat = 0,
@@ -180,6 +282,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the right edge of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func rightAnchor(lessThanOrEqualTo anchor: NSLayoutXAxisAnchor,
                      constant: CGFloat = 0,
@@ -190,6 +298,11 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the height of the view’s frame.
+    ///
+    /// - Parameter equalToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func heightAnchor(equalToConstant height: CGFloat,
                       priority: UILayoutPriority = UILayoutPriority.required) -> Self {
@@ -199,6 +312,11 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the height of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func heightAnchor(greaterThanOrEqualToConstant height: CGFloat,
                       priority: UILayoutPriority = UILayoutPriority.required) -> Self {
@@ -208,6 +326,11 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the height of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func heightAnchor(lessThanOrEqualToConstant height: CGFloat,
                       priority: UILayoutPriority = UILayoutPriority.required) -> Self {
@@ -217,27 +340,59 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the height of the view’s frame.
+    ///
+    /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Parameter multiplier: The multiplier constant for the constraint.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
-    func heightAnchor(equalTo layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
+    func heightAnchor(equalTo layoutDimension: NSLayoutDimension,
+                      priority: UILayoutPriority = UILayoutPriority.required,
+                      multiplier: CGFloat = 1.0) -> Self {
         let constraint = heightAnchor.constraint(equalTo: layoutDimension, multiplier: multiplier)
+        constraint.priority = priority
         constraint.isActive = true
         return self
     }
 
+    /// A layout anchor representing the height of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Parameter multiplier: The multiplier constant for the constraint.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
-    func heightAnchor(lessThanOrEqualTo layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
+    func heightAnchor(lessThanOrEqualTo layoutDimension: NSLayoutDimension,
+                      priority: UILayoutPriority = UILayoutPriority.required,
+                      multiplier: CGFloat = 1.0) -> Self {
         let constraint = heightAnchor.constraint(lessThanOrEqualTo: layoutDimension, multiplier: multiplier)
+        constraint.priority = priority
         constraint.isActive = true
         return self
     }
 
+    /// A layout anchor representing the height of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Parameter multiplier: The multiplier constant for the constraint.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
-    func heightAnchor(greaterThanOrEqualTo layoutDimension: NSLayoutDimension, multiplier: CGFloat = 1.0) -> Self {
+    func heightAnchor(greaterThanOrEqualTo layoutDimension: NSLayoutDimension,
+                      priority: UILayoutPriority = UILayoutPriority.required,
+                      multiplier: CGFloat = 1.0) -> Self {
         let constraint = heightAnchor.constraint(greaterThanOrEqualTo: layoutDimension, multiplier: multiplier)
+        constraint.priority = priority
         constraint.isActive = true
         return self
     }
 
+    /// A layout anchor representing the width of the view’s frame.
+    ///
+    /// - Parameter equalToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func widthAnchor(equalToConstant width: CGFloat,
                      priority: UILayoutPriority = UILayoutPriority.required) -> Self {
@@ -247,6 +402,11 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the width of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func widthAnchor(greaterThanOrEqualToConstant width: CGFloat,
                      priority: UILayoutPriority = UILayoutPriority.required) -> Self {
@@ -256,6 +416,11 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the width of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated
     @discardableResult
     func widthAnchor(lessThanOrEqualToConstant width: CGFloat,
                      priority: UILayoutPriority = UILayoutPriority.required) -> Self {
@@ -265,6 +430,13 @@ public extension UIView {
         return self
     }
 
+
+    /// A layout anchor representing the width of the view’s frame.
+    ///
+    /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Parameter multiplier: The multiplier constant for the constraint.
+    /// - Returns: The current UIView with the applied constraint and activated.
     @discardableResult
     func widthAnchor(equalTo layoutDimension: NSLayoutDimension,
                      priority: UILayoutPriority = UILayoutPriority.required,
@@ -275,6 +447,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the width of the view’s frame.
+    ///
+    /// - Parameter lessThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Parameter multiplier: The multiplier constant for the constraint.
+    /// - Returns: The current UIView with the applied constraint and activated.
     @discardableResult
     func widthAnchor(lessThanOrEqualTo layoutDimension: NSLayoutDimension,
                      priority: UILayoutPriority = UILayoutPriority.required,
@@ -285,6 +463,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the width of the view’s frame.
+    ///
+    /// - Parameter greaterThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Parameter multiplier: The multiplier constant for the constraint.
+    /// - Returns: The current UIView with the applied constraint and activated.
     @discardableResult
     func widthAnchor(greaterThanOrEqualTo layoutDimension: NSLayoutDimension,
                      priority: UILayoutPriority = UILayoutPriority.required,
@@ -295,6 +479,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the horizontal center of the view’s frame.
+    ///
+    /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated.
     @discardableResult
     func centerXAnchor(equalTo anchor: NSLayoutXAxisAnchor,
                        constant: CGFloat = 0,
@@ -305,6 +495,12 @@ public extension UIView {
         return self
     }
 
+    /// A layout anchor representing the vertical center of the view’s frame.
+    ///
+    /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter constant: The constant offset for the constraint.
+    /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
+    /// - Returns: The current UIView with the applied constraint and activated.
     @discardableResult
     func centerYAnchor(equalTo anchor: NSLayoutYAxisAnchor,
                        constant: CGFloat = 0,
@@ -318,6 +514,11 @@ public extension UIView {
 
 public extension UIView {
 
+    ///
+    ///
+    /// - Parameter to:
+    /// - Parameter withInset:
+    /// - Returns: The current UIView with the applied constraint and activated.
     @discardableResult
     func inset(to view: UIView, withInset inset: UIEdgeInsets? = nil) -> Self {
         return self
@@ -327,6 +528,10 @@ public extension UIView {
             .trailingAnchor(equalTo: view.trailingAnchor, constant: -(inset?.right ?? 0))
     }
 
+    ///
+    ///
+    /// - Parameter constant: 
+    /// - Returns: The current UIView with the applied constraint and activated.
     @discardableResult
     func aspectRadio(constant: CGFloat) -> Self {
         let constraint = widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: constant)
