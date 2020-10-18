@@ -79,7 +79,11 @@ final class HeightAnchorTests: XCTestCase {
 
         XCTAssertEqual(constraints.count, 1, "Should have 1 constraint installed")
         XCTAssertEqual(constraints[0].constant, 20, "Should be 20")
-        XCTAssertEqual(view.frame.height, 20, "Should be 20")
+        if #available(iOS 11.0, tvOS 11.0, *) {
+            XCTAssertEqual(view.frame.height, 20, "Should be 20")
+        } else {
+            XCTAssertEqual(view.frame.height, 0, "Should be 0")
+        }
         XCTAssertEqual(constraints[0].relation, .lessThanOrEqual, "Should be lessThanOrEqual")
     }
 

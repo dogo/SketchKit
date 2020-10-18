@@ -94,7 +94,11 @@ final class SafeWidthAnchorTests: XCTestCase {
 
         XCTAssertEqual(constraints.count, 5, "Should have 5 constraints installed")
         XCTAssertEqual(constraints.first { $0.firstAttribute == .width }?.constant, 20, "Should be 20")
-        XCTAssertEqual(viewOne.frame.width, 20, "Should be 20")
+        if #available(iOS 11.0, tvOS 11.0, *) {
+            XCTAssertEqual(viewOne.frame.width, 20, "Should be 20")
+        } else {
+            XCTAssertEqual(viewOne.frame.width, 0, "Should be 0")
+        }
         XCTAssertEqual(constraints.first { $0.firstAttribute == .width && $0.relation == .lessThanOrEqual }?.relation, .lessThanOrEqual, "Should be lessThanOrEqual")
     }
 
