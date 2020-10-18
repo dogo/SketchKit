@@ -528,9 +528,9 @@ public extension UIView {
             .trailingAnchor(equalTo: view.trailingAnchor, constant: -(inset?.right ?? 0))
     }
 
+    /// A layout anchor representing the aspect ratio of a UIView.
     ///
-    ///
-    /// - Parameter constant: 
+    /// - Parameter constant: A constant representing the value of the aspect ratio to be applied.
     /// - Returns: The current UIView with the applied constraint and activated.
     @discardableResult
     func aspectRadio(constant: CGFloat) -> Self {
