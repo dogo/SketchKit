@@ -8,6 +8,7 @@
 import XCTest
 @testable import SketchKit
 
+@available(iOS 11.0, tvOS 11.0, *)
 final class SafeWidthAnchorTests: XCTestCase {
 
     var container: UIView!
