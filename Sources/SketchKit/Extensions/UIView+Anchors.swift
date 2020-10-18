@@ -514,10 +514,10 @@ public extension UIView {
 
 public extension UIView {
 
+    /// A layout anchor to set inset distances for views.
     ///
-    ///
-    /// - Parameter to:
-    /// - Parameter withInset:
+    /// - Parameter to: The target UIView to apply the edge insets.
+    /// - Parameter withInset: Adjusts a rectangle by the given edge insets.
     /// - Returns: The current UIView with the applied constraint and activated.
     @discardableResult
     func inset(to view: UIView, withInset inset: UIEdgeInsets? = nil) -> Self {
