@@ -430,7 +430,6 @@ public extension UIView {
         return self
     }
 
-
     /// A layout anchor representing the width of the view’s frame.
     ///
     /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.

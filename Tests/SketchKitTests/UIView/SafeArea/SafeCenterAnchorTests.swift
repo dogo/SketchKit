@@ -73,4 +73,3 @@ final class SafeCenterAnchorTests: XCTestCase {
         ("testSafeCenterYAnchorTests", testSafeCenterYAnchorTests)
     ]
 }
-

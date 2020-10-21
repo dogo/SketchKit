@@ -62,6 +62,6 @@ final class CenterAnchorTests: XCTestCase {
 
     static var allTests = [
         ("testCenterXAnchor", testCenterXAnchor),
-        ("testCenterXAnchor", testCenterXAnchor),
+        ("testCenterXAnchor", testCenterXAnchor)
     ]
 }

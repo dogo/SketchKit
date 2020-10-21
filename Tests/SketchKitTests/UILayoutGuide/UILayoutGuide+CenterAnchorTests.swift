@@ -62,7 +62,6 @@ final class UILayoutGuide_CenterAnchorTests: XCTestCase {
 
     static var allTests = [
         ("testCenterXAnchor", testCenterXAnchor),
-        ("testCenterXAnchor", testCenterXAnchor),
+        ("testCenterXAnchor", testCenterXAnchor)
     ]
 }
-

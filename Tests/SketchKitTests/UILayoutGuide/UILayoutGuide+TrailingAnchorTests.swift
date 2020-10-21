@@ -85,4 +85,3 @@ final class UILayoutGuide_TrailingAnchorTests: XCTestCase {
         ("testTrailingAnchorLessThanOrEqualTo", testTrailingAnchorLessThanOrEqualTo)
     ]
 }
-

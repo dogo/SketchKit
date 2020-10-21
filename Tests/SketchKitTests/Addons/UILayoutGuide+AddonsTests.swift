@@ -96,4 +96,3 @@ final class UILayoutGuide_AnchorAddonsTests: XCTestCase {
         ("testAspectRadio", testAspectRadio)
     ]
 }
-

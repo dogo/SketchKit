@@ -89,4 +89,3 @@ final class SafeTopAnchorTests: XCTestCase {
         ("testSafeTopAnchorLessThanOrEqualTo", testSafeTopAnchorLessThanOrEqualTo)
     ]
 }
-

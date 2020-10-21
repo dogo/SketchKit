@@ -108,4 +108,3 @@ final class SafeHeightAnchorTests: XCTestCase {
         ("testSafeHeightAnchorLessThanOrEqualTo", testSafeHeightAnchorLessThanOrEqualTo)
     ]
 }
-
