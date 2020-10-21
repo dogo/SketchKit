@@ -23,6 +23,9 @@ xcuserdata/
 ## Mac OSX
 .DS_Store
 
+## Ruby
+Gemfile.lock
+
 ## Git
 *.orig
 
