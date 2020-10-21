@@ -124,6 +124,9 @@ final class MyViewController: UIViewController {
 }
 ```
 
+## Documentation
+The project documentation can be found ([here](https://dogo.github.io/SketchKit/index.html)) 
+
 ## Credits
 
 - Nicholas Babo ([@NickBabo](https://github.com/NickBabo)) thank you for the SketchKit logo,
