@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SketchKit'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = 'A lightweight autolayout DSL library for iOS.'
   s.homepage         = 'https://github.com/dogo/SketchKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
