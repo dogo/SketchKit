@@ -78,7 +78,7 @@ final class UILayoutGuide_AnchorAddonsTests: XCTestCase {
         scrollView.addLayoutGuide(containerLayoutGuide)
 
         containerLayoutGuide.layout.applyConstraint { guide in
-            guide.aspectRadio(constant: 250 / 2)
+            guide.aspectRatio(constant: 250 / 2)
         }
 
         let constraints = self.scrollView.constraints

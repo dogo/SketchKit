@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		216FB52125DC6EC9000AAF16 /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216FB52025DC6EC9000AAF16 /* Constrainable.swift */; };
+		216FB52725DC721B000AAF16 /* Constrainable+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216FB52625DC721B000AAF16 /* Constrainable+Anchors.swift */; };
 		OBJ_100 /* UILayoutGuide+WidthAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* UILayoutGuide+WidthAnchorTests.swift */; };
 		OBJ_101 /* BottomAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* BottomAnchorTests.swift */; };
 		OBJ_102 /* CenterAnchorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* CenterAnchorTests.swift */; };
@@ -43,9 +45,6 @@
 		OBJ_119 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* XCTestManifests.swift */; };
 		OBJ_121 /* SketchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SketchKit::SketchKit::Product" /* SketchKit.framework */; };
 		OBJ_68 /* Anchors+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Anchors+SafeArea.swift */; };
-		OBJ_69 /* UILayoutGuide+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* UILayoutGuide+Anchors.swift */; };
-		OBJ_70 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* UIView+Anchors.swift */; };
-		OBJ_71 /* SketchKitLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* SketchKitLayoutGuideDSL.swift */; };
 		OBJ_72 /* SketchKitViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* SketchKitViewDSL.swift */; };
 		OBJ_79 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_90 /* Anchor+AddonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Anchor+AddonsTests.swift */; };
@@ -78,10 +77,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		216FB52025DC6EC9000AAF16 /* Constrainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrainable.swift; sourceTree = "<group>"; };
+		216FB52625DC721B000AAF16 /* Constrainable+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constrainable+Anchors.swift"; sourceTree = "<group>"; };
 		OBJ_10 /* Anchors+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchors+SafeArea.swift"; sourceTree = "<group>"; };
-		OBJ_11 /* UILayoutGuide+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+Anchors.swift"; sourceTree = "<group>"; };
-		OBJ_12 /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
-		OBJ_13 /* SketchKitLayoutGuideDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchKitLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		OBJ_14 /* SketchKitViewDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchKitViewDSL.swift; sourceTree = "<group>"; };
 		OBJ_18 /* Anchor+AddonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchor+AddonsTests.swift"; sourceTree = "<group>"; };
 		OBJ_19 /* UILayoutGuide+AddonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+AddonsTests.swift"; sourceTree = "<group>"; };
@@ -231,7 +229,7 @@
 			path = SafeArea;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -247,7 +245,6 @@
 				OBJ_61 /* _config.yml */,
 				OBJ_62 /* Gemfile */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_52 /* Products */ = {
@@ -271,8 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Extensions */,
-				OBJ_13 /* SketchKitLayoutGuideDSL.swift */,
 				OBJ_14 /* SketchKitViewDSL.swift */,
+				216FB52025DC6EC9000AAF16 /* Constrainable.swift */,
 			);
 			path = SketchKit;
 			sourceTree = "<group>";
@@ -281,8 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_10 /* Anchors+SafeArea.swift */,
-				OBJ_11 /* UILayoutGuide+Anchors.swift */,
-				OBJ_12 /* UIView+Anchors.swift */,
+				216FB52625DC721B000AAF16 /* Constrainable+Anchors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,7 +349,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -372,9 +368,8 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_68 /* Anchors+SafeArea.swift in Sources */,
-				OBJ_69 /* UILayoutGuide+Anchors.swift in Sources */,
-				OBJ_70 /* UIView+Anchors.swift in Sources */,
-				OBJ_71 /* SketchKitLayoutGuideDSL.swift in Sources */,
+				216FB52125DC6EC9000AAF16 /* Constrainable.swift in Sources */,
+				216FB52725DC721B000AAF16 /* Constrainable+Anchors.swift in Sources */,
 				OBJ_72 /* SketchKitViewDSL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

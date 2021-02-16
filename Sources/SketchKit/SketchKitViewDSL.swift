@@ -8,27 +8,21 @@
 
 import UIKit
 
-public extension UIView {
-
-    /// Property to access the SketchKitViewDSL and be able to applyConstraints
-    var layout: SketchKitViewDSL {
-        return SketchKitViewDSL(view: self)
-    }
-}
-
 /// SketchKitViewDSL
 public class SketchKitViewDSL {
 
-    let view: UIView
+    let constrainable: Constrainable
 
-    init(view: UIView) {
-        self.view = view
+    init(constrainable: Constrainable) {
+        self.constrainable = constrainable
     }
 
     /// Apply all the constraints to a UIView using SketchKitLayoutGuideDSL
     /// - Parameter block: Block with all constraints to be applied to the current layoutGuide.
-    public func applyConstraint(_ block: ((UIView) -> Void)) {
-        self.view.translatesAutoresizingMaskIntoConstraints = false
-        block(self.view)
+    public func applyConstraint(_ block: ((Constrainable) -> Void)) {
+        if constrainable is UIView {
+            (constrainable as? UIView)?.translatesAutoresizingMaskIntoConstraints = false
+        }
+        block(self.constrainable)
     }
 }
