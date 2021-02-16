@@ -8,7 +8,7 @@
 import UIKit
 
 public extension Constrainable {
-    
+
     /// A layout anchor representing the top edge of the view’s frame.
     ///
     /// - Parameter equalTo: Vertical layout constraint.
@@ -24,7 +24,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the top edge of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
@@ -40,7 +40,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the top edge of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
@@ -56,7 +56,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the bottom edge of the view’s frame.
     ///
     /// - Parameter equalTo: Vertical layout constraint.
@@ -72,7 +72,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the bottom edge of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
@@ -88,7 +88,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the bottom edge of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
@@ -104,7 +104,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the leading edge of the view’s frame.
     ///
     /// - Parameter equalTo: Vertical layout constraint.
@@ -120,7 +120,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the leading edge of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
@@ -136,7 +136,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the leading edge of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
@@ -152,7 +152,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the left edge of the view’s frame.
     ///
     /// - Parameter equalTo: Vertical layout constraint.
@@ -168,7 +168,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the left edge of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
@@ -184,7 +184,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the left edge of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
@@ -200,7 +200,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the trailing edge of the view’s frame.
     ///
     /// - Parameter equalTo: Vertical layout constraint.
@@ -216,7 +216,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the trailing edge of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
@@ -232,7 +232,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the trailing edge of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
@@ -248,7 +248,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the right edge of the view’s frame.
     ///
     /// - Parameter equalTo: Vertical layout constraint.
@@ -264,7 +264,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the right edge of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
@@ -280,7 +280,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the right edge of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
@@ -296,7 +296,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the height of the view’s frame.
     ///
     /// - Parameter equalToConstant: A constant representing the size of the attribute associated with this dimension anchor.
@@ -310,7 +310,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the height of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
@@ -324,7 +324,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the height of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
@@ -338,7 +338,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the height of the view’s frame.
     ///
     /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
@@ -354,7 +354,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the height of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
@@ -370,7 +370,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the height of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
@@ -386,7 +386,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the width of the view’s frame.
     ///
     /// - Parameter equalToConstant: A constant representing the size of the attribute associated with this dimension anchor.
@@ -400,7 +400,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the width of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
@@ -414,7 +414,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the width of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
@@ -428,7 +428,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the width of the view’s frame.
     ///
     /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
@@ -444,7 +444,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the width of the view’s frame.
     ///
     /// - Parameter lessThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
@@ -460,7 +460,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the width of the view’s frame.
     ///
     /// - Parameter greaterThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
@@ -476,7 +476,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the horizontal center of the view’s frame.
     ///
     /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
@@ -492,7 +492,7 @@ public extension Constrainable {
         constraint.isActive = true
         return self
     }
-    
+
     /// A layout anchor representing the vertical center of the view’s frame.
     ///
     /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
@@ -511,7 +511,7 @@ public extension Constrainable {
 }
 
 public extension Constrainable {
-    
+
     /// A layout anchor to set inset distances for views.
     ///
     /// - Parameter to: The target UIView to apply the edge insets.
@@ -525,7 +525,7 @@ public extension Constrainable {
             .leadingAnchor(equalTo: view.leadingAnchor, constant: inset?.left ?? 0)
             .trailingAnchor(equalTo: view.trailingAnchor, constant: -(inset?.right ?? 0))
     }
-    
+
     /// A layout anchor representing the aspect ratio of a UIView.
     ///
     /// - Parameter constant: A constant representing the value of the aspect ratio to be applied.
