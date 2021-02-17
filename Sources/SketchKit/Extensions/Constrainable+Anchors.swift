@@ -3,6 +3,7 @@
 //  SketchKit
 //
 //  Created by Nick Babo on 16/02/21.
+//  Copyright (c) 2021 Anykey Entertrainment. All rights reserved.
 //
 
 import UIKit

@@ -46,7 +46,7 @@
 		OBJ_70 /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Constrainable.swift */; };
 		OBJ_71 /* Anchors+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Anchors+SafeArea.swift */; };
 		OBJ_72 /* Constrainable+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Constrainable+Anchors.swift */; };
-		OBJ_73 /* SketchKitViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* SketchKitViewDSL.swift */; };
+		OBJ_73 /* SketchKitDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* SketchKitDSL.swift */; };
 		OBJ_80 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_91 /* Anchor+AddonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Anchor+AddonsTests.swift */; };
 		OBJ_92 /* UILayoutGuide+AddonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* UILayoutGuide+AddonsTests.swift */; };
@@ -79,7 +79,7 @@
 /* Begin PBXFileReference section */
 		OBJ_11 /* Anchors+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchors+SafeArea.swift"; sourceTree = "<group>"; };
 		OBJ_12 /* Constrainable+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constrainable+Anchors.swift"; sourceTree = "<group>"; };
-		OBJ_13 /* SketchKitViewDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchKitViewDSL.swift; sourceTree = "<group>"; };
+		OBJ_13 /* SketchKitDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchKitDSL.swift; sourceTree = "<group>"; };
 		OBJ_17 /* Anchor+AddonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Anchor+AddonsTests.swift"; sourceTree = "<group>"; };
 		OBJ_18 /* UILayoutGuide+AddonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+AddonsTests.swift"; sourceTree = "<group>"; };
 		OBJ_20 /* UILayoutGuide+BottomAnchorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+BottomAnchorTests.swift"; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Constrainable.swift */,
-				OBJ_13 /* SketchKitViewDSL.swift */,
+				OBJ_13 /* SketchKitDSL.swift */,
 				OBJ_10 /* Extensions */,
 			);
 			path = SketchKit;
@@ -377,7 +377,7 @@
 				OBJ_70 /* Constrainable.swift in Sources */,
 				OBJ_71 /* Anchors+SafeArea.swift in Sources */,
 				OBJ_72 /* Constrainable+Anchors.swift in Sources */,
-				OBJ_73 /* SketchKitViewDSL.swift in Sources */,
+				OBJ_73 /* SketchKitDSL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

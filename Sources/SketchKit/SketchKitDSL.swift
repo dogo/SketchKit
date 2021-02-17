@@ -1,5 +1,5 @@
 //
-//  SketchKitViewDSL.swift
+//  SketchKitDSL.swift
 //  SketchKit
 //
 //  Created by Diogo Autilio on 04/10/19.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-/// SketchKitViewDSL
-public class SketchKitViewDSL {
+/// SketchKitDSL
+public class SketchKitDSL {
 
     let constrainable: Constrainable
 
@@ -17,7 +17,7 @@ public class SketchKitViewDSL {
         self.constrainable = constrainable
     }
 
-    /// Apply all the constraints to a UIView using SketchKitLayoutGuideDSL
+    /// Apply all the constraints to a UIView or UILayoutGuide using SketchKitDSL
     /// - Parameter block: Block with all constraints to be applied to the current layoutGuide.
     public func applyConstraint(_ block: ((Constrainable) -> Void)) {
         if constrainable is UIView {

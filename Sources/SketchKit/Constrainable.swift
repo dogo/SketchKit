@@ -3,6 +3,7 @@
 //  SketchKit
 //
 //  Created by Nick Babo on 16/02/21.
+//  Copyright (c) 2021 Anykey Entertrainment. All rights reserved.
 //
 
 import UIKit
@@ -30,17 +31,17 @@ public protocol Constrainable {
 }
 
 extension UIView: Constrainable {
-    
-    /// Property to access the SketchKitViewDSL and be able to applyConstraints
-    public var layout: SketchKitViewDSL {
-        return SketchKitViewDSL(constrainable: self)
+
+    /// Property to access the SketchKitDSL and be able to applyConstraints
+    public var layout: SketchKitDSL {
+        return SketchKitDSL(constrainable: self)
     }
 }
 
 extension UILayoutGuide: Constrainable {
-    
-    /// Property to access the SketchKitViewDSL and be able to applyConstraints
-    public var layout: SketchKitViewDSL {
-        return SketchKitViewDSL(constrainable: self)
+
+    /// Property to access the SketchKitDSL and be able to applyConstraints
+    public var layout: SketchKitDSL {
+        return SketchKitDSL(constrainable: self)
     }
 }
