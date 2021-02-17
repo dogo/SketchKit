@@ -32,9 +32,9 @@ jobs:
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3  
 
-      - name: Prepare iOS 10.3 simulator
-        run: |
-          bundle exec xcversion simulators --install='iOS 10.3'
+      #- name: Prepare iOS 10.3 simulator
+      #  run: |
+      #    bundle exec xcversion simulators --install='iOS 10.3'
       
       - name: Running SketchKit Unit Tests
         run: exec ./.github/scripts/test_app.sh
