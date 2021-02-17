@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/dogo/SketchKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Diogo Autilio' => 'diautilio@gmail.com' }
-  s.social_media_url = 'http://twitter.com/di_autilio'
+  s.social_media_url = 'https://twitter.com/di_autilio'
   s.requires_arc     = true
   s.frameworks       = 'UIKit'
 
