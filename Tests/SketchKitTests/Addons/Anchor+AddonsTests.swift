@@ -71,7 +71,7 @@ final class Anchor_AddonsTests: XCTestCase {
         self.container.addSubview(view)
 
         view.layout.applyConstraint { view in
-            view.aspectRadio(constant: 250 / 2)
+            view.aspectRatio(constant: 250 / 2)
         }
 
         let constraints = view.constraints
