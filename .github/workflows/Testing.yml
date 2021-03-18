@@ -7,7 +7,7 @@ jobs:
     runs-on: macOS-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       
       - name: Setup Xcode version
         uses: maxim-lobanov/setup-xcode@v1.2.1
@@ -15,7 +15,7 @@ jobs:
           xcode-version: 12.4
 
       - name: Set up Ruby 2.6
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1.66.0
         with:
           ruby-version: 2.6
           bundler-cache: true
@@ -25,4 +25,4 @@ jobs:
         shell: bash
       
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1.2.1
+        uses: codecov/codecov-action@v1.3.1
