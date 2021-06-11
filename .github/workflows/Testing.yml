@@ -21,7 +21,8 @@ jobs:
           bundler-cache: true
       
       - name: Running SketchKit Unit Tests
-        run: set -o pipefail && xcodebuild -project "SketchKit.xcodeproj" -scheme "SketchKit-Package" -destination "platform=iOS Simulator,name=iPhone 11" clean test | xcpretty
+        run: exec ./.github/scripts/test_app.sh
+        shell: bash
       
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1.3.1
