@@ -26,7 +26,7 @@ jobs:
           xcodebuild clean test \
           -project SketchKit.xcodeproj \
           -scheme SketchKit-Package \
-          -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 11 \
+          -destination 'platform=iOS Simulator,name=iPhone 11' \
           | xcpretty
       
       - name: Upload coverage to Codecov
