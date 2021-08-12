@@ -37,7 +37,7 @@ final class SafeCenterAnchorTests: XCTestCase {
 
         let constraints = self.container.constraints
 
-        if #available(iOS 11.0, tvOS 11.0, *) {
+        if #available(iOS 11.0, tvOS 11.0, macOS 11.0, *) {
             XCTAssertEqual(constraints.count, 5, "Should have 5 constraints installed")
         } else {
             XCTAssertEqual(constraints.count, 1, "Should have 1 constraints installed")
@@ -59,7 +59,7 @@ final class SafeCenterAnchorTests: XCTestCase {
 
         let constraints = self.container.constraints
 
-        if #available(iOS 11.0, tvOS 11.0, *) {
+        if #available(iOS 11.0, tvOS 11.0, macOS 11.0, *) {
             XCTAssertEqual(constraints.count, 5, "Should have 5 constraints installed")
         } else {
             XCTAssertEqual(constraints.count, 1, "Should have 1 constraints installed")

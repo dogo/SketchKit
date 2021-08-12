@@ -2,11 +2,15 @@
 //  Constrainable.swift
 //  SketchKit
 //
-//  Created by Nick Babo on 16/02/21.
+//  Created by Diogo Autilio on 04/10/19.
 //  Copyright (c) 2021 Anykey Entertrainment. All rights reserved.
 //
 
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 /// Constrainable is an abstraction of Apple layout anchor system
 public protocol Constrainable {
@@ -42,7 +46,7 @@ public protocol Constrainable {
     var centerYAnchor: NSLayoutYAxisAnchor { get }
 }
 
-extension UIView: Constrainable {
+extension View: Constrainable {
 
     /// Property to access the SketchKitDSL and be able to applyConstraints
     public var layout: SketchKitDSL {
@@ -50,7 +54,7 @@ extension UIView: Constrainable {
     }
 }
 
-extension UILayoutGuide: Constrainable {
+extension LayoutGuide: Constrainable {
 
     /// Property to access the SketchKitDSL and be able to applyConstraints
     public var layout: SketchKitDSL {

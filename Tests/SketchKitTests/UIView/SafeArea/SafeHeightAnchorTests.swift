@@ -94,7 +94,7 @@ final class SafeHeightAnchorTests: XCTestCase {
 
         XCTAssertEqual(constraints.count, 5, "Should have 5 constraints installed")
         XCTAssertEqual(constraints.first { $0.firstAttribute == .width }?.constant, 20, "Should be 20")
-        if #available(iOS 11.0, tvOS 11.0, *) {
+        if #available(iOS 11.0, tvOS 11.0, macOS 11.0, *) {
             XCTAssertEqual(viewOne.frame.height, 20, "Should be 20")
         } else {
             XCTAssertEqual(viewOne.frame.height, 0, "Should be 0")
