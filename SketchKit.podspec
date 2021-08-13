@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
   s.author           = { 'Diogo Autilio' => 'diautilio@gmail.com' }
   s.social_media_url = 'https://twitter.com/di_autilio'
   s.requires_arc     = true
-  s.frameworks       = 'UIKit'
 
   s.swift_versions   = ['3.2', '4.0', '4.2', '5.0', '5.1']
   s.ios.deployment_target = '9.0'
