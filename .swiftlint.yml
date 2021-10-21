@@ -68,6 +68,9 @@ opt_in_rules:
  - xct_specific_matcher
  - yoda_condition
 
+line_length:
+ ignores_comments: true
+
 excluded:
   - Package.swift  
 
