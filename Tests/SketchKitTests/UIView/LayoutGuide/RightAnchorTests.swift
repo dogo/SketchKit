@@ -11,7 +11,7 @@ import XCTest
 
 final class RightAnchorTests: XCTestCase {
 
-    var container: UIView!
+    private var container: UIView!
 
     override func setUp() {
         super.setUp()

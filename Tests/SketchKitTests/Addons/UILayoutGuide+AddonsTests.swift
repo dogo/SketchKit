@@ -10,7 +10,7 @@ import XCTest
 
 final class UILayoutGuide_AnchorAddonsTests: XCTestCase {
 
-    var scrollView: UIScrollView!
+    private var scrollView: UIScrollView!
 
     override func setUp() {
         super.setUp()

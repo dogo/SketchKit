@@ -11,7 +11,7 @@ import XCTest
 @available(iOS 11.0, tvOS 11.0, *)
 final class SafeTopAnchorTests: XCTestCase {
 
-    var container: UIView!
+    private var container: UIView!
 
     override func setUp() {
         super.setUp()
