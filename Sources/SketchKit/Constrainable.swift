@@ -46,6 +46,7 @@ public protocol Constrainable {
     var centerYAnchor: NSLayoutYAxisAnchor { get }
 }
 
+/// VIew is an abstraction of Apple visual layout system
 extension View: Constrainable {
 
     /// Property to access the SketchKitDSL and be able to applyConstraints
@@ -54,6 +55,7 @@ extension View: Constrainable {
     }
 }
 
+/// LayoutGuide is an abstraction of Apple layout system
 extension LayoutGuide: Constrainable {
 
     /// Property to access the SketchKitDSL and be able to applyConstraints
