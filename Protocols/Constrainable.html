@@ -1,0 +1,2997 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Constrainable Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/Constrainable" class="dashAnchor"></a>
+    <a title="Constrainable Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SketchKit 2.0.0 Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/dogo/SketchKit"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SketchKit Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        Constrainable Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/SketchKitDSL.html">SketchKitDSL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/LayoutGuide.html">LayoutGuide</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/View.html">View</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Constrainable.html">Constrainable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/EdgeInsets">EdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9SketchKit10EdgeInsetsa">EdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/LayoutGuide">LayoutGuide</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9SketchKit11LayoutGuidea">LayoutGuide</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9SketchKit14LayoutPrioritya">LayoutPriority</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/View">View</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9SketchKit4Viewa">View</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Constrainable</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Constrainable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Constrainable is an abstraction of Apple layout anchor system</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP9topAnchorSo013NSLayoutYAxisE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/topAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP9topAnchorSo013NSLayoutYAxisE0Cvp">topAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the top edge of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">topAnchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP12bottomAnchorSo013NSLayoutYAxisE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/bottomAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP12bottomAnchorSo013NSLayoutYAxisE0Cvp">bottomAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the bottom edge of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">bottomAnchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP13leadingAnchorSo013NSLayoutXAxisE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/leadingAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP13leadingAnchorSo013NSLayoutXAxisE0Cvp">leadingAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the leading edge of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">leadingAnchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP10leftAnchorSo013NSLayoutXAxisE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/leftAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP10leftAnchorSo013NSLayoutXAxisE0Cvp">leftAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the left edge of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">leftAnchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP14trailingAnchorSo013NSLayoutXAxisE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/trailingAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP14trailingAnchorSo013NSLayoutXAxisE0Cvp">trailingAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the trailing edge of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">trailingAnchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP11rightAnchorSo013NSLayoutXAxisE0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/rightAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP11rightAnchorSo013NSLayoutXAxisE0Cvp">rightAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the right edge of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rightAnchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP12heightAnchorSo17NSLayoutDimensionCvp"></a>
+                    <a name="//apple_ref/swift/Property/heightAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP12heightAnchorSo17NSLayoutDimensionCvp">heightAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the height of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">heightAnchor</span><span class="p">:</span> <span class="kt">NSLayoutDimension</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP11widthAnchorSo17NSLayoutDimensionCvp"></a>
+                    <a name="//apple_ref/swift/Property/widthAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP11widthAnchorSo17NSLayoutDimensionCvp">widthAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the width of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">widthAnchor</span><span class="p">:</span> <span class="kt">NSLayoutDimension</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP13centerXAnchorSo19NSLayoutXAxisAnchorCvp"></a>
+                    <a name="//apple_ref/swift/Property/centerXAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP13centerXAnchorSo19NSLayoutXAxisAnchorCvp">centerXAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the horizontal center of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">centerXAnchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainableP13centerYAnchorSo19NSLayoutYAxisAnchorCvp"></a>
+                    <a name="//apple_ref/swift/Property/centerYAnchor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainableP13centerYAnchorSo19NSLayoutYAxisAnchorCvp">centerYAnchor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor abstraction representing the vertical center of the view or layout guide frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">centerYAnchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE9topAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/topAnchor(equalTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE9topAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">topAnchor(equalTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the top edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">topAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span><span class="p">,</span>
+               <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+               <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE9topAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/topAnchor(greaterThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE9topAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">topAnchor(greaterThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the top edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">topAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span><span class="p">,</span>
+               <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+               <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE9topAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/topAnchor(lessThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE9topAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">topAnchor(lessThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the top edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">topAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span><span class="p">,</span>
+               <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+               <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE12bottomAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/bottomAnchor(equalTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE12bottomAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">bottomAnchor(equalTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the bottom edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">bottomAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span><span class="p">,</span>
+                  <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE12bottomAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/bottomAnchor(greaterThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE12bottomAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">bottomAnchor(greaterThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the bottom edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">bottomAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span><span class="p">,</span>
+                  <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE12bottomAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/bottomAnchor(lessThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE12bottomAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5YAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">bottomAnchor(lessThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the bottom edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">bottomAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span><span class="p">,</span>
+                  <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                  <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE13leadingAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/leadingAnchor(equalTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE13leadingAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">leadingAnchor(equalTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the leading edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">leadingAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                   <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE13leadingAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/leadingAnchor(greaterThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE13leadingAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">leadingAnchor(greaterThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the leading edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">leadingAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                   <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE13leadingAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/leadingAnchor(lessThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE13leadingAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">leadingAnchor(lessThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the leading edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">leadingAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                   <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE10leftAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/leftAnchor(equalTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE10leftAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">leftAnchor(equalTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the left edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">leftAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE10leftAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/leftAnchor(greaterThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE10leftAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">leftAnchor(greaterThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the left edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">leftAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE10leftAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/leftAnchor(lessThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE10leftAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">leftAnchor(lessThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the left edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">leftAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE14trailingAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/trailingAnchor(equalTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE14trailingAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">trailingAnchor(equalTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the trailing edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">trailingAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                    <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE14trailingAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/trailingAnchor(greaterThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE14trailingAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">trailingAnchor(greaterThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the trailing edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">trailingAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                    <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE14trailingAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/trailingAnchor(lessThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE14trailingAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">trailingAnchor(lessThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the trailing edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">trailingAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                    <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11rightAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/rightAnchor(equalTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11rightAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0j5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">rightAnchor(equalTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the right edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">rightAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                 <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                 <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11rightAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/rightAnchor(greaterThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11rightAnchor20greaterThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">rightAnchor(greaterThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the right edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">rightAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                 <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                 <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11rightAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/rightAnchor(lessThanOrEqualTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11rightAnchor17lessThanOrEqualTo8constant8prioritySo18NSLayoutConstraintCSo0m5XAxisE0C_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">rightAnchor(lessThanOrEqualTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the right edge of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">rightAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                 <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                 <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vertical layout constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE12heightAnchor15equalToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/heightAnchor(equalToConstant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE12heightAnchor15equalToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF">heightAnchor(equalToConstant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the height of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">heightAnchor</span><span class="p">(</span><span class="n">equalToConstant</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                  <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalToConstant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE12heightAnchor28greaterThanOrEqualToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/heightAnchor(greaterThanOrEqualToConstant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE12heightAnchor28greaterThanOrEqualToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF">heightAnchor(greaterThanOrEqualToConstant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the height of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">heightAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualToConstant</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                  <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualToConstant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE12heightAnchor25lessThanOrEqualToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/heightAnchor(lessThanOrEqualToConstant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE12heightAnchor25lessThanOrEqualToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF">heightAnchor(lessThanOrEqualToConstant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the height of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">heightAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualToConstant</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                  <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualToConstant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE12heightAnchor7equalTo8priority10multiplierSo18NSLayoutConstraintCSo0J9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF"></a>
+                    <a name="//apple_ref/swift/Method/heightAnchor(equalTo:priority:multiplier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE12heightAnchor7equalTo8priority10multiplierSo18NSLayoutConstraintCSo0J9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF">heightAnchor(equalTo:<wbr>priority:<wbr>multiplier:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the height of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">heightAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">layoutDimension</span><span class="p">:</span> <span class="kt">NSLayoutDimension</span><span class="p">,</span>
+                  <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">,</span>
+                  <span class="nv">multiplier</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>multiplier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The multiplier constant for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE12heightAnchor17lessThanOrEqualTo8priority10multiplierSo18NSLayoutConstraintCSo0M9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF"></a>
+                    <a name="//apple_ref/swift/Method/heightAnchor(lessThanOrEqualTo:priority:multiplier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE12heightAnchor17lessThanOrEqualTo8priority10multiplierSo18NSLayoutConstraintCSo0M9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF">heightAnchor(lessThanOrEqualTo:<wbr>priority:<wbr>multiplier:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the height of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">heightAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualTo</span> <span class="nv">layoutDimension</span><span class="p">:</span> <span class="kt">NSLayoutDimension</span><span class="p">,</span>
+                  <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">,</span>
+                  <span class="nv">multiplier</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>multiplier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The multiplier constant for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE12heightAnchor20greaterThanOrEqualTo8priority10multiplierSo18NSLayoutConstraintCSo0M9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF"></a>
+                    <a name="//apple_ref/swift/Method/heightAnchor(greaterThanOrEqualTo:priority:multiplier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE12heightAnchor20greaterThanOrEqualTo8priority10multiplierSo18NSLayoutConstraintCSo0M9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF">heightAnchor(greaterThanOrEqualTo:<wbr>priority:<wbr>multiplier:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the height of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">heightAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualTo</span> <span class="nv">layoutDimension</span><span class="p">:</span> <span class="kt">NSLayoutDimension</span><span class="p">,</span>
+                  <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">,</span>
+                  <span class="nv">multiplier</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>multiplier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The multiplier constant for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11widthAnchor15equalToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/widthAnchor(equalToConstant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11widthAnchor15equalToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF">widthAnchor(equalToConstant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the width of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">widthAnchor</span><span class="p">(</span><span class="n">equalToConstant</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                 <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalToConstant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11widthAnchor28greaterThanOrEqualToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/widthAnchor(greaterThanOrEqualToConstant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11widthAnchor28greaterThanOrEqualToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF">widthAnchor(greaterThanOrEqualToConstant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the width of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">widthAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualToConstant</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                 <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualToConstant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11widthAnchor25lessThanOrEqualToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/widthAnchor(lessThanOrEqualToConstant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11widthAnchor25lessThanOrEqualToConstant8prioritySo18NSLayoutConstraintC12CoreGraphics7CGFloatV_So16UILayoutPriorityatF">widthAnchor(lessThanOrEqualToConstant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the width of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">widthAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualToConstant</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span>
+                 <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualToConstant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11widthAnchor7equalTo8priority10multiplierSo18NSLayoutConstraintCSo0J9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF"></a>
+                    <a name="//apple_ref/swift/Method/widthAnchor(equalTo:priority:multiplier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11widthAnchor7equalTo8priority10multiplierSo18NSLayoutConstraintCSo0J9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF">widthAnchor(equalTo:<wbr>priority:<wbr>multiplier:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the width of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">widthAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">layoutDimension</span><span class="p">:</span> <span class="kt">NSLayoutDimension</span><span class="p">,</span>
+                 <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">,</span>
+                 <span class="nv">multiplier</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>multiplier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The multiplier constant for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11widthAnchor17lessThanOrEqualTo8priority10multiplierSo18NSLayoutConstraintCSo0M9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF"></a>
+                    <a name="//apple_ref/swift/Method/widthAnchor(lessThanOrEqualTo:priority:multiplier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11widthAnchor17lessThanOrEqualTo8priority10multiplierSo18NSLayoutConstraintCSo0M9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF">widthAnchor(lessThanOrEqualTo:<wbr>priority:<wbr>multiplier:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the width of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">widthAnchor</span><span class="p">(</span><span class="n">lessThanOrEqualTo</span> <span class="nv">layoutDimension</span><span class="p">:</span> <span class="kt">NSLayoutDimension</span><span class="p">,</span>
+                 <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">,</span>
+                 <span class="nv">multiplier</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lessThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>multiplier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The multiplier constant for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11widthAnchor20greaterThanOrEqualTo8priority10multiplierSo18NSLayoutConstraintCSo0M9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF"></a>
+                    <a name="//apple_ref/swift/Method/widthAnchor(greaterThanOrEqualTo:priority:multiplier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11widthAnchor20greaterThanOrEqualTo8priority10multiplierSo18NSLayoutConstraintCSo0M9DimensionC_So16UILayoutPrioritya12CoreGraphics7CGFloatVtF">widthAnchor(greaterThanOrEqualTo:<wbr>priority:<wbr>multiplier:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the width of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">widthAnchor</span><span class="p">(</span><span class="n">greaterThanOrEqualTo</span> <span class="nv">layoutDimension</span><span class="p">:</span> <span class="kt">NSLayoutDimension</span><span class="p">,</span>
+                 <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">,</span>
+                 <span class="nv">multiplier</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>greaterThanOrEqualTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>multiplier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The multiplier constant for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE13centerXAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0J11XAxisAnchorC_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/centerXAnchor(equalTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE13centerXAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0J11XAxisAnchorC_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">centerXAnchor(equalTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the horizontal center of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">centerXAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutXAxisAnchor</span><span class="p">,</span>
+                   <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE13centerYAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0J11YAxisAnchorC_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF"></a>
+                    <a name="//apple_ref/swift/Method/centerYAnchor(equalTo:constant:priority:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE13centerYAnchor7equalTo8constant8prioritySo18NSLayoutConstraintCSo0J11YAxisAnchorC_12CoreGraphics7CGFloatVSo16UILayoutPriorityatF">centerYAnchor(equalTo:<wbr>constant:<wbr>priority:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the vertical center of the view’s frame.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">centerYAnchor</span><span class="p">(</span><span class="n">equalTo</span> <span class="nv">anchor</span><span class="p">:</span> <span class="kt">NSLayoutYAxisAnchor</span><span class="p">,</span>
+                   <span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="nv">priority</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/LayoutPriority">LayoutPriority</a></span> <span class="o">=</span> <span class="o">.</span><span class="kd">required</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>equalTo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the size of the attribute associated with this dimension anchor.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constant offset for the constraint.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Layout priority used to indicate the constraint-based layout system.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE5inset2to9withInsetSaySo18NSLayoutConstraintCGSo6UIViewC_So12UIEdgeInsetsVSgtF"></a>
+                    <a name="//apple_ref/swift/Method/inset(to:withInset:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE5inset2to9withInsetSaySo18NSLayoutConstraintCGSo6UIViewC_So12UIEdgeInsetsVSgtF">inset(to:<wbr>withInset:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor to set inset distances for views.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">inset</span><span class="p">(</span><span class="n">to</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9SketchKit4Viewa">View</a></span><span class="p">,</span> <span class="n">withInset</span> <span class="nv">inset</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/EdgeInsets">EdgeInsets</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSLayoutConstraint</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>to</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The target View to apply the edge insets.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withInset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Adjusts a rectangle by the given edge insets.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>All the activated and applied constraints to the current View with</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9SketchKit13ConstrainablePAAE11aspectRatio8constantSo18NSLayoutConstraintC12CoreGraphics7CGFloatV_tF"></a>
+                    <a name="//apple_ref/swift/Method/aspectRatio(constant:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9SketchKit13ConstrainablePAAE11aspectRatio8constantSo18NSLayoutConstraintC12CoreGraphics7CGFloatV_tF">aspectRatio(constant:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A layout anchor representing the aspect ratio of a View.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">aspectRatio</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSLayoutConstraint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constant</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A constant representing the value of the aspect ratio to be applied.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright (c) 2020 Anykey Entertrainment. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
