@@ -46,7 +46,7 @@ jobs:
             -sdk iphonesimulator \
             -destination '${{ matrix.destination }}' \
             -enableCodeCoverage YES \
-            test | xcpretty && exit ${PIPESTATUS[0]}    
+            test
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3.1.4
