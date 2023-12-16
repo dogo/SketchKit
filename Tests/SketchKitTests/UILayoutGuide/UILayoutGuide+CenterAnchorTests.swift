@@ -5,7 +5,9 @@
 //  Created by Diogo Autilio on 17/10/20.
 //
 
+import UIKit
 import XCTest
+
 @testable import SketchKit
 
 final class UILayoutGuide_CenterAnchorTests: XCTestCase {

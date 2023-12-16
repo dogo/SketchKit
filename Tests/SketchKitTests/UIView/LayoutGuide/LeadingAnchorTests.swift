@@ -6,7 +6,9 @@
 //  Copyright (c) 2019 Anykey Entertrainment. All rights reserved.
 //
 
+import UIKit
 import XCTest
+
 @testable import SketchKit
 
 final class LeadingAnchorTests: XCTestCase {

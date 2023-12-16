@@ -5,6 +5,15 @@ jobs:
   test:
     name: Testing SketchKit
     runs-on: macos-13
+    strategy:
+      matrix:
+        scheme: [
+          SketchKit
+        ]      
+        destination: [
+          'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
+        ]
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -31,9 +40,13 @@ jobs:
         env:
           DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Running SketchKit Unit Tests
-        run: exec ./.github/scripts/test_app.sh
-        shell: bash
+      - name: Test ${{ matrix.scheme }} on ${{ matrix.destination }}
+        run: |
+          xcodebuild -scheme ${{ matrix.scheme }} \
+            -sdk iphonesimulator \
+            -destination '${{ matrix.destination }}' \
+            -enableCodeCoverage YES \
+            test | xcpretty && exit ${PIPESTATUS[0]}    
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3.1.4

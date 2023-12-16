@@ -5,7 +5,9 @@
 //  Created by Diogo Autilio on 15/10/20.
 //
 
+import UIKit
 import XCTest
+
 @testable import SketchKit
 
 @available(iOS 11.0, tvOS 11.0, *)
