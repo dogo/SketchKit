@@ -41,7 +41,7 @@ public typealias EdgeInsets = UIEdgeInsets
 /// SketchKitDSL
 public class SketchKitDSL {
 
-    let constrainable: Constrainable
+    private let constrainable: Constrainable
 
     init(constrainable: Constrainable) {
         self.constrainable = constrainable
@@ -54,5 +54,24 @@ public class SketchKitDSL {
             (constrainable as? View)?.translatesAutoresizingMaskIntoConstraints = false
         }
         block(self.constrainable)
+    }
+
+    func resolveKeyboardLayoutGuide() -> LayoutGuide {
+        guard let view = constrainable as? View else { return LayoutGuide() }
+
+        let layoutGuideIdentifier = "KeyboardLayoutGuide"
+
+        // Attempt to find an existing keyboard layout guide by its identifier
+        if let existingLayoutGuide = view.layoutGuides.first(where: { $0.identifier == layoutGuideIdentifier }) {
+            return existingLayoutGuide
+        }
+
+        // Create and configure a new keyboard layout guide if it doesn't exist
+        let keyboardLayoutGuide = KeyboardLayoutGuide()
+        keyboardLayoutGuide.identifier = layoutGuideIdentifier
+        view.addLayoutGuide(keyboardLayoutGuide)
+        keyboardLayoutGuide.setUp()
+
+        return keyboardLayoutGuide
     }
 }

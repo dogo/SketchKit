@@ -53,6 +53,11 @@ extension View: Constrainable {
     public var layout: SketchKitDSL {
         return SketchKitDSL(constrainable: self)
     }
+
+    /// A layout guide that dynamically adjusts to the keyboard's frame.
+    public var keyboardLayout: LayoutGuide {
+        return SketchKitDSL(constrainable: self).resolveKeyboardLayoutGuide()
+    }
 }
 
 /// LayoutGuide is an abstraction of Apple layout system
