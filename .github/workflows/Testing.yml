@@ -30,7 +30,7 @@ jobs:
           bundler-cache: true
 
       - name: Danger action
-        uses: MeilCli/danger-action@v5.6.28
+        uses: MeilCli/danger-action@v6
         if: github.event_name == 'pull_request'
         with:
           plugins_file: 'Gemfile'
