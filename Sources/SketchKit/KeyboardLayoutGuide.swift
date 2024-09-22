@@ -71,7 +71,7 @@ final class KeyboardLayoutGuide: LayoutGuide {
     @objc
     private func adjustKeyboard(_ notification: Notification) {
         if var height = notification.keyboardHeight, let duration = notification.animationDuration {
-            if height > 0, let bottom = owningView?.safeAreaInsets.bottom {
+            if #available(iOS 11.0, *), height > 0, let bottom = owningView?.safeAreaInsets.bottom {
                 height -= bottom
             }
             heightConstraint?.constant = height
