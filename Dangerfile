@@ -5,8 +5,8 @@ warn("PR is classed as Work in Progress") if github.pr_title.include?("WIP")
 warn("Big PR - #{git.lines_of_code} lines of code") if git.lines_of_code > 150
 
 # Ensure testing shortcuts (fdescribe, fit) aren't accidentally merged into master
-fail("fdescribe found in tests") if `grep -r fdescribe specs/ `.length > 1
-fail("fit found in tests") if `grep -r fit specs/ `.length > 1
+fail("fdescribe found in tests") if `grep -r fdescribe Tests/ `.length > 1
+fail("fit found in tests") if `grep -r fit Tests/ `.length > 1
 
 # Define a method to handle directory linting
 def lint_directory(directory, config_file)
