@@ -6,6 +6,7 @@
 //  Copyright (c) 2021 Anykey Entertrainment. All rights reserved.
 //
 
+#if os(iOS)
 import Foundation
 import UIKit
 
@@ -139,3 +140,4 @@ extension Notification {
         return self.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? CGFloat
     }
 }
+#endif

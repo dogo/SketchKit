@@ -56,6 +56,7 @@ public class SketchKitDSL {
         block(self.constrainable)
     }
 
+#if os(iOS)
     func resolveKeyboardLayoutGuide() -> LayoutGuide {
         guard let view = constrainable as? View else { return LayoutGuide() }
 
@@ -74,4 +75,5 @@ public class SketchKitDSL {
 
         return keyboardLayoutGuide
     }
+#endif
 }
