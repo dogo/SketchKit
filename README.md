@@ -40,6 +40,30 @@ newView.layout.applyConstraint { view in
 }
 ```
 
+## Keyboard Layout Guide
+
+The `KeyboardLayoutGuide` allows you to align your views relative to the keyboard in a native way, without observing notifications or calculating keyboard heights manually.
+
+### Basic usage
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    // Pin your button to the keyboard
+    button.layout.applyConstraint { button in
+        button.bottomAnchor(equalTo: view.keyboardLayoutGuide.topAnchor)
+    }
+}
+```
+
+In the example above, the button will always be anchored to the top of the keyboard, automatically adjusting when the keyboard appears or disappears.
+
+### Safe Area behavior
+
+By default, the `KeyboardLayoutGuide` aligns your view with the **bottom safe area** when available (iOS 11.0, tvOS 11.0, macOS 11.0 and later).
+On earlier versions, it falls back to the view’s `bottomAnchor`.
+
 ## Requirements
 
 - iOS 9.0+ / tvOS 9.0+ / macOS 10.11+
