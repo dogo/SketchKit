@@ -160,6 +160,33 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         )
     }
 
+    func testAdjustKeyboard_FloatingKeyboard_ComputesHeightFromKeyboardTop() {
+        sut.setUp()
+
+        let screenHeight = UIScreen.main.bounds.height
+        // Floating keyboard: its top is 400pt from the bottom of the view, and it does not
+        // extend down to the view's bottom edge.
+        let floatingKeyboardTop = screenHeight - 400
+        let keyboardFrame = CGRect(x: 50, y: floatingKeyboardTop, width: 320, height: 290)
+        let notification = Notification(name: UIResponder.keyboardWillChangeFrameNotification, object: nil, userInfo: [
+            UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: keyboardFrame),
+            UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25)
+        ])
+
+        NotificationCenter.default.post(notification)
+
+        XCTAssertEqual(
+            SKKeyboard.shared.currentHeight,
+            400,
+            "Height should be the distance from the view's bottom to the keyboard's top, not the intersection height"
+        )
+        XCTAssertEqual(
+            sut.heightConstraint?.constant,
+            400,
+            "The height constraint should lift content above the floating keyboard"
+        )
+    }
+
     func testAdjustKeyboardWhenKeyboardWillHide() {
         sut.setUp()
 
