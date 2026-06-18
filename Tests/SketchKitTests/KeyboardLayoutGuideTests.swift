@@ -133,6 +133,33 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         )
     }
 
+    func testAdjustKeyboard_UsesWindowConversion_WhenViewIsHostedInWindow() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.addSubview(mockView)
+        sut.setUp()
+
+        let screenHeight = UIScreen.main.bounds.height
+        let keyboardFrame = CGRect(x: 0, y: screenHeight - 216, width: 320, height: 216)
+        let notification = Notification(name: UIResponder.keyboardWillChangeFrameNotification, object: nil, userInfo: [
+            UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: keyboardFrame),
+            UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25)
+        ])
+
+        NotificationCenter.default.post(notification)
+
+        let expectedHeight = 216 - mockView.safeAreaInsets.bottom
+        XCTAssertEqual(
+            SKKeyboard.shared.currentHeight,
+            expectedHeight,
+            "The keyboard height should be computed through the window-conversion path when the view has a window"
+        )
+        XCTAssertEqual(
+            sut.heightConstraint?.constant,
+            expectedHeight,
+            "The height constraint should reflect the window-converted keyboard intersection"
+        )
+    }
+
     func testAdjustKeyboardWhenKeyboardWillHide() {
         sut.setUp()
 
