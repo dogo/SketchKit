@@ -122,11 +122,6 @@ extension LayoutGuide {
 }
 
 extension Notification {
-    /// Retrieves the keyboard's height from the notification's userInfo.
-    var keyboardHeight: CGFloat? {
-        return keyboardHeight(in: nil)
-    }
-
     /// Retrieves the keyboard's height from the notification's userInfo, converted to a specific view when possible.
     func keyboardHeight(in view: UIView?) -> CGFloat? {
         guard let keyboardFrame = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
