@@ -54,7 +54,7 @@ final class KeyboardLayoutGuide: LayoutGuide {
 
     /// Sets up the layout guide's initial constraints.
     func setUp() {
-        guard let owningView else { return }
+        guard let owningView = owningView else { return }
 
         // Apply height, left, and right constraints
         self.layout.applyConstraint {
@@ -85,7 +85,7 @@ final class KeyboardLayoutGuide: LayoutGuide {
 
     /// Animates the layout changes when the keyboard frame changes.
     private func animate(_ notification: Notification) {
-        if let owningView, isVisible(view: owningView) {
+        if let owningView = owningView, isVisible(view: owningView) {
             owningView.layoutIfNeeded()
         } else {
             UIView.performWithoutAnimation { [weak self] in
@@ -97,7 +97,7 @@ final class KeyboardLayoutGuide: LayoutGuide {
     /// Checks if the view is visible in the current view hierarchy.
     private func isVisible(view: UIView) -> Bool {
         func isVisible(view: UIView, inView: UIView?) -> Bool {
-            guard let inView else { return true }
+            guard let inView = inView else { return true }
             let viewFrame = inView.convert(view.bounds, from: view)
             if viewFrame.intersects(inView.bounds) {
                 return isVisible(view: view, inView: inView.superview)
