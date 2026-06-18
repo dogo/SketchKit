@@ -22,8 +22,10 @@ final class SKKeyboard {
 final class KeyboardLayoutGuide: LayoutGuide {
 
     private var bottomConstraint: NSLayoutConstraint?
+    private let notificationCenter: NotificationCenter
 
     init(notificationCenter: NotificationCenter = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         super.init()
 
         // Observe keyboardWillChangeFrame notifications
@@ -49,7 +51,7 @@ final class KeyboardLayoutGuide: LayoutGuide {
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(self)
+        notificationCenter.removeObserver(self)
     }
 
     /// Sets up the layout guide's initial constraints.
@@ -71,20 +73,20 @@ final class KeyboardLayoutGuide: LayoutGuide {
     /// Adjusts the layout guide's height based on the keyboard's frame.
     @objc
     private func adjustKeyboard(_ notification: Notification) {
-        if var height = notification.keyboardHeight, let duration = notification.animationDuration {
+        if var height = notification.keyboardHeight(in: owningView), let duration = notification.animationDuration {
             if #available(iOS 11.0, *), height > 0, let bottom = owningView?.safeAreaInsets.bottom {
                 height -= bottom
             }
             heightConstraint?.constant = height
             if duration > 0.0 {
-                animate(notification)
+                animate()
             }
             SKKeyboard.shared.currentHeight = height
         }
     }
 
     /// Animates the layout changes when the keyboard frame changes.
-    private func animate(_ notification: Notification) {
+    private func animate() {
         if let owningView = owningView, isVisible(view: owningView) {
             owningView.layoutIfNeeded()
         } else {
@@ -122,6 +124,11 @@ extension LayoutGuide {
 extension Notification {
     /// Retrieves the keyboard's height from the notification's userInfo.
     var keyboardHeight: CGFloat? {
+        return keyboardHeight(in: nil)
+    }
+
+    /// Retrieves the keyboard's height from the notification's userInfo, converted to a specific view when possible.
+    func keyboardHeight(in view: UIView?) -> CGFloat? {
         guard let keyboardFrame = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
             return nil
         }
@@ -129,10 +136,22 @@ extension Notification {
         if name == UIResponder.keyboardWillHideNotification {
             return 0.0
         } else {
-            // Keyboard frame behaves differently across iOS versions, so we calculate based on screen height.
-            let screenHeight = UIApplication.shared.keyWindow?.bounds.height ?? UIScreen.main.bounds.height
-            return screenHeight - keyboardFrame.cgRectValue.minY
+            if let view {
+                let keyboardFrameInView = convertedKeyboardFrame(keyboardFrame.cgRectValue, to: view)
+                return max(0.0, view.bounds.intersection(keyboardFrameInView).height)
+            }
+
+            return max(0.0, UIScreen.main.bounds.height - keyboardFrame.cgRectValue.minY)
         }
+    }
+
+    private func convertedKeyboardFrame(_ keyboardFrame: CGRect, to view: UIView) -> CGRect {
+        guard let window = view.window else {
+            return view.convert(keyboardFrame, from: nil)
+        }
+
+        let keyboardFrameInWindow = window.convert(keyboardFrame, from: nil)
+        return view.convert(keyboardFrameInWindow, from: window)
     }
 
     /// Retrieves the keyboard's animation duration from the notification's userInfo.

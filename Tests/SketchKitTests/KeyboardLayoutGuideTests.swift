@@ -17,7 +17,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        mockView = UIView()
+        mockView = UIView(frame: UIScreen.main.bounds)
         sut = KeyboardLayoutGuide()
 
         mockView.addLayoutGuide(sut)
@@ -35,7 +35,11 @@ final class KeyboardLayoutGuideTests: XCTestCase {
 
         let heightConstraint = sut.heightConstraint
         XCTAssertNotNil(heightConstraint, "Height constraint should be applied")
-        XCTAssertEqual(heightConstraint?.constant, 0, "Height constraint should match the SKKeyboard.shared.currentHeight")
+        XCTAssertEqual(
+            heightConstraint?.constant,
+            0,
+            "Height constraint should match the SKKeyboard.shared.currentHeight"
+        )
 
         XCTAssertTrue(mockView.constraints.contains {
             $0.firstAnchor == sut.leftAnchor && $0.secondAnchor == mockView.leftAnchor
@@ -46,8 +50,57 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         }, "Right constraint should be applied between the layout guide and the owning view")
 
         XCTAssertNotNil(sut.bottomConstraint, "Bottom constraint should be updated")
-        XCTAssertEqual(sut.bottomConstraint?.firstAnchor, sut.bottomAnchor, "Bottom constraint should anchor to the layout guide's bottomAnchor")
-        XCTAssertEqual(sut.bottomConstraint?.secondAnchor, mockView.safeBottomAnchor, "Bottom constraint should anchor to the view's safeBottomAnchor")
+        XCTAssertEqual(
+            sut.bottomConstraint?.firstAnchor,
+            sut.bottomAnchor,
+            "Bottom constraint should anchor to the layout guide's bottomAnchor"
+        )
+        XCTAssertEqual(
+            sut.bottomConstraint?.secondAnchor,
+            mockView.safeBottomAnchor,
+            "Bottom constraint should anchor to the view's safeBottomAnchor"
+        )
+    }
+
+    func testKeyboardLayout_CreatesAndConfiguresGuide() {
+        let view = UIView(frame: UIScreen.main.bounds)
+
+        let keyboardLayout = view.keyboardLayout
+
+        XCTAssertTrue(
+            keyboardLayout is KeyboardLayoutGuide,
+            "The public keyboardLayout getter should create a KeyboardLayoutGuide"
+        )
+        XCTAssertEqual(
+            keyboardLayout.identifier,
+            "KeyboardLayoutGuide",
+            "The layout guide should be identifiable for later reuse"
+        )
+        XCTAssertTrue(
+            view.layoutGuides.contains { $0 === keyboardLayout },
+            "The keyboard layout guide should be attached to the view"
+        )
+        XCTAssertNotNil(
+            keyboardLayout.heightConstraint,
+            "The keyboard layout guide should be configured with a height constraint"
+        )
+    }
+
+    func testKeyboardLayout_ReusesExistingGuide() {
+        let view = UIView(frame: UIScreen.main.bounds)
+
+        let firstKeyboardLayout = view.keyboardLayout
+        let secondKeyboardLayout = view.keyboardLayout
+
+        XCTAssertTrue(
+            firstKeyboardLayout === secondKeyboardLayout,
+            "The public keyboardLayout getter should reuse an existing guide"
+        )
+        XCTAssertEqual(
+            view.layoutGuides.filter { $0.identifier == "KeyboardLayoutGuide" }.count,
+            1,
+            "The view should not accumulate duplicate keyboard layout guides"
+        )
     }
 
     func testAdjustKeyboardWhenKeyboardWillShow() {
@@ -67,9 +120,17 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         NotificationCenter.default.post(notification)
 
         let expectedHeight = screenHeight - keyboardFrame.minY // Should be 216
-        XCTAssertEqual(SKKeyboard.shared.currentHeight, expectedHeight, "SKKeyboard.shared.currentHeight should be properly updated with the keyboard notification")
+        XCTAssertEqual(
+            SKKeyboard.shared.currentHeight,
+            expectedHeight,
+            "SKKeyboard.shared.currentHeight should be properly updated with the keyboard notification"
+        )
 
-        XCTAssertEqual(sut.heightConstraint?.constant, expectedHeight, "The height constraint should be properly adjusted based on the keyboard height")
+        XCTAssertEqual(
+            sut.heightConstraint?.constant,
+            expectedHeight,
+            "The height constraint should be properly adjusted based on the keyboard height"
+        )
     }
 
     func testAdjustKeyboardWhenKeyboardWillHide() {
@@ -79,14 +140,52 @@ final class KeyboardLayoutGuideTests: XCTestCase {
 
         NotificationCenter.default.post(notification)
 
-        XCTAssertEqual(SKKeyboard.shared.currentHeight, 0, "SKKeyboard.shared.currentHeight should be reset to 0 when the keyboard hides")
+        XCTAssertEqual(
+            SKKeyboard.shared.currentHeight,
+            0,
+            "SKKeyboard.shared.currentHeight should be reset to 0 when the keyboard hides"
+        )
 
-        XCTAssertEqual(sut.heightConstraint?.constant, 0, "The height constraint should be reset to 0 when the keyboard hides")
+        XCTAssertEqual(
+            sut.heightConstraint?.constant,
+            0,
+            "The height constraint should be reset to 0 when the keyboard hides"
+        )
     }
 
-    func testDeinit_RemovesObservers() {
-        sut = nil
-        XCTAssertNil(NotificationCenter.default.observationInfo, "All observers should be removed on deinit")
+    func testDeinit_RemovesObserversFromInjectedNotificationCenter() {
+        let notificationCenter = NotificationCenterSpy()
+        var guide: KeyboardLayoutGuide? = KeyboardLayoutGuide(notificationCenter: notificationCenter)
+        let expectedObserverIdentifier = guide.map { ObjectIdentifier($0) }
+
+        guide = nil
+
+        XCTAssertEqual(
+            notificationCenter.removeObserverCallCount,
+            1,
+            "The guide should remove itself from its injected notification center"
+        )
+        XCTAssertEqual(
+            notificationCenter.removedObserverIdentifier,
+            expectedObserverIdentifier,
+            "The removed observer should be the deallocated guide"
+        )
+    }
+}
+
+private final class NotificationCenterSpy: NotificationCenter {
+
+    private(set) var removeObserverCallCount = 0
+    private(set) var removedObserverIdentifier: ObjectIdentifier?
+
+    override func removeObserver(_ observer: Any) {
+        removeObserverCallCount += 1
+
+        if let observer = observer as? AnyObject {
+            removedObserverIdentifier = ObjectIdentifier(observer)
+        }
+
+        super.removeObserver(observer)
     }
 }
 
