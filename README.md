@@ -67,7 +67,7 @@ On earlier versions, it falls back to the view’s `bottomAnchor`.
 ## Requirements
 
 - iOS 9.0+ / tvOS 9.0+ / macOS 10.11+
-- Swift 3.2+
+- Swift 5.3+
 
 ## Installation
 

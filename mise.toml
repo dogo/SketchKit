@@ -1,0 +1,4 @@
+[tools]
+ruby = "3.3.0"
+swiftlint = "0.63.2"
+swiftformat = "0.61.1"
