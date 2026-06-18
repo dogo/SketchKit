@@ -133,7 +133,10 @@ extension Notification {
         } else {
             if let view {
                 let keyboardFrameInView = convertedKeyboardFrame(keyboardFrame.cgRectValue, to: view)
-                return max(0.0, view.bounds.intersection(keyboardFrameInView).height)
+                // Distance from the view's bottom up to the keyboard's top, so the guide pushes
+                // content above the keyboard even when the keyboard is floating/undocked.
+                let distanceFromBottom = view.bounds.maxY - keyboardFrameInView.minY
+                return max(0.0, min(distanceFromBottom, view.bounds.height))
             }
 
             return max(0.0, UIScreen.main.bounds.height - keyboardFrame.cgRectValue.minY)
