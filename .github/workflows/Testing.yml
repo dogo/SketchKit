@@ -1,36 +1,47 @@
 name: Testing
-on: [push, pull_request]
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+  checks: write
+  issues: write
+  pull-requests: write
 
 jobs:
   test:
-    name: Testing SketchKit
-    runs-on: macos-13
+    name: Test SketchKit
+    runs-on: macos-26
+
+    env:
+      IOS_DESTINATION: platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5
+      XCODE_VERSION: "26.5"
+
     strategy:
       matrix:
         scheme: [
           SketchKit
-        ]      
-        destination: [
-          'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1'
         ]
-    
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.3
 
       - name: Setup Xcode version
-        uses: maxim-lobanov/setup-xcode@v1.6.0
+        uses: maxim-lobanov/setup-xcode@v1.7.0
         with:
-          xcode-version: 15.0.1
+          xcode-version: ${{ env.XCODE_VERSION }}
 
-      - name: Set up Ruby 3.1.2
-        uses: ruby/setup-ruby@v1.162.0
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1.312.0
         with:
-          ruby-version: 3.1.2
+          ruby-version: 3.3.0
           bundler-cache: true
 
       - name: Danger action
-        uses: MeilCli/danger-action@v6
+        uses: MeilCli/danger-action@v6.0.50
         if: github.event_name == 'pull_request'
         with:
           plugins_file: 'Gemfile'
@@ -40,17 +51,18 @@ jobs:
         env:
           DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Test ${{ matrix.scheme }} on ${{ matrix.destination }}
+      - name: Test ${{ matrix.scheme }} on iOS Simulator
         run: |
           xcodebuild -scheme ${{ matrix.scheme }} \
             -sdk iphonesimulator \
-            -destination '${{ matrix.destination }}' \
+            -destination "$IOS_DESTINATION" \
             -enableCodeCoverage YES \
             test
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v6.0.1
         env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}        
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
+          fail_ci_if_error: true
           verbose: true
