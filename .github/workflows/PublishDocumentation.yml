@@ -1,15 +1,22 @@
 name: Publish Documentation
 
-on: 
+on:
   release:
     types: [published]
 
+permissions:
+  contents: read
+
 jobs:
   deploy_docs:
-    runs-on: macos-latest
+    name: Publish Jazzy Docs
+    runs-on: macos-26
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Publish Jazzy Docs
-      uses: swiftpackages/jazzy-swift-docs-action@v2
-      with:
-        personal_access_token: ${{ secrets.JAZZY_ACCESS_TOKEN }}
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.3
+
+      - name: Publish Jazzy Docs
+        uses: swiftpackages/jazzy-swift-docs-action@v2.1.0
+        with:
+          personal_access_token: ${{ secrets.JAZZY_ACCESS_TOKEN }}
