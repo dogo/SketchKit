@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  TopAnchorTests.swift
 //  SketchKitTests
@@ -91,3 +92,5 @@ final class TopAnchorTests: XCTestCase {
         ("testTopAnchorLessThanOrEqualTo", testTopAnchorLessThanOrEqualTo)
     ]
 }
+
+#endif

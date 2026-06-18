@@ -1,3 +1,4 @@
+#if os(iOS)
 //
 //  KeyboardLayoutGuideTests.swift
 //  SketchKitTests
@@ -88,3 +89,5 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         XCTAssertNil(NotificationCenter.default.observationInfo, "All observers should be removed on deinit")
     }
 }
+
+#endif

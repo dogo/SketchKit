@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  LeadingAnchorTests.swift
 //  SketchKitTests
@@ -91,3 +92,5 @@ final class LeadingAnchorTests: XCTestCase {
         ("testLeadingAnchorLessThanOrEqualTo", testLeadingAnchorLessThanOrEqualTo)
     ]
 }
+
+#endif

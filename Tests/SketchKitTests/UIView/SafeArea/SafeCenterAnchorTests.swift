@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  SafeCenterAnchorTests.swift
 //  SketchKitTests
@@ -75,3 +76,5 @@ final class SafeCenterAnchorTests: XCTestCase {
         ("testSafeCenterYAnchorTests", testSafeCenterYAnchorTests)
     ]
 }
+
+#endif

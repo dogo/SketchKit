@@ -1,3 +1,4 @@
+#if os(iOS)
 //
 //  KeyboardLayoutGuide+Mirror.swift
 //  SketchKitTests
@@ -16,3 +17,5 @@ extension KeyboardLayoutGuide {
         Mirror.extract(variable: "bottomConstraint", from: self)!
     }
 }
+
+#endif

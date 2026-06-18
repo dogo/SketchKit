@@ -51,6 +51,9 @@ jobs:
         env:
           DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Test SwiftPM on macOS
+        run: swift test
+
       - name: Test ${{ matrix.scheme }} on iOS Simulator
         run: |
           xcodebuild -scheme ${{ matrix.scheme }} \

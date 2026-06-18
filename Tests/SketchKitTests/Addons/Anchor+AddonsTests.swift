@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  Anchor+AddonsTests.swift
 //  SketchKitTests
@@ -91,3 +92,5 @@ final class Anchor_AddonsTests: XCTestCase {
         ("testAspectRadio", testAspectRadio)
     ]
 }
+
+#endif

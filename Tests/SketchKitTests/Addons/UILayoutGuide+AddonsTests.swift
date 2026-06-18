@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  UILayoutGuide+AddonsTests.swift
 //  SketchKitTests
@@ -98,3 +99,5 @@ final class UILayoutGuide_AnchorAddonsTests: XCTestCase {
         ("testAspectRadio", testAspectRadio)
     ]
 }
+
+#endif

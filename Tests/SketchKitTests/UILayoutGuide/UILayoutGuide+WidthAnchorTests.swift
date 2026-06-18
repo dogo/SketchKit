@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  UILayoutGuide+WidthAnchorTests.swift
 //  SketchKitTests
@@ -145,3 +146,5 @@ final class UILayoutGuide_WidthAnchorTests: XCTestCase {
         ("testWidthAnchorLessThanOrEqualTo", testWidthAnchorLessThanOrEqualTo)
     ]
 }
+
+#endif

@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  LeftAnchorTests.swift
 //  SketchKitTests
@@ -91,3 +92,5 @@ final class LeftAnchorTests: XCTestCase {
         ("testLeftAnchorLessThanOrEqualTo", testLeftAnchorLessThanOrEqualTo)
     ]
 }
+
+#endif

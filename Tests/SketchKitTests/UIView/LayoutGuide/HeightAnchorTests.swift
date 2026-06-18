@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  HeightAnchorTests.swift
 //  SketchKitTests
@@ -147,3 +148,5 @@ final class HeightAnchorTests: XCTestCase {
         ("testHeightAnchorLessThanOrEqualTo", testHeightAnchorLessThanOrEqualTo)
     ]
 }
+
+#endif

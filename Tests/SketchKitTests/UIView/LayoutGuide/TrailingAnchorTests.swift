@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  TrailingAnchorTests.swift
 //  SketchKitTests
@@ -91,3 +92,5 @@ final class TrailingAnchorTests: XCTestCase {
         ("testTrailingAnchorLessThanOrEqualTo", testTrailingAnchorLessThanOrEqualTo)
     ]
 }
+
+#endif

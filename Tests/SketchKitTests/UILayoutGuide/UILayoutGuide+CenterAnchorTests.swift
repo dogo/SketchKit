@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 //
 //  UILayoutGuide+CenterAnchorTests.swift
 //  SketchKitTests
@@ -67,3 +68,5 @@ final class UILayoutGuide_CenterAnchorTests: XCTestCase {
         ("testCenterXAnchor", testCenterXAnchor)
     ]
 }
+
+#endif
