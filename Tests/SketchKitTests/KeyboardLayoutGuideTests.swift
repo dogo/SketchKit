@@ -301,6 +301,76 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         )
     }
 
+    func testAdjustKeyboard_UsesNonAnimatedPath_WhenViewIsOffscreen() {
+        // grandparent (small) -> parent (offset outside grandparent) -> offscreenView.
+        // offscreenView intersects its parent but, converted up to the grandparent, falls
+        // outside it so isVisible() recurses past the parent and returns false, driving
+        // animate() down the UIView.performWithoutAnimation branch.
+        let grandparent = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let parent = UIView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
+        let offscreenView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        grandparent.addSubview(parent)
+        parent.addSubview(offscreenView)
+
+        let guide = KeyboardLayoutGuide()
+        offscreenView.addLayoutGuide(guide)
+        guide.setUp()
+
+        let screenHeight = UIScreen.main.bounds.height
+        let keyboardFrame = CGRect(x: 0, y: screenHeight - 216, width: 320, height: 216)
+        let notification = Notification(name: UIResponder.keyboardWillChangeFrameNotification, object: nil, userInfo: [
+            UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: keyboardFrame),
+            UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25)
+        ])
+
+        NotificationCenter.default.post(notification)
+
+        XCTAssertEqual(
+            SKKeyboard.shared.lastKeyboardFrame,
+            keyboardFrame,
+            "An offscreen guide should still process the notification through the non-animated path"
+        )
+        XCTAssertNotNil(
+            guide.heightConstraint,
+            "The offscreen guide should keep a valid height constraint after the notification"
+        )
+    }
+
+    func testAdjustKeyboard_IgnoresFrameChangeWithoutFrameKey() {
+        sut.setUp()
+
+        // Establish a known state with a valid keyboard notification.
+        let screenHeight = UIScreen.main.bounds.height
+        let keyboardFrame = CGRect(x: 0, y: screenHeight - 216, width: 320, height: 216)
+        NotificationCenter.default.post(Notification(
+            name: UIResponder.keyboardWillChangeFrameNotification,
+            object: nil,
+            userInfo: [
+                UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: keyboardFrame),
+                UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25)
+            ]
+        ))
+        XCTAssertEqual(sut.heightConstraint?.constant, 216, "Precondition: the keyboard should be shown")
+
+        // A malformed frame-change notification that lacks the frame key.
+        NotificationCenter.default.post(Notification(
+            name: UIResponder.keyboardWillChangeFrameNotification,
+            object: nil,
+            userInfo: [UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25)]
+        ))
+
+        XCTAssertEqual(
+            SKKeyboard.shared.lastKeyboardFrame,
+            keyboardFrame,
+            "A notification without a frame should leave the cached frame untouched"
+        )
+        XCTAssertEqual(
+            sut.heightConstraint?.constant,
+            216,
+            "A notification without a frame should leave the height untouched"
+        )
+    }
+
     func testAnimationCurve_TranslatesKeyboardCurveToAnimationOptions() {
         let notification = Notification(
             name: UIResponder.keyboardWillChangeFrameNotification,
