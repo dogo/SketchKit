@@ -12,7 +12,13 @@ import UIKit
 
 final class SKKeyboard {
     static let shared = SKKeyboard()
-    var currentHeight: CGFloat = 0
+
+    /// Last keyboard end frame seen, in screen coordinates. `nil` when the keyboard
+    /// is hidden or has not been observed yet. Stored in screen coordinates, rather
+    /// than as a view-relative height, so every guide can recompute against its own
+    /// `owningView` instead of inheriting a height that was only correct for whichever
+    /// view happened to handle the last notification.
+    var lastKeyboardFrame: CGRect?
 
     private init() {
         // Safe singleton pattern
@@ -58,9 +64,15 @@ final class KeyboardLayoutGuide: LayoutGuide {
     func setUp() {
         guard let owningView = owningView else { return }
 
+        // Recompute the initial height against this guide's own owningView from the
+        // last cached keyboard frame, so a guide attached while the keyboard is already
+        // visible starts at the correct height for its view rather than a stale value.
+        let initialHeight = SKKeyboard.shared.lastKeyboardFrame
+            .map { owningView.keyboardLayoutGuideHeight(forKeyboardFrame: $0) } ?? 0.0
+
         // Apply height, left, and right constraints
         self.layout.applyConstraint {
-            $0.heightAnchor(equalToConstant: SKKeyboard.shared.currentHeight)
+            $0.heightAnchor(equalToConstant: initialHeight)
             $0.leftAnchor(equalTo: owningView.leftAnchor)
             $0.rightAnchor(equalTo: owningView.rightAnchor)
         }
@@ -73,15 +85,29 @@ final class KeyboardLayoutGuide: LayoutGuide {
     /// Adjusts the layout guide's height based on the keyboard's frame.
     @objc
     private func adjustKeyboard(_ notification: Notification) {
-        if var height = notification.keyboardHeight(in: owningView), let duration = notification.animationDuration {
-            if #available(iOS 11.0, *), height > 0, let bottom = owningView?.safeAreaInsets.bottom {
-                height -= bottom
-            }
-            heightConstraint?.constant = height
-            if duration > 0.0 {
-                animate()
-            }
-            SKKeyboard.shared.currentHeight = height
+        guard let duration = notification.animationDuration else { return }
+
+        let keyboardFrame: CGRect?
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            keyboardFrame = nil
+        } else if let frame = notification.keyboardFrameEnd {
+            keyboardFrame = frame
+        } else {
+            // Malformed notification without a frame; leave existing state untouched.
+            return
+        }
+
+        // Cache the raw frame (screen coordinates) so guides attached later can recompute
+        // against their own owningView. `nil` means the keyboard is hidden.
+        SKKeyboard.shared.lastKeyboardFrame = keyboardFrame
+
+        guard let owningView = owningView else { return }
+
+        heightConstraint?.constant = keyboardFrame
+            .map { owningView.keyboardLayoutGuideHeight(forKeyboardFrame: $0) } ?? 0.0
+
+        if duration > 0.0 {
+            animate()
         }
     }
 
@@ -121,35 +147,39 @@ extension LayoutGuide {
     }
 }
 
-extension Notification {
-    /// Retrieves the keyboard's height from the notification's userInfo, converted to a specific view when possible.
-    func keyboardHeight(in view: UIView?) -> CGFloat? {
-        guard let keyboardFrame = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
-            return nil
+extension UIView {
+    /// Height the keyboard layout guide should adopt for a keyboard end frame given in
+    /// screen coordinates. The frame is converted into this view's coordinate space, the
+    /// overlap is measured from the view's bottom up to the keyboard's top, so the guide
+    /// pushes content above the keyboard even when it is floating/undocked and the bottom
+    /// safe-area inset is removed.
+    func keyboardLayoutGuideHeight(forKeyboardFrame keyboardFrame: CGRect) -> CGFloat {
+        let keyboardFrameInView = convertedKeyboardFrame(keyboardFrame)
+        let distanceFromBottom = bounds.maxY - keyboardFrameInView.minY
+        var height = max(0.0, min(distanceFromBottom, bounds.height))
+
+        if #available(iOS 11.0, *), height > 0 {
+            height -= safeAreaInsets.bottom
         }
 
-        if name == UIResponder.keyboardWillHideNotification {
-            return 0.0
-        } else {
-            if let view {
-                let keyboardFrameInView = convertedKeyboardFrame(keyboardFrame.cgRectValue, to: view)
-                // Distance from the view's bottom up to the keyboard's top, so the guide pushes
-                // content above the keyboard even when the keyboard is floating/undocked.
-                let distanceFromBottom = view.bounds.maxY - keyboardFrameInView.minY
-                return max(0.0, min(distanceFromBottom, view.bounds.height))
-            }
-
-            return max(0.0, UIScreen.main.bounds.height - keyboardFrame.cgRectValue.minY)
-        }
+        return max(0.0, height)
     }
 
-    private func convertedKeyboardFrame(_ keyboardFrame: CGRect, to view: UIView) -> CGRect {
-        guard let window = view.window else {
-            return view.convert(keyboardFrame, from: nil)
+    private func convertedKeyboardFrame(_ keyboardFrame: CGRect) -> CGRect {
+        guard let window = window else {
+            return convert(keyboardFrame, from: nil)
         }
 
         let keyboardFrameInWindow = window.convert(keyboardFrame, from: nil)
-        return view.convert(keyboardFrameInWindow, from: window)
+        return convert(keyboardFrameInWindow, from: window)
+    }
+}
+
+extension Notification {
+    /// The keyboard's end frame in screen coordinates from the notification's userInfo,
+    /// or `nil` when absent.
+    var keyboardFrameEnd: CGRect? {
+        (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
     }
 
     /// Retrieves the keyboard's animation duration from the notification's userInfo.

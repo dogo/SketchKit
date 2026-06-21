@@ -26,7 +26,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
     override func tearDown() {
         sut = nil
         mockView = nil
-        SKKeyboard.shared.currentHeight = 0
+        SKKeyboard.shared.lastKeyboardFrame = nil
         super.tearDown()
     }
 
@@ -38,7 +38,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         XCTAssertEqual(
             heightConstraint?.constant,
             0,
-            "Height constraint should match the SKKeyboard.shared.currentHeight"
+            "Height constraint should start at 0 when no keyboard frame has been cached"
         )
 
         XCTAssertTrue(mockView.constraints.contains {
@@ -106,7 +106,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
     func testAdjustKeyboardWhenKeyboardWillShow() {
         sut.setUp()
 
-        XCTAssertEqual(SKKeyboard.shared.currentHeight, 0, "The initial keyboard height should be 0")
+        XCTAssertEqual(sut.heightConstraint?.constant, 0, "The initial keyboard height should be 0")
 
         let screenHeight = UIScreen.main.bounds.height
 
@@ -121,15 +121,45 @@ final class KeyboardLayoutGuideTests: XCTestCase {
 
         let expectedHeight = screenHeight - keyboardFrame.minY // Should be 216
         XCTAssertEqual(
-            SKKeyboard.shared.currentHeight,
-            expectedHeight,
-            "SKKeyboard.shared.currentHeight should be properly updated with the keyboard notification"
+            SKKeyboard.shared.lastKeyboardFrame,
+            keyboardFrame,
+            "SKKeyboard.shared should cache the raw keyboard frame in screen coordinates"
         )
 
         XCTAssertEqual(
             sut.heightConstraint?.constant,
             expectedHeight,
             "The height constraint should be properly adjusted based on the keyboard height"
+        )
+    }
+
+    func testSetUp_RecomputesHeightForOwnView_WhenKeyboardAlreadyVisible() {
+        // The first guide observes the keyboard and caches its frame.
+        sut.setUp()
+
+        let screenHeight = UIScreen.main.bounds.height
+        let keyboardFrame = CGRect(x: 0, y: screenHeight - 216, width: 320, height: 216)
+        let notification = Notification(name: UIResponder.keyboardWillChangeFrameNotification, object: nil, userInfo: [
+            UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: keyboardFrame),
+            UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25)
+        ])
+        NotificationCenter.default.post(notification)
+
+        XCTAssertEqual(sut.heightConstraint?.constant, 216, "The original guide should reflect the keyboard height for its own view")
+
+        // A second guide attaches to a shorter view *after* the keyboard is already shown.
+        // It must compute its height against its own view, not inherit the first view's 216.
+        let shorterView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: screenHeight - 100))
+        let secondGuide = KeyboardLayoutGuide()
+        shorterView.addLayoutGuide(secondGuide)
+
+        secondGuide.setUp()
+
+        let expectedShorterHeight = (screenHeight - 100) - keyboardFrame.minY // 116
+        XCTAssertEqual(
+            secondGuide.heightConstraint?.constant,
+            expectedShorterHeight,
+            "A guide attached after the keyboard is shown should recompute against its own owningView"
         )
     }
 
@@ -149,9 +179,9 @@ final class KeyboardLayoutGuideTests: XCTestCase {
 
         let expectedHeight = 216 - mockView.safeAreaInsets.bottom
         XCTAssertEqual(
-            SKKeyboard.shared.currentHeight,
-            expectedHeight,
-            "The keyboard height should be computed through the window-conversion path when the view has a window"
+            SKKeyboard.shared.lastKeyboardFrame,
+            keyboardFrame,
+            "The raw keyboard frame should be cached when the view has a window"
         )
         XCTAssertEqual(
             sut.heightConstraint?.constant,
@@ -176,9 +206,9 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         NotificationCenter.default.post(notification)
 
         XCTAssertEqual(
-            SKKeyboard.shared.currentHeight,
-            400,
-            "Height should be the distance from the view's bottom to the keyboard's top, not the intersection height"
+            SKKeyboard.shared.lastKeyboardFrame,
+            keyboardFrame,
+            "The raw floating keyboard frame should be cached in screen coordinates"
         )
         XCTAssertEqual(
             sut.heightConstraint?.constant,
@@ -190,14 +220,33 @@ final class KeyboardLayoutGuideTests: XCTestCase {
     func testAdjustKeyboardWhenKeyboardWillHide() {
         sut.setUp()
 
-        let notification = Notification(name: UIResponder.keyboardWillHideNotification, object: nil, userInfo: nil)
+        // First show the keyboard so there is a non-zero state to reset.
+        let screenHeight = UIScreen.main.bounds.height
+        let keyboardFrame = CGRect(x: 0, y: screenHeight - 216, width: 320, height: 216)
+        let showNotification = Notification(
+            name: UIResponder.keyboardWillChangeFrameNotification,
+            object: nil,
+            userInfo: [
+                UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: keyboardFrame),
+                UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25)
+            ]
+        )
+        NotificationCenter.default.post(showNotification)
+        XCTAssertEqual(sut.heightConstraint?.constant, 216, "Precondition: the keyboard should be shown")
 
-        NotificationCenter.default.post(notification)
+        let hideNotification = Notification(
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil,
+            userInfo: [
+                UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: keyboardFrame),
+                UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25)
+            ]
+        )
+        NotificationCenter.default.post(hideNotification)
 
-        XCTAssertEqual(
-            SKKeyboard.shared.currentHeight,
-            0,
-            "SKKeyboard.shared.currentHeight should be reset to 0 when the keyboard hides"
+        XCTAssertNil(
+            SKKeyboard.shared.lastKeyboardFrame,
+            "The cached keyboard frame should be cleared when the keyboard hides"
         )
 
         XCTAssertEqual(
