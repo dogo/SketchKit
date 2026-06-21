@@ -3,7 +3,7 @@
 //  SketchKit
 //
 //  Created by Diogo Autilio on 04/10/19.
-//  Copyright (c) 2021 Anykey Entertrainment. All rights reserved.
+//  Copyright (c) 2021 Anykey Entertainment. All rights reserved.
 //
 
 #if os(iOS)

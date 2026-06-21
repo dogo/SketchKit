@@ -4,7 +4,7 @@
 //  SketchKitTests
 //
 //  Created by Diogo Autilio on 24/01/20.
-//  Copyright (c) 2019 Anykey Entertrainment. All rights reserved.
+//  Copyright (c) 2019 Anykey Entertainment. All rights reserved.
 //
 
 import UIKit

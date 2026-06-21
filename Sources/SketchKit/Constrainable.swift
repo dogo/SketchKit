@@ -3,7 +3,7 @@
 //  SketchKit
 //
 //  Created by Diogo Autilio on 04/10/19.
-//  Copyright (c) 2021 Anykey Entertrainment. All rights reserved.
+//  Copyright (c) 2021 Anykey Entertainment. All rights reserved.
 //
 
 #if os(OSX)
@@ -46,7 +46,7 @@ public protocol Constrainable {
     var centerYAnchor: NSLayoutYAxisAnchor { get }
 }
 
-/// VIew is an abstraction of Apple visual layout system
+/// View is an abstraction of Apple visual layout system
 extension View: Constrainable {
 
     /// Property to access the SketchKitDSL and be able to applyConstraints
@@ -54,8 +54,8 @@ extension View: Constrainable {
         return SketchKitDSL(constrainable: self)
     }
 
-    /// A layout guide that dynamically adjusts to the keyboard's frame.
 #if os(iOS)
+    /// A layout guide that dynamically adjusts to the keyboard's frame.
     public var keyboardLayout: LayoutGuide {
         return SketchKitDSL(constrainable: self).resolveKeyboardLayoutGuide()
     }

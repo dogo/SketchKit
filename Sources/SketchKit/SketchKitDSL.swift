@@ -3,37 +3,37 @@
 //  SketchKit
 //
 //  Created by Diogo Autilio on 04/10/19.
-//  Copyright (c) 2021 Anykey Entertrainment. All rights reserved.
+//  Copyright (c) 2021 Anykey Entertainment. All rights reserved.
 //
 
 #if os(OSX)
 import AppKit
 
-/// Abstration for NSView
+/// :nodoc:
 public typealias View = NSView
 
-/// Abstration for NSLayoutGuide
+/// :nodoc:
 public typealias LayoutGuide = NSLayoutGuide
 
-/// Abstration for NSLayoutConstraint.Priority
+/// :nodoc:
 public typealias LayoutPriority = NSLayoutConstraint.Priority
 
-/// Abstration for NSEdgeInsets
+/// :nodoc:
 public typealias EdgeInsets = NSEdgeInsets
 
 #else
 import UIKit
 
-/// Abstration for UIView
+/// Cross-platform abstraction over `UIView` (iOS/tvOS) and `NSView` (macOS).
 public typealias View = UIView
 
-/// Abstration for UILayoutGuide
+/// Cross-platform abstraction over `UILayoutGuide` (iOS/tvOS) and `NSLayoutGuide` (macOS).
 public typealias LayoutGuide = UILayoutGuide
 
-/// Abstration for UILayoutPriority
+/// Cross-platform abstraction over `UILayoutPriority` (iOS/tvOS) and `NSLayoutConstraint.Priority` (macOS).
 public typealias LayoutPriority = UILayoutPriority
 
-/// Abstration for UIEdgeInsets
+/// Cross-platform abstraction over `UIEdgeInsets` (iOS/tvOS) and `NSEdgeInsets` (macOS).
 public typealias EdgeInsets = UIEdgeInsets
 
 #endif
