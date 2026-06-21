@@ -49,7 +49,7 @@ jobs:
             --transform-for-static-hosting \
             --hosting-base-path SketchKit \
             --output-path _site
-          echo '<script>window.location.href += "documentation/sketchkit"</script>' > _site/index.html
+          echo '<script>window.location.href = "/SketchKit/documentation/sketchkit"</script>' > _site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5.0.0
