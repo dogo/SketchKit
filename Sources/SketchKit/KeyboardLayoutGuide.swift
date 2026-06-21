@@ -107,14 +107,17 @@ final class KeyboardLayoutGuide: LayoutGuide {
             .map { owningView.keyboardLayoutGuideHeight(forKeyboardFrame: $0) } ?? 0.0
 
         if duration > 0.0 {
-            animate()
+            animate(duration: TimeInterval(duration), options: notification.animationCurve)
         }
     }
 
-    /// Animates the layout changes when the keyboard frame changes.
-    private func animate() {
+    /// Animates the layout changes so the guide tracks the system keyboard's timing,
+    /// using the duration and curve reported in the keyboard notification.
+    private func animate(duration: TimeInterval, options: UIView.AnimationOptions) {
         if let owningView = owningView, isVisible(view: owningView) {
-            owningView.layoutIfNeeded()
+            UIView.animate(withDuration: duration, delay: 0, options: options) {
+                owningView.layoutIfNeeded()
+            }
         } else {
             UIView.performWithoutAnimation { [weak self] in
                 self?.owningView?.layoutIfNeeded()
@@ -185,6 +188,17 @@ extension Notification {
     /// Retrieves the keyboard's animation duration from the notification's userInfo.
     var animationDuration: CGFloat? {
         return self.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? CGFloat
+    }
+
+    /// The keyboard's animation curve translated to `UIView.AnimationOptions`, so the
+    /// guide eases on the same spring as the system keyboard. Falls back to `.curveEaseInOut`
+    /// when the notification omits the curve. The raw curve is shifted left by 16 bits to
+    /// line up with the option's bit field.
+    var animationCurve: UIView.AnimationOptions {
+        guard let curve = userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt else {
+            return .curveEaseInOut
+        }
+        return UIView.AnimationOptions(rawValue: curve << 16)
     }
 }
 #endif

@@ -256,6 +256,34 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         )
     }
 
+    func testAnimationCurve_TranslatesKeyboardCurveToAnimationOptions() {
+        let notification = Notification(
+            name: UIResponder.keyboardWillChangeFrameNotification,
+            object: nil,
+            userInfo: [UIResponder.keyboardAnimationCurveUserInfoKey: UInt(7)]
+        )
+
+        XCTAssertEqual(
+            notification.animationCurve,
+            UIView.AnimationOptions(rawValue: UInt(7) << 16),
+            "The keyboard animation curve should be shifted into the AnimationOptions bit field"
+        )
+    }
+
+    func testAnimationCurve_DefaultsToEaseInOut_WhenAbsent() {
+        let notification = Notification(
+            name: UIResponder.keyboardWillChangeFrameNotification,
+            object: nil,
+            userInfo: nil
+        )
+
+        XCTAssertEqual(
+            notification.animationCurve,
+            .curveEaseInOut,
+            "The animation curve should fall back to easeInOut when the notification omits it"
+        )
+    }
+
     func testDeinit_RemovesObserversFromInjectedNotificationCenter() {
         let notificationCenter = NotificationCenterSpy()
         var guide: KeyboardLayoutGuide? = KeyboardLayoutGuide(notificationCenter: notificationCenter)
