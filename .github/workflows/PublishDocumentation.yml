@@ -7,17 +7,65 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  deploy_docs:
-    name: Publish Jazzy Docs
+  build_docs:
+    name: Build DocC
     runs-on: macos-26
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6.0.3
 
-      - name: Publish Jazzy Docs
-        uses: swiftpackages/jazzy-swift-docs-action@v2.1.0
+      - name: Emit symbol graphs for every platform
+        run: |
+          for entry in \
+            "ios:generic/platform=iOS Simulator" \
+            "tvos:generic/platform=tvOS Simulator" \
+            "macos:platform=macOS"; do
+            name="${entry%%:*}"
+            destination="${entry#*:}"
+            mkdir -p "$PWD/symbolgraphs/$name"
+            xcodebuild build \
+              -scheme SketchKit \
+              -destination "$destination" \
+              -derivedDataPath ".build/dd-$name" \
+              OTHER_SWIFT_FLAGS="-emit-symbol-graph -emit-symbol-graph-dir $PWD/symbolgraphs/$name -emit-extension-block-symbols"
+          done
+
+      - name: Build static site with DocC
+        run: |
+          "$(xcrun --find docc)" convert Sources/SketchKit/SketchKit.docc \
+            --fallback-display-name SketchKit \
+            --fallback-bundle-identifier com.dogo.SketchKit \
+            --fallback-bundle-version 1 \
+            --additional-symbol-graph-dir "$PWD/symbolgraphs" \
+            --transform-for-static-hosting \
+            --hosting-base-path SketchKit \
+            --output-path _site
+          echo '<script>window.location.href += "documentation/sketchkit"</script>' > _site/index.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5.0.0
         with:
-          personal_access_token: ${{ secrets.JAZZY_ACCESS_TOKEN }}
+          path: _site
+
+  deploy_docs:
+    name: Deploy to Pages
+    needs: build_docs
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.0
