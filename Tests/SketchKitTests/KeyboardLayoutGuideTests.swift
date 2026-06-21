@@ -256,6 +256,51 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         )
     }
 
+    func testAdjustKeyboard_IgnoresKeyboardFromAnotherApp() {
+        sut.setUp()
+
+        let screenHeight = UIScreen.main.bounds.height
+        let keyboardFrame = CGRect(x: 0, y: screenHeight - 216, width: 320, height: 216)
+        // A keyboard belonging to another app sharing the screen (Split View / Slide Over).
+        let notification = Notification(name: UIResponder.keyboardWillChangeFrameNotification, object: nil, userInfo: [
+            UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: keyboardFrame),
+            UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25),
+            UIResponder.keyboardIsLocalUserInfoKey: false
+        ])
+
+        NotificationCenter.default.post(notification)
+
+        XCTAssertNil(
+            SKKeyboard.shared.lastKeyboardFrame,
+            "A non-local keyboard should not update the shared cache"
+        )
+        XCTAssertEqual(
+            sut.heightConstraint?.constant,
+            0,
+            "A keyboard from another app should not move this guide"
+        )
+    }
+
+    func testAdjustKeyboard_HandlesLocalKeyboard() {
+        sut.setUp()
+
+        let screenHeight = UIScreen.main.bounds.height
+        let keyboardFrame = CGRect(x: 0, y: screenHeight - 216, width: 320, height: 216)
+        let notification = Notification(name: UIResponder.keyboardWillChangeFrameNotification, object: nil, userInfo: [
+            UIResponder.keyboardFrameEndUserInfoKey: NSValue(cgRect: keyboardFrame),
+            UIResponder.keyboardAnimationDurationUserInfoKey: CGFloat(0.25),
+            UIResponder.keyboardIsLocalUserInfoKey: true
+        ])
+
+        NotificationCenter.default.post(notification)
+
+        XCTAssertEqual(
+            sut.heightConstraint?.constant,
+            216,
+            "A local keyboard should move this guide as usual"
+        )
+    }
+
     func testAnimationCurve_TranslatesKeyboardCurveToAnimationOptions() {
         let notification = Notification(
             name: UIResponder.keyboardWillChangeFrameNotification,

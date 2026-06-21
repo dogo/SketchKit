@@ -85,7 +85,7 @@ final class KeyboardLayoutGuide: LayoutGuide {
     /// Adjusts the layout guide's height based on the keyboard's frame.
     @objc
     private func adjustKeyboard(_ notification: Notification) {
-        guard let duration = notification.animationDuration else { return }
+        guard shouldHandle(notification), let duration = notification.animationDuration else { return }
 
         let keyboardFrame: CGRect?
         if notification.name == UIResponder.keyboardWillHideNotification {
@@ -123,6 +123,34 @@ final class KeyboardLayoutGuide: LayoutGuide {
                 self?.owningView?.layoutIfNeeded()
             }
         }
+    }
+
+    /// Decides whether a keyboard notification targets this guide's scene. Multi-scene
+    /// apps (Split View, Slide Over, Stage Manager) receive notifications for keyboards
+    /// hosted in other scenes/apps; converting those frames through this guide's window
+    /// would be meaningless, so they are ignored.
+    private func shouldHandle(_ notification: Notification) -> Bool {
+        // Ignore keyboards belonging to another app sharing the screen.
+        if let isLocal = notification.userInfo?[UIResponder.keyboardIsLocalUserInfoKey] as? Bool, !isLocal {
+            return false
+        }
+
+        // Ignore keyboards reported on a different screen than the one hosting the guide.
+        if #available(iOS 13.0, *), notificationTargetsForeignScreen(notification) {
+            return false
+        }
+
+        return true
+    }
+
+    @available(iOS 13.0, *)
+    private func notificationTargetsForeignScreen(_ notification: Notification) -> Bool {
+        guard let notificationScreen = notification.object as? UIScreen,
+              let guideScreen = owningView?.window?.windowScene?.screen else {
+            // No screen to compare against — fall through and handle the notification.
+            return false
+        }
+        return notificationScreen !== guideScreen
     }
 
     /// Checks if the view is visible in the current view hierarchy.
