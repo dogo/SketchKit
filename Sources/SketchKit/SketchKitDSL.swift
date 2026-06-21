@@ -9,16 +9,16 @@
 #if os(OSX)
 import AppKit
 
-/// :nodoc:
+/// Cross-platform abstraction over `UIView` (iOS/tvOS) and `NSView` (macOS).
 public typealias View = NSView
 
-/// :nodoc:
+/// Cross-platform abstraction over `UILayoutGuide` (iOS/tvOS) and `NSLayoutGuide` (macOS).
 public typealias LayoutGuide = NSLayoutGuide
 
-/// :nodoc:
+/// Cross-platform abstraction over `UILayoutPriority` (iOS/tvOS) and `NSLayoutConstraint.Priority` (macOS).
 public typealias LayoutPriority = NSLayoutConstraint.Priority
 
-/// :nodoc:
+/// Cross-platform abstraction over `UIEdgeInsets` (iOS/tvOS) and `NSEdgeInsets` (macOS).
 public typealias EdgeInsets = NSEdgeInsets
 
 #else

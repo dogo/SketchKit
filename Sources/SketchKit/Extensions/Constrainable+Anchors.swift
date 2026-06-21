@@ -16,7 +16,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the top edge of the view’s frame.
     ///
-    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -32,7 +32,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the top edge of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -48,7 +48,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the top edge of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -64,7 +64,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the bottom edge of the view’s frame.
     ///
-    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -80,7 +80,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the bottom edge of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -96,7 +96,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the bottom edge of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -112,7 +112,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the leading edge of the view’s frame.
     ///
-    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -128,7 +128,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the leading edge of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -144,7 +144,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the leading edge of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -160,7 +160,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the left edge of the view’s frame.
     ///
-    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -176,7 +176,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the left edge of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -192,7 +192,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the left edge of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -208,7 +208,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the trailing edge of the view’s frame.
     ///
-    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -224,7 +224,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the trailing edge of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -240,7 +240,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the trailing edge of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -256,7 +256,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the right edge of the view’s frame.
     ///
-    /// - Parameter equalTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -272,7 +272,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the right edge of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -288,7 +288,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the right edge of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualTo: Vertical layout constraint.
+    /// - Parameter anchor: Vertical layout constraint.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -304,7 +304,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the height of the view’s frame.
     ///
-    /// - Parameter equalToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter height: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
     @discardableResult
@@ -318,7 +318,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the height of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter height: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
     @discardableResult
@@ -332,7 +332,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the height of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter height: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
     @discardableResult
@@ -346,7 +346,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the height of the view’s frame.
     ///
-    /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter layoutDimension: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Parameter multiplier: The multiplier constant for the constraint.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -362,7 +362,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the height of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter layoutDimension: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Parameter multiplier: The multiplier constant for the constraint.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -378,7 +378,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the height of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter layoutDimension: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Parameter multiplier: The multiplier constant for the constraint.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -394,7 +394,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the width of the view’s frame.
     ///
-    /// - Parameter equalToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter width: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
     @discardableResult
@@ -408,7 +408,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the width of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter width: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
     @discardableResult
@@ -422,7 +422,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the width of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualToConstant: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter width: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
     @discardableResult
@@ -436,7 +436,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the width of the view’s frame.
     ///
-    /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter layoutDimension: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Parameter multiplier: The multiplier constant for the constraint.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -452,7 +452,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the width of the view’s frame.
     ///
-    /// - Parameter lessThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter layoutDimension: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Parameter multiplier: The multiplier constant for the constraint.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -468,7 +468,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the width of the view’s frame.
     ///
-    /// - Parameter greaterThanOrEqualTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter layoutDimension: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Parameter multiplier: The multiplier constant for the constraint.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -484,7 +484,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the horizontal center of the view’s frame.
     ///
-    /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter anchor: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -500,7 +500,7 @@ public extension Constrainable {
 
     /// A layout anchor representing the vertical center of the view’s frame.
     ///
-    /// - Parameter equalTo: A constant representing the size of the attribute associated with this dimension anchor.
+    /// - Parameter anchor: A constant representing the size of the attribute associated with this dimension anchor.
     /// - Parameter constant: The constant offset for the constraint.
     /// - Parameter priority: Layout priority used to indicate the constraint-based layout system.
     /// - Returns: An activated NSLayoutConstraint object that defines a constant size for the attribute associated with this dimension anchor.
@@ -519,9 +519,9 @@ public extension Constrainable {
 
     /// A layout anchor to set inset distances for views.
     ///
-    /// - Parameter to: The target View to apply the edge insets.
-    /// - Parameter withInset: Adjusts a rectangle by the given edge insets.
-    /// - Returns: All the activated and applied constraints to the current View with
+    /// - Parameter view: The target View to apply the edge insets.
+    /// - Parameter inset: The edge insets used to adjust the rectangle.
+    /// - Returns: All the activated and applied constraints to the current View.
     @discardableResult
     func inset(to view: View, withInset inset: EdgeInsets? = nil) -> [NSLayoutConstraint] {
         return [
