@@ -149,7 +149,7 @@ final class MyViewController: UIViewController {
 ```
 
 ## Documentation
-The project documentation can be found ([here](https://dogo.github.io/SketchKit/index.html)) 
+The project documentation can be found ([here](https://dogo.github.io/SketchKit/documentation/sketchkit)).
 
 ## Credits
 
