@@ -26,7 +26,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
     override func tearDown() {
         sut = nil
         mockView = nil
-        SKKeyboard.shared.lastKeyboardFrame = nil
+        SKKeyboard.shared.setLastKeyboardFrame(nil, for: nil)
         super.tearDown()
     }
 
@@ -121,7 +121,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
 
         let expectedHeight = screenHeight - keyboardFrame.minY // Should be 216
         XCTAssertEqual(
-            SKKeyboard.shared.lastKeyboardFrame,
+            SKKeyboard.shared.lastKeyboardFrame(for: nil),
             keyboardFrame,
             "SKKeyboard.shared should cache the raw keyboard frame in screen coordinates"
         )
@@ -178,11 +178,15 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         NotificationCenter.default.post(notification)
 
         let expectedHeight = 216 - mockView.safeAreaInsets.bottom
-        XCTAssertEqual(
-            SKKeyboard.shared.lastKeyboardFrame,
-            keyboardFrame,
-            "The raw keyboard frame should be cached when the view has a window"
-        )
+        if #available(iOS 13.0, *) {
+            XCTAssertEqual(
+                SKKeyboard.shared.lastKeyboardFrame(for: window.windowScene),
+                keyboardFrame,
+                "The raw keyboard frame should be cached for the hosting scene when the view has a window"
+            )
+            // Don't leak the scene entry into other tests; tearDown only clears the fallback slot.
+            SKKeyboard.shared.setLastKeyboardFrame(nil, for: window.windowScene)
+        }
         XCTAssertEqual(
             sut.heightConstraint?.constant,
             expectedHeight,
@@ -206,7 +210,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         NotificationCenter.default.post(notification)
 
         XCTAssertEqual(
-            SKKeyboard.shared.lastKeyboardFrame,
+            SKKeyboard.shared.lastKeyboardFrame(for: nil),
             keyboardFrame,
             "The raw floating keyboard frame should be cached in screen coordinates"
         )
@@ -245,7 +249,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         NotificationCenter.default.post(hideNotification)
 
         XCTAssertNil(
-            SKKeyboard.shared.lastKeyboardFrame,
+            SKKeyboard.shared.lastKeyboardFrame(for: nil),
             "The cached keyboard frame should be cleared when the keyboard hides"
         )
 
@@ -271,7 +275,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         NotificationCenter.default.post(notification)
 
         XCTAssertNil(
-            SKKeyboard.shared.lastKeyboardFrame,
+            SKKeyboard.shared.lastKeyboardFrame(for: nil),
             "A non-local keyboard should not update the shared cache"
         )
         XCTAssertEqual(
@@ -326,7 +330,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         NotificationCenter.default.post(notification)
 
         XCTAssertEqual(
-            SKKeyboard.shared.lastKeyboardFrame,
+            SKKeyboard.shared.lastKeyboardFrame(for: nil),
             keyboardFrame,
             "An offscreen guide should still process the notification through the non-animated path"
         )
@@ -360,7 +364,7 @@ final class KeyboardLayoutGuideTests: XCTestCase {
         ))
 
         XCTAssertEqual(
-            SKKeyboard.shared.lastKeyboardFrame,
+            SKKeyboard.shared.lastKeyboardFrame(for: nil),
             keyboardFrame,
             "A notification without a frame should leave the cached frame untouched"
         )

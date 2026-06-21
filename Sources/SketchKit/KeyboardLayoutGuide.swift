@@ -10,18 +10,42 @@
 import Foundation
 import UIKit
 
+/// Caches the last keyboard end frame (screen coordinates) per scene, so a guide attached
+/// while the keyboard is already visible can seed its initial height in `setUp()`.
+///
+/// The frame is stored per `UIWindowScene`, keyed weakly so entries are purged when a scene
+/// is torn down, instead of in a single global slot. A global value would be both
+/// view-relative-wrong (the original bug) and scene-wrong: in a multi-scene app one scene's
+/// keyboard frame would otherwise leak into another scene's guide. Scenes don't exist before
+/// iOS 13, so those builds fall back to a single slot.
 final class SKKeyboard {
     static let shared = SKKeyboard()
 
-    /// Last keyboard end frame seen, in screen coordinates. `nil` when the keyboard
-    /// is hidden or has not been observed yet. Stored in screen coordinates, rather
-    /// than as a view-relative height, so every guide can recompute against its own
-    /// `owningView` instead of inheriting a height that was only correct for whichever
-    /// view happened to handle the last notification.
-    var lastKeyboardFrame: CGRect?
+    private let framesByScene = NSMapTable<AnyObject, NSValue>(keyOptions: .weakMemory, valueOptions: .strongMemory)
+    private var fallbackFrame: CGRect?
 
     private init() {
         // Safe singleton pattern
+    }
+
+    /// The last keyboard frame seen for `scene`, or `nil` if the keyboard is hidden /
+    /// unobserved for it. Pass `nil` for the pre-iOS 13 / sceneless fallback slot.
+    func lastKeyboardFrame(for scene: AnyObject?) -> CGRect? {
+        guard let scene else { return fallbackFrame }
+        return framesByScene.object(forKey: scene)?.cgRectValue
+    }
+
+    /// Stores `frame` (screen coordinates) for `scene`, or clears it when `frame` is `nil`.
+    func setLastKeyboardFrame(_ frame: CGRect?, for scene: AnyObject?) {
+        guard let scene else {
+            fallbackFrame = frame
+            return
+        }
+        if let frame {
+            framesByScene.setObject(NSValue(cgRect: frame), forKey: scene)
+        } else {
+            framesByScene.removeObject(forKey: scene)
+        }
     }
 }
 
@@ -64,10 +88,10 @@ final class KeyboardLayoutGuide: LayoutGuide {
     func setUp() {
         guard let owningView = owningView else { return }
 
-        // Recompute the initial height against this guide's own owningView from the
-        // last cached keyboard frame, so a guide attached while the keyboard is already
-        // visible starts at the correct height for its view rather than a stale value.
-        let initialHeight = SKKeyboard.shared.lastKeyboardFrame
+        // Recompute the initial height against this guide's own owningView from the last
+        // keyboard frame cached for its scene, so a guide attached while the keyboard is
+        // already visible starts at the correct height for its view rather than a stale value.
+        let initialHeight = SKKeyboard.shared.lastKeyboardFrame(for: owningScene)
             .map { owningView.keyboardLayoutGuideHeight(forKeyboardFrame: $0) } ?? 0.0
 
         // Apply height, left, and right constraints
@@ -97,9 +121,9 @@ final class KeyboardLayoutGuide: LayoutGuide {
             return
         }
 
-        // Cache the raw frame (screen coordinates) so guides attached later can recompute
-        // against their own owningView. `nil` means the keyboard is hidden.
-        SKKeyboard.shared.lastKeyboardFrame = keyboardFrame
+        // Cache the raw frame (screen coordinates) for this guide's scene so guides attached
+        // later can recompute against their own owningView. `nil` means the keyboard is hidden.
+        SKKeyboard.shared.setLastKeyboardFrame(keyboardFrame, for: owningScene)
 
         guard let owningView = owningView else { return }
 
@@ -143,11 +167,20 @@ final class KeyboardLayoutGuide: LayoutGuide {
         return true
     }
 
+    /// The scene hosting this guide, used to key the per-scene keyboard cache. `nil` before
+    /// iOS 13 (no scenes) or while the guide isn't in a window.
+    private var owningScene: AnyObject? {
+        if #available(iOS 13.0, *) {
+            return owningView?.window?.windowScene
+        }
+        return nil
+    }
+
     @available(iOS 13.0, *)
     private func notificationTargetsForeignScreen(_ notification: Notification) -> Bool {
         guard let notificationScreen = notification.object as? UIScreen,
               let guideScreen = owningView?.window?.windowScene?.screen else {
-            // No screen to compare against — fall through and handle the notification.
+            // No screen to compare against, so fall through and handle the notification.
             return false
         }
         return notificationScreen !== guideScreen
